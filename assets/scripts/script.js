@@ -12,6 +12,10 @@ function setGame() {
         tile.id = i.toString();
         document.getElementById("soil").appendChild(tile);
     }
+
+    setInterval(setMole, 1000); // 1000 miliseconds = 1 second, every 1 second call setMole
+    setInterval(setPlant, 2000); // 2000 miliseconds = 2 seconds, every 2 second call setPlant
+
 }
 
 function getRandomTile() {
@@ -23,10 +27,11 @@ function getRandomTile() {
 function setMole() {
 
     let mole = document.createElement("img");
-    mole.src = "/assets/images/mole.png";
+    mole.src = "/assets/images/mole.webp";
 
     // randomly place the mole on one of the holes
     
     let num = getRandomTile();
-
+    currMoleTile = document.getElementById(num);
+    currMoleTile.appendChild(mole);
 }

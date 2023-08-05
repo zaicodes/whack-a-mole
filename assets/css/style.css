@@ -71,3 +71,10 @@ header h1 {
     background-size: cover;
     background-position: center center;
 }
+
+/* Mole */
+
+#soil div img {
+    width: 100px;
+    height: 100px;
+}
