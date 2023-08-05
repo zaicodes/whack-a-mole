@@ -63,3 +63,12 @@ header h1 {
     border: 3px solid white;
     border-radius: 25px;
 }
+.soil div {
+    /* soil = 540x540, divide into 3x3 holes --> 180x180 per div */
+    width: 180px;
+    height: 180px;
+    /* border: 1px solid white;
+    border-radius: 25px; */
+    background-image: url(/assets/images/hole.webp);
+    background-size: cover;
+}
