@@ -3,6 +3,7 @@
 Whack a mole is a game...
 
 [Live link to website](link)
+
 ![Am-I-responsive](link)
 
 ## User Experience (UX)
@@ -12,6 +13,10 @@ Whack a mole is a game...
 ## Design
 
 ### Wireframes
+
+![Home](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/Home.png)
+
+![Instructions](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/Instructions.png)
 
 ### Colour Scheme
 
