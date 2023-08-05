@@ -1,6 +1,7 @@
 let currMoleTile;
 let currRabbitTile;
-
+let score = 0;
+let gameOver = false;
 
 window.onload = function() {
     setGame(); 
@@ -12,11 +13,12 @@ function setGame() {
         //<div id="0-8"></div>
         let tile = document.createElement("div");
         tile.id = i.toString();
+        tile.addEventListener("click", selectTile);
         document.getElementById("soil").appendChild(tile);
     }
 
     setInterval(setMole, 1000); // 1000 miliseconds = 1 second, every 1 second call setMole
-    setInterval(setPlant, 2000); // 2000 miliseconds = 2 seconds, every 2 second call setPlant
+    setInterval(setRabbit, 2000); // 2000 miliseconds = 2 seconds, every 2 second call setPlant
 
 }
 
@@ -32,14 +34,14 @@ function setMole() {
     }
     // remove the mole from the previous tile
     if (currMoleTile) {
-        currMoleTitle.innerHTML = "";
+        currMoleTile.innerHTML = "";
     }
     // create a mole
 
     let mole = document.createElement("img");
     mole.src = "/assets/images/mole.webp";
 
-    // randomly place the mole on one of the holes
+    // randomly place the mole on one of the tiles
     
     let num = getRandomTile();
 
@@ -72,4 +74,18 @@ function setRabbit() {
     }
     currRabbitTile = document.getElementById(num);
     currRabbitTile.appendChild(rabbit);
+}
+
+function selectTile() {
+    if (gameOver) {
+        return;
+    }
+    if (this == currMoleTile) {
+        score += 10;
+        document.getElementById("score").innerText = score.toString(); //update score html
+    }
+    else if (this == currRabbitTile) {
+        document.getElementById("score").innerText = "GAME OVER: " + score.toString(); //update score html
+        gameOver = true;
+    }
 }
