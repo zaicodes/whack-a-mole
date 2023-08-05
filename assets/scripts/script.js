@@ -26,6 +26,11 @@ function getRandomTile() {
 
 function setMole() {
 
+    if (currMoleTile) {
+        currMoleTitle.innerHTML = "";
+    }
+    // create a mole
+
     let mole = document.createElement("img");
     mole.src = "/assets/images/mole.webp";
 
