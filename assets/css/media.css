@@ -1,0 +1,44 @@
+/* Media Queries */
+
+/* 1400px wide and below */
+@media screen and (max-width: 1400px) {
+    #soil {
+        width: 50%;
+        margin: auto;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}
+
+/* 770px wide and below */
+@media screen and (max-width: 770px) {
+    .game-area {
+        width: 100%;
+    }
+
+    #soil {
+        width: auto;
+        max-width: 100%;
+    }
+
+    .game-settings {
+        width: auto;
+        margin: auto;
+    }
+
+    .modal {
+        padding: 1px;
+    }
+
+    .modal-content {
+        font-size: 1.2rem;
+        width: 80%;
+    }
+
+    button {
+        font-size: 0.7rem;
+    }
+
+}
