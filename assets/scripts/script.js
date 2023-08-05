@@ -1,4 +1,6 @@
 let currMoleTile;
+let currRabbitTile;
+
 
 window.onload = function() {
     setGame(); 
@@ -39,4 +41,26 @@ function setMole() {
     let num = getRandomTile();
     currMoleTile = document.getElementById(num);
     currMoleTile.appendChild(mole);
+
+
+}
+
+// create a rabbit
+
+function setRabbit() {
+    if (gameOver) {
+        return;
+    }
+    if (currRabbitTile) {
+        currRabbitTile.innerHTML = "";
+    }
+    let rabbit = document.createElement("img");
+    rabbit.src = "/assets/images/rabbit.webp";
+
+    let num = getRandomTile();
+    if (currMoleTile && currMoleTile.id == num) {
+        return;
+    }
+    currRabbitTile = document.getElementById(num);
+    currRabbitTile.appendChild(rabbit);
 }
