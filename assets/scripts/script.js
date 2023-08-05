@@ -9,8 +9,7 @@ function setGame() {
     for (let i = 0; i < 9; i++) { //i goes from 0 to 8, stops at 9
         //<div id="0-8"></div>
         let tile = document.createElement("div");
-        tile.class = i.toString();
-        tile.addEventListener("click", selectTile);
+        tile.id = i.toString();
         document.getElementById("soil").appendChild(tile);
     }
 }
