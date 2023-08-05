@@ -39,6 +39,25 @@ header h1 {
     font-size: 1.5rem;
 }
 
+/* Buttons */
+button {
+    font-family: var(--main-font);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #000000;
+    padding: 1rem;
+    background-color: var(--main-white);
+    border-radius: 6px;
+}
+
+button:hover {
+    color: var(--main-white);
+    background-color: var(--main-black);
+    cursor: pointer;
+}
+
 /* Main game area */
 .game-area {
     width: auto;
@@ -84,3 +103,9 @@ header h1 {
     -webkit-user-select: none;
     -ms-user-select: none;
 }
+
+/* Footer */
+footer a {
+    color: var(--main-black);
+}
+

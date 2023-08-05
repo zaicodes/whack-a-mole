@@ -22,6 +22,23 @@ musicButton.addEventListener("click", () => {
     }
 });
 
+
+// Modal box settings //
+
+modalButton.addEventListener("click", () => {
+    modal.style.display = "block";
+});
+
+closeButton.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+    if (e.target == modal) {
+        modal.style.display = "none";
+    }
+});
+
 function setGame() {
     //set up the grid in html
     for (let i = 0; i < 9; i++) { //i goes from 0 to 8, stops at 9
