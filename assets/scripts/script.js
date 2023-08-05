@@ -5,13 +5,12 @@ window.onload = function() {
 }
 
 function setGame() {
-    // set up the grid for the game board in html
+    //set up the grid in html
     for (let i = 0; i < 9; i++) { //i goes from 0 to 8, stops at 9
-
-        // create a div element for each tile
+        //<div id="0-8"></div>
         let tile = document.createElement("div");
-        tile.id = i.toString();
-        document.getElementById("soil").appendChild(title);
-
+        tile.class = i.toString();
+        tile.addEventListener("click", selectTile);
+        document.getElementById("soil").appendChild(tile);
     }
 }

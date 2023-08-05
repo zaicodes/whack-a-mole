@@ -49,7 +49,7 @@ header h1 {
     justify-content: center;
     background-size: cover;
 }
-.soil {
+#soil {
    width: 540px;
    height: 540px;
 
@@ -63,7 +63,7 @@ header h1 {
     border: 3px solid white;
     border-radius: 25px;
 }
-.soil div {
+#soil div {
     /* soil = 540x540, divide into 3x3 holes --> 180x180 per div */
     width: 180px;
     height: 180px;
