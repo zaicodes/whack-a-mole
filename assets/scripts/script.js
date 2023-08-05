@@ -27,7 +27,10 @@ function getRandomTile() {
 }
 
 function setMole() {
-
+    if (gameOver) {
+        return;
+    }
+    // remove the mole from the previous tile
     if (currMoleTile) {
         currMoleTitle.innerHTML = "";
     }
@@ -39,6 +42,12 @@ function setMole() {
     // randomly place the mole on one of the holes
     
     let num = getRandomTile();
+
+    if (currRabbitTile && currRabbitTile.id == num) {
+        return;
+    }
+
+    // if the mole is on the same tile as the rabbit, don't place the mole
     currMoleTile = document.getElementById(num);
     currMoleTile.appendChild(mole);
 
