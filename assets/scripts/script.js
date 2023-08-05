@@ -2,10 +2,25 @@ let currMoleTile;
 let currRabbitTile;
 let score = 0;
 let gameOver = false;
+const musicButton = document.getElementById('music-button');
+const audio = document.querySelector("audio");
 
 window.onload = function() {
     setGame(); 
 }
+
+// Music control settings //
+
+musicButton.addEventListener("click", () => {
+    if (audio.paused) {
+        audio.volume = 0.2;
+        audio.play();
+        musicButton.innerHTML = "Stop Music";
+    } else {
+        audio.pause();
+        musicButton.innerHTML = "Play Music";
+    }
+});
 
 function setGame() {
     //set up the grid in html
