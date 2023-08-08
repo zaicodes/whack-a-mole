@@ -1,142 +1,169 @@
 * {
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 10px;
+  font-size: 10px;
 }
 
 body {
-    background: url("/assets/images/background.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-    font-family: sans-serif;
+  background: url("/assets/images/background.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
 }
 
 /* Header */
 
 header h1 {
-    font-size: 3rem;
-    font-family: "Leckerli One", cursive;
-    font-size: 4rem;
-    text-align: center;
-    color: #a00;
-    text-shadow: 2px 2px 0px #ffffff;
-    animation: glowAnimation 2s infinite;
-    margin: 20px 0;
+  font-size: 3rem;
+  font-family: "Leckerli One", cursive;
+  font-size: 4rem;
+  text-align: center;
+  color: #a00;
+  text-shadow: 2px 2px 0px #ffffff;
+  animation: glowAnimation 2s infinite;
+  margin: 20px 0;
 }
 
 @keyframes glowAnimation {
-    0%,
-    100% {
-        color: #a00;
-        text-shadow: 0 0 10px #fff;
-    }
-    50% {
-        color: #12ff3d;
-        text-shadow: 0 0 10px rgb(255, 255, 255);
-    }
+  0%,
+  100% {
+    color: #a00;
+    text-shadow: 0 0 10px #fff;
+  }
+  50% {
+    color: #12ff3d;
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+  }
+}
+/* Game Settings */
+
+.game-settings {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
 }
 
+.settings-button {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 16px 18px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Handjet", cursive;
+  cursor: pointer;
+}
 
+/* Button colors*/
+.settings-button:hover {
+  background-image: linear-gradient(
+    to right,
+    rgb(250, 82, 82),
+    rgb(250, 82, 82) 16.65%,
+    rgb(190, 75, 219) 16.65%,
+    rgb(190, 75, 219) 33.3%,
+    rgb(76, 110, 245) 33.3%,
+    rgb(76, 110, 245) 49.95%,
+    rgb(64, 192, 87) 49.95%,
+    rgb(64, 192, 87) 66.6%,
+    rgb(250, 176, 5) 66.6%,
+    rgb(250, 176, 5) 83.25%,
+    rgb(253, 126, 20) 83.25%,
+    rgb(253, 126, 20) 100%,
+    rgb(250, 82, 82) 100%
+  );
+  animation: var(--timing) linear dance6123 infinite;
+  transform: scale(1.1) translateY(-1px);
+}
+
+@keyframes dance6123 {
+  to {
+    background-position: var(--width);
+  }
+}
 
 /* Modal instructions box */
 .modal {
-    display: none;
-    position: fixed;
-    padding: 20px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    overflow-y: auto;
+  display: none;
+  position: fixed;
+  padding: 20px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow-y: auto;
 }
 
 /* Modal text content */
 .modal-content {
-    position: relative;
-    background-color: var(--main-white);
-    border: 5px solid #000000;
-    height: auto;
-    padding: 20px;
-    margin: auto;
-    width: 66%;
-    font-size: 1.5rem;
-}
-
-/* Buttons */
-button {
-    font-family: var(--main-font);
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-align: center;
-    border: 2px solid #000000;
-    padding: 1rem;
-    background-color: var(--main-white);
-    border-radius: 6px;
-}
-
-button:hover {
-    color: var(--main-white);
-    background-color: var(--main-black);
-    cursor: pointer;
+  position: relative;
+  background-color: var(--main-white);
+  border: 5px solid #000000;
+  height: auto;
+  padding: 20px;
+  margin: auto;
+  width: 66%;
+  font-size: 1.5rem;
 }
 
 /* Main game area */
 .game-area {
-    width: auto;
-    margin: auto;
+  width: auto;
+  margin: auto;
 }
 .game-board {
-    display: flex;
-    justify-content: center;
-    background-size: cover;
+  display: flex;
+  justify-content: center;
+  background-size: cover;
 }
 #soil {
-   width: 540px;
-   height: 540px;
+  width: 540px;
+  height: 540px;
 
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
 
-    background: url(/assets/images/soil.webp);
-    background-size: cover;
-    
-    border: 3px solid white;
-    border-radius: 25px;
+  background: url(/assets/images/soil.webp);
+  background-size: cover;
+
+  border: 3px solid white;
+  border-radius: 25px;
 }
 #soil div {
-    /* soil = 540x540, divide into 3x3 holes --> 180x180 per div */
-    width: 180px;
-    height: 180px;
-    background-image: url(/assets/images/hole.webp);
-    background-size: cover;
-    background-position: center center;
+  /* soil = 540x540, divide into 3x3 holes --> 180x180 per div */
+  width: 180px;
+  height: 180px;
+  background-image: url(/assets/images/hole.webp);
+  background-size: cover;
+  background-position: center center;
 }
 
 /* Mole & Rabbit*/
 
 #soil div img {
-    /* all img tags inside tiles */
-    width: 100px;
-    height: 100px;
-    -ms-user-select: none;
-    -moz-user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    user-select: none;
+  /* all img tags inside tiles */
+  width: 100px;
+  height: 100px;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 /* Footer */
 footer a {
-    color: var(--main-black);
+  color: var(--main-black);
 }
-
