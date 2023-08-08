@@ -28,6 +28,7 @@ header h1 {
     color: #a00;
     text-shadow: 2px 2px 0px #ffffff;
     animation: glowAnimation 2s infinite;
+    margin: 20px 0;
 }
 
 @keyframes glowAnimation {

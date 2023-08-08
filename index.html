@@ -1,89 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <link href="https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Leckerli+One&family=Lugrasimo&family=Montserrat:wght@200;500&family=Narnoor&family=Playfair+Display+SC:ital,wght@1,900&family=Roboto+Mono:ital@1&display=swap" rel="stylesheet"
-/>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Leckerli+One&family=Lugrasimo&family=Montserrat:wght@200;500&family=Narnoor&family=Playfair+Display+SC:ital,wght@1,900&family=Roboto+Mono:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.png"
+      type="image/x-icon"
+    />
     <title>Whack a Mole</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <!-- Header -->
     <header>
-        <h1>Whack a Mole!</h1>
+      <h1>Whack a Mole!</h1>
     </header>
 
-    <!-- Game Area -->    
+    <!-- Game Area -->
     <main class="game-area">
+      <!-- Settings -->
+      <section class="game-settings">
+        <button class="settings-button" id="music-button">Play Music</button>
+        <button class="settings-button" id="instructions-button">
+          Instructions
+        </button>
+        <button class="settings-button" id="reset-button">Reset</button>
+      </section>
 
-        <!--Modal instructions box-->
-        <aside class="modal">
-            <div class="modal-content">
-                <h1>Welcome to Whack A Mole</h1>
-                <h2>Objectives:</h2>
-                <p>
-                    Your objective is to score as many points as possible by whacking moles that pop up from their holes. 
-                    Each successful hit on a mole will earn you 5 points.
-                </p>
-                <h2>Avoid Hitting Rabbits:</h2>
-                <p>
-                    Avoid clicking on rabbits! If you hit a rabbit, your score will be penalized, and you will lose the game.
-                    The game will continue for a set duration ( 30 seconds).
-                </p>
-                
-                <p>
-                    Whack as many moles as you can while avoiding rabbits to achieve the highest score possible.
-                </p>
-                <p>
-                    Hit the reset button to restart the game at any point and the play/stop music button to toggle the
-                    game's music.
-                    If you need a refresh on the rules, then click the instructions button.
-                </p>
-                <h2>Tips:</h2>
-                <p>
-                    Stay focused and be quick with your mouse clicks to whack the moles before they disappear.
-                </p>
-                <p>
-                    Be patient and avoid hasty clicks, especially when a rabbit appears. 
-                    It's better to miss a mole than to hit a rabbit and lose points.
-                </p>
-                <button class="close-button">Play Game</button>
-            </div>
-        </aside>
+      <!-- Game Board -->
+      <section class="game-board">
+        <div class="container" id="soil"></div>
+      </section>
 
-        <!-- Settings -->
-        <section class="game-settings">
-            <button class="settings-button" id="music-button">Play Music</button>
-            <button class="settings-button" id="instructions-button">Instructions</button>
-            <button class="settings-button" id="reset-button">Reset</button>
-        </section>
-
-        <!-- Game Board -->
-        <section class="game-board">
-            <div class="container" id="soil"></div>
-        </section>
-
-        <h2>Score</h2>
-        <section class="" id="score">
-            <h2>0</h2>
-        </section>
-
+      <h2>Score</h2>
+      <section class="" id="score">
+        <h2>0</h2>
+      </section>
     </main>
+
+    <!--Modal instructions box-->
+    <aside class="modal">
+      <div class="modal-content">
+        <h1>Welcome to Whack A Mole</h1>
+        <h2>Objectives:</h2>
+        <p>
+          Your objective is to score as many points as possible by whacking
+          moles that pop up from their holes. Each successful hit on a mole will
+          earn you 5 points.
+        </p>
+        <h2>Avoid Hitting Rabbits:</h2>
+        <p>
+          Avoid clicking on rabbits! If you hit a rabbit, your score will be
+          penalized, and you will lose the game. The game will continue for a
+          set duration ( 30 seconds).
+        </p>
+
+        <p>
+          Whack as many moles as you can while avoiding rabbits to achieve the
+          highest score possible.
+        </p>
+        <p>
+          Hit the reset button to restart the game at any point and the
+          play/stop music button to toggle the game's music. If you need a
+          refresh on the rules, then click the instructions button.
+        </p>
+        <h2>Tips:</h2>
+        <p>
+          Stay focused and be quick with your mouse clicks to whack the moles
+          before they disappear.
+        </p>
+        <p>
+          Be patient and avoid hasty clicks, especially when a rabbit appears.
+          It's better to miss a mole than to hit a rabbit and lose points.
+        </p>
+        <button class="close-button">Play Game</button>
+      </div>
+    </aside>
 
     <!-- Footer -->
     <footer>
-        <p>Developed by <a href="https://github.com/zaicodes">Zainab Ismail</a> Code Institute's Portfolio Project 2 - 2023</p>
+      <p>
+        Developed by
+        <a href="https://github.com/zaicodes">Zainab Ismail</a> Code Institute's
+        Portfolio Project 2 - 2023
+      </p>
     </footer>
 
     <!-- Music -->
     <audio src=""></audio>
 
     <!-- JavaScript File -->
-        <script src="assets/scripts/script.js"></script>
-</body>
+    <script src="assets/scripts/script.js"></script>
+  </body>
 </html>
