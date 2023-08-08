@@ -122,26 +122,20 @@ header h1 {
 }
 
 /* Main game area */
-.game-area {
-  width: auto;
-  margin: auto;
-}
+
 .game-board {
+  margin: 20px 0;
   display: flex;
   justify-content: center;
-  background-size: cover;
 }
 #soil {
   width: 540px;
   height: 540px;
-
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-
   background: url(/assets/images/soil.webp);
   background-size: cover;
-
   border: 3px solid white;
   border-radius: 25px;
 }
@@ -153,6 +147,11 @@ header h1 {
   background-image: url(/assets/images/hole.webp);
   background-size: cover;
   background-position: center center;
+}
+
+#soil img {
+  width: 100px;
+  height: 100px;
 }
 
 /* Mole & Rabbit*/
