@@ -159,6 +159,13 @@ header h1 {
 }
 
 /* Footer */
+
+footer {
+  text-align: center;
+  margin: 0 0;
+  font-size: 1.9rem;
+  font-family: "Handjet", cursive;
+}
 footer a {
-  color: var(--main-black);
+  color: rgb(74, 89, 54);
 }
