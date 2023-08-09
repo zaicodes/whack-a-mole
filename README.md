@@ -20,6 +20,8 @@ Whack a mole is a game...
 
 ### Colour Scheme
 
+![Colour Palette](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/colour-palette.png)
+
 ### Typography
 
 ## Features
