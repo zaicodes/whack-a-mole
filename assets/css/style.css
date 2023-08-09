@@ -102,6 +102,10 @@ header h1 {
   display: flex;
   justify-content: center;
 }
+
+.score h2 {
+  text-align: center;
+}
 #soil {
   width: 420px;
   height: 420px;
