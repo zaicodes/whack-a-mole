@@ -24,6 +24,12 @@ Whack a mole is a game...
 
 ### Typography
 
+I used three fonts for this project:
+
+- Leckerli One, for the logo.
+- Handjet, for the buttons.
+- Sans-serif for the rest of text in body.
+
 ## Features
 
 ## Technologies and Frameworks
