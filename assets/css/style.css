@@ -150,6 +150,7 @@ header h1 {
 .modal {
   background-color: white;
   max-width: 900px;
+  position: relative;
   border-radius: 15px;
   margin: 20px auto;
   padding: 30px;
@@ -172,9 +173,23 @@ header h1 {
 }
 
 .hidden {
-  display: block;
+  display: none;
 }
 
+/* closing the instructions - x button*/
+.close {
+  border-radius: 10px;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  padding: 0 10px;
+  font-size: 2rem;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+/* close the instructions - play button */
 .close-button {
   width: 9em;
   height: 3em;
