@@ -33,7 +33,7 @@ header h1 {
   color: #a00;
   text-shadow: 2px 2px 0px #ffffff;
   animation: glowAnimation 2s infinite;
-  margin: 20px 0;
+  margin: 30px 0;
 }
 
 @keyframes glowAnimation {
@@ -147,10 +147,15 @@ header h1 {
 
 /* Modal instructions box */
 
+.instruction-box {
+  display: flex;
+  justify-content: center;
+}
+
 .modal {
+  position: absolute;
   background-color: white;
   max-width: 900px;
-  position: relative;
   border-radius: 15px;
   margin: 20px auto;
   padding: 30px;
