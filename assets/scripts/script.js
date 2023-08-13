@@ -7,13 +7,20 @@ const play = document.querySelector(".play-game");
 function instructionlist() {
   modal.classList.remove("hidden");
 }
-
-instructionbtn.addEventListener("click", instructionlist);
-
+// Close button
 function closeinstruction() {
   modal.classList.add("hidden");
 }
 
-close.addEventListener("click", closeinstruction);
+// Escape button function
+function closingEscape(e) {
+  if (e.key === "Escape") {
+    closeinstruction();
+    modal.classList.add("hidden");
+  }
+}
 
+close.addEventListener("click", closeinstruction);
+instructionbtn.addEventListener("click", instructionlist);
 play.addEventListener("click", closeinstruction);
+document.addEventListener("keydown", closingEscape);
