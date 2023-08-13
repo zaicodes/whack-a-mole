@@ -177,10 +177,6 @@ header h1 {
   margin: 10px 0;
 }
 
-.hidden {
-  display: none;
-}
-
 /* closing the instructions - x button*/
 .close {
   border-radius: 10px;
@@ -231,6 +227,22 @@ header h1 {
 }
 .play-game {
   text-align: center;
+}
+
+/* Overlay Part */
+
+.hidden {
+  display: none;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.313);
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 /* Footer */
