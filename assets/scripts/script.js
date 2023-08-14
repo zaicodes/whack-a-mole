@@ -3,6 +3,20 @@ const modal = document.querySelector(".modal");
 const close = document.querySelector(".close");
 const play = document.querySelector(".play-game");
 const overlay = document.querySelector(".overlay");
+const musicButton = document.getElementById("music-button");
+const audio = document.querySelector("audio");
+
+// Music control settings //
+musicButton.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.volume = 0.2;
+    audio.play();
+    musicButton.innerHTML = "Stop Music";
+  } else {
+    audio.pause();
+    musicButton.innerHTML = "Play Music";
+  }
+});
 
 // modal instructions //
 function instructionlist() {
