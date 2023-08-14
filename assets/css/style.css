@@ -94,7 +94,7 @@ header h1 {
   width: 9em;
 }
 
-/* Main game area */
+/* Main game area - Soil and Holes */
 
 .game-board {
   margin: 20px 0;
@@ -127,7 +127,7 @@ header h1 {
   height: 110px;
 }
 
-/* Mole & Rabbit*/
+/* Mole & Rabbit */
 
 #soil div img {
   /* all img tags inside tiles */
@@ -143,6 +143,10 @@ header h1 {
 .instruction-box {
   display: flex;
   justify-content: center;
+}
+
+.hidden {
+  display: none;
 }
 
 .modal {
@@ -223,10 +227,6 @@ header h1 {
 }
 
 /* Overlay Part */
-
-.hidden {
-  display: none;
-}
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.313);
