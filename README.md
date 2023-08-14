@@ -6,7 +6,7 @@
 
 ## Project Goals
 
-This project aims at creating an interactive web application where the user is able to play a fun yet challenging puzzle game called Whack A Mole.
+This project aims at creating an interactive website where the user is able to play a fun yet challenging puzzle game called Whack A Mole.
 
 ### Initial discussion
 
@@ -166,6 +166,9 @@ The images used in this project are from the following links:
 
 - [Soil-and-Holes](https://www.freepik.com/free-photos-vectors/soil-cartoon)
 - [Background](https://www.freepik.com/free-photos-vectors/green-white-background)
+- [Mole](https://www.pngwing.com/en/free-png-twlbm)
+- [Rabbit](https://www.pngwing.com/en/free-png-bppwo)
+- [Hammer](https://www.pngwing.com/en/free-png-zybiy)
 
 Music:
 The music used in the game is by [Wallpaper-by-Kevin-MacLeod](https://www.chosic.com/download-audio/45420/)
