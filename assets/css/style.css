@@ -101,7 +101,7 @@ header a {
 /* Main game area - Soil and Holes */
 
 .board {
-  width: 540px;
+  width: 600px;
   height: 540px;
   background-image: url(/assets/images/soil.webp);
   display: flex;
@@ -109,8 +109,10 @@ header a {
   background-size: cover;
   background-position: center;
   margin: auto;
+  padding: 20px;
   margin-top: 10px;
   border-radius: 15px;
+  border: rgba(255, 166, 0, 0.584) solid 3px;
 }
 
 .board div {
