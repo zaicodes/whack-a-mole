@@ -5,6 +5,7 @@ const play = document.querySelector(".play-game");
 const overlay = document.querySelector(".overlay");
 const musicButton = document.getElementById("music-button");
 const audio = document.querySelector("audio");
+let board = document.querySelector(".board");
 
 // Music control settings //
 musicButton.addEventListener("click", () => {
@@ -37,6 +38,19 @@ function closingEscape(e) {
     closeinstruction();
   }
 }
+
+// Holes grid
+function startGame() {
+  for (let i = 0; i < 9; i++) {
+    console.log(i);
+    let hole = document.createElement("div");
+    hole.id = i.toString();
+    // hole.addEventListener("click", selectHole)
+    board.appendChild(hole);
+  }
+}
+
+startGame();
 
 close.addEventListener("click", closeinstruction);
 instructionbtn.addEventListener("click", instructionlist);

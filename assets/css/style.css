@@ -100,46 +100,42 @@ header a {
 
 /* Main game area - Soil and Holes */
 
-.game-board {
-  margin: 20px 0;
-  display: flex;
-  justify-content: center;
-}
-
-.score-board h2 {
-  text-align: center;
-}
-#soil {
-  max-width: 540px;
-  padding-top: 10px;
-  padding-bottom: 30px;
-  margin: 0 auto;
+.board {
+  width: 540px;
+  height: 540px;
+  background-image: url(/assets/images/soil.webp);
   display: flex;
   flex-wrap: wrap;
-  background: url(/assets/images/soil.webp);
   background-size: cover;
-  border: 3px solid rgb(194, 130, 28);
-  border-radius: 25px;
-}
-
-#soil div {
+  background-position: center;
   margin: auto;
+  margin-top: 10px;
+  border-radius: 15px;
 }
 
-#soil img {
-  width: 150px;
-  height: 110px;
+.board div {
+  width: 180px;
+  height: 180px;
+  margin: auto;
+  background-image: url(/assets/images/hole.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
-
 /* Mole & Rabbit */
 
-#soil div img {
+.board div img {
   /* all img tags inside tiles */
+  width: 180px;
+  height: 180px;
   -ms-user-select: none;
   -moz-user-select: none;
   -webkit-user-drag: none;
   -webkit-user-select: none;
   user-select: none;
+}
+
+.score-board h2 {
+  text-align: center;
 }
 
 /* Modal instructions box */
