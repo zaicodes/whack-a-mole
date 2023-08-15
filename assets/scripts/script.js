@@ -30,12 +30,12 @@ musicButton.addEventListener("click", () => {
 });
 
 // modal instructions //
-function instructionlist() {
+function instructionList() {
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
 }
 // Close button
-function closeinstruction() {
+function closeInstruction() {
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
 }
@@ -43,7 +43,7 @@ function closeinstruction() {
 // Escape button function
 function closingEscape(e) {
   if (e.key === "Escape") {
-    closeinstruction();
+    closeInstruction();
   }
 }
 
@@ -97,7 +97,7 @@ function createRabbit() {
   currRabbitHole.appendChild(rabbit);
 }
 
-close.addEventListener("click", closeinstruction);
-instructionButtons.addEventListener("click", instructionlist);
-play.addEventListener("click", closeinstruction);
+close.addEventListener("click", closeInstruction);
+instructionButtons.addEventListener("click", instructionList);
+play.addEventListener("click", closeInstruction);
 document.addEventListener("keydown", closingEscape);
