@@ -11,10 +11,12 @@ musicButton.addEventListener("click", () => {
   if (audio.paused) {
     audio.volume = 0.2;
     audio.play();
-    musicButton.innerHTML = "Stop Music";
+    musicButton.innerHTML =
+      '<i class="fa fa-stop" aria-hidden="true"></i> Pause Music';
   } else {
     audio.pause();
-    musicButton.innerHTML = "Play Music";
+    musicButton.innerHTML =
+      '<i class="fa fa-music" aria-hidden="true"></i> Play Music';
   }
 });
 
