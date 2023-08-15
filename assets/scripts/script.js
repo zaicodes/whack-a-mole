@@ -1,4 +1,4 @@
-const instructionbtn = document.querySelector("#instructions-button");
+const instructionButtons = document.querySelector("#instructions-button");
 const modal = document.querySelector(".modal");
 const close = document.querySelector(".close");
 const play = document.querySelector(".play-game");
@@ -6,6 +6,14 @@ const overlay = document.querySelector(".overlay");
 const musicButton = document.getElementById("music-button");
 const audio = document.querySelector("audio");
 let board = document.querySelector(".board");
+let currMoleHole;
+let currRabbitHole;
+
+// Mole Appearance
+setInterval(createMole, 1000);
+
+// Rabbit Appearance
+setInterval(createRabbit, 1000);
 
 // Music control settings //
 musicButton.addEventListener("click", () => {
@@ -49,10 +57,47 @@ function startGame() {
     board.appendChild(hole);
   }
 }
-
 startGame();
 
+// Mole Randomly Appearing
+function randomHole() {
+  let num = Math.floor(Math.random() * 9);
+  return num.toString();
+}
+
+// Creating Mole
+function createMole() {
+  if (currMoleHole) {
+    currMoleHole.innerHTML = "";
+  }
+
+  let mole = document.createElement("img");
+  mole.src = "/assets/images/mole.webp";
+
+  let num = randomHole();
+  currMoleHole = document.getElementById(num);
+  currMoleHole.appendChild(mole);
+}
+
+// Rabbit Randomly Appearing
+function randomRabbit() {
+  let num = Math.floor(Math.random() * 9);
+  return num.toString();
+}
+
+// Creating Rabbit
+function createRabbit() {
+  if (currRabbitHole) {
+    currRabbitHole.innerHTML = "";
+  }
+  rabbit = document.createElement("img");
+  rabbit.src = "/assets/images/rabbit.webp";
+  let num = randomHole();
+  currRabbitHole = document.getElementById(num);
+  currRabbitHole.appendChild(rabbit);
+}
+
 close.addEventListener("click", closeinstruction);
-instructionbtn.addEventListener("click", instructionlist);
+instructionButtons.addEventListener("click", instructionlist);
 play.addEventListener("click", closeinstruction);
 document.addEventListener("keydown", closingEscape);
