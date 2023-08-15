@@ -86,6 +86,10 @@ I used three fonts for this project:
 
 ## Features
 
+### Exisiting Features
+
+### Features left to implement
+
 ## Technologies and Frameworks
 
 ### Technologies used
