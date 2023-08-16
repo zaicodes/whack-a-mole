@@ -69,6 +69,10 @@ function randomHole() {
 
 // Creating Mole
 function createMole() {
+  if (gameOver) {
+    return;
+  }
+
   if (currMoleHole) {
     currMoleHole.innerHTML = "";
   }
@@ -93,6 +97,10 @@ function randomRabbit() {
 
 // Creating Rabbit
 function createRabbit() {
+  if (gameOver) {
+    return;
+  }
+
   if (currRabbitHole) {
     currRabbitHole.innerHTML = "";
   }
@@ -114,6 +122,7 @@ function selectMole() {
     document.querySelector(".score").innerHTML = score.toString();
   } else if (this == currRabbitHole) {
     document.querySelector(".score").innerHTML = "Game Over" + score.toString();
+    gameOver = true;
   }
 }
 
