@@ -8,6 +8,8 @@ const audio = document.querySelector("audio");
 let board = document.querySelector(".board");
 let currMoleHole;
 let currRabbitHole;
+let score = 0;
+let gameOver = false;
 
 // Mole Appearance
 setInterval(createMole, 1000);
@@ -53,7 +55,7 @@ function startGame() {
     console.log(i);
     let hole = document.createElement("div");
     hole.id = i.toString();
-    // hole.addEventListener("click", selectHole)
+    hole.addEventListener("click", selectMole);
     board.appendChild(hole);
   }
 }
@@ -75,6 +77,10 @@ function createMole() {
   mole.src = "/assets/images/mole.webp";
 
   let num = randomHole();
+  if (currRabbitHole && currRabbitHole.id == num) {
+    return;
+  }
+
   currMoleHole = document.getElementById(num);
   currMoleHole.appendChild(mole);
 }
@@ -93,8 +99,22 @@ function createRabbit() {
   rabbit = document.createElement("img");
   rabbit.src = "/assets/images/rabbit.webp";
   let num = randomHole();
+
+  if (currMoleHole && currMoleHole.id == num) {
+    return;
+  }
   currRabbitHole = document.getElementById(num);
   currRabbitHole.appendChild(rabbit);
+}
+
+// Score
+function selectMole() {
+  if (this == currMoleHole) {
+    score += 10;
+    document.querySelector(".score").innerHTML = score.toString();
+  } else if (this == currRabbitHole) {
+    document.querySelector(".score").innerHTML = "Game Over" + score.toString();
+  }
 }
 
 close.addEventListener("click", closeInstruction);
