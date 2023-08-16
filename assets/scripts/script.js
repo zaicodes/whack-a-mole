@@ -8,11 +8,17 @@ const audio = document.querySelector("audio");
 const easyButton = document.querySelector(".easy-button");
 const mediumButton = document.querySelector(".medium-button");
 const hardButton = document.querySelector(".hard-button");
+const reset = document.getElementById("reset-button");
 let board = document.querySelector(".board");
 let currMoleHole;
 let currRabbitHole;
 let score = 0;
 let gameOver = false;
+
+// Reset game
+function gameRefreshed() {
+  location.reload();
+}
 
 // Difficulty Settings
 
@@ -20,22 +26,21 @@ let gameOver = false;
 easyButton.addEventListener("click", function () {
   setInterval(createMole, 1500);
   setInterval(createRabbit, 3000);
-  easyButton.removeEventListener("click", handleEasyClick);
 });
 
 // Medium
 mediumButton.addEventListener("click", function () {
   setInterval(createMole, 1000);
   setInterval(createRabbit, 1500);
-  mediumButton.removeEventListener("click", handleMediumClick);
 });
 
 // Hard
 hardButton.addEventListener("click", function () {
   setInterval(createMole, 900);
   setInterval(createRabbit, 2000);
-  hardButton.removeEventListener("click", handleEHardClick);
 });
+
+reset.addEventListener("click", gameRefreshed);
 
 // Music control settings //
 musicButton.addEventListener("click", () => {
