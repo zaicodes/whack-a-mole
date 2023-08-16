@@ -59,6 +59,7 @@ header a {
 }
 
 .settings-button {
+  background-color: white;
   width: 9em;
   height: 3em;
   border-radius: 30em;
@@ -122,6 +123,7 @@ header a {
 }
 
 .difficulty-button {
+  background-color: white;
   width: 9em;
   height: 3em;
   border-radius: 30em;
@@ -129,7 +131,7 @@ header a {
   box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
   position: relative;
   overflow: hidden;
-  /* z-index: 1; */
+  z-index: 1;
   text-transform: uppercase;
   font-size: 18px;
   font-weight: bold;

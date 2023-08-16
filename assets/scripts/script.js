@@ -5,17 +5,34 @@ const play = document.querySelector(".play-game");
 const overlay = document.querySelector(".overlay");
 const musicButton = document.getElementById("music-button");
 const audio = document.querySelector("audio");
+const easyButton = document.querySelector(".easy-button");
+const mediumButton = document.querySelector(".medium-button");
+const hardButton = document.querySelector(".hard-button");
 let board = document.querySelector(".board");
 let currMoleHole;
 let currRabbitHole;
 let score = 0;
 let gameOver = false;
 
-// Mole Appearance
-setInterval(createMole, 1000);
+// Difficulty Settings
 
-// Rabbit Appearance
-setInterval(createRabbit, 1000);
+// Easy
+easyButton.addEventListener("click", function () {
+  setInterval(createMole, 1500);
+  setInterval(createRabbit, 3000);
+});
+
+// Medium
+mediumButton.addEventListener("click", function () {
+  setInterval(createMole, 1000);
+  setInterval(createRabbit, 1500);
+});
+
+// Hard
+hardButton.addEventListener("click", function () {
+  setInterval(createMole, 900);
+  setInterval(createRabbit, 2000);
+});
 
 // Music control settings //
 musicButton.addEventListener("click", () => {
