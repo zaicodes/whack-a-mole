@@ -25,7 +25,6 @@ body {
 /* Header */
 
 header h1 {
-  font-size: 3rem;
   font-family: "Leckerli One";
   font-size: 4rem;
   text-align: center;
@@ -100,6 +99,69 @@ header a {
 
 /* Main game area - Soil and Holes */
 
+.game-board {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  gap: 20px;
+}
+
+.difficulty-main {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 20px;
+}
+
+.difficulty {
+  font-size: 3.5rem;
+  font-family: "Handjet";
+  margin-right: 30px;
+  margin-top: 40px;
+  text-transform: uppercase;
+  text-shadow: 4px 4px 0px #9fff76ca;
+}
+
+.difficulty-button {
+  width: 9em;
+  height: 3em;
+  border-radius: 30em;
+  border: none;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  position: relative;
+  overflow: hidden;
+  /* z-index: 1; */
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Handjet";
+  padding-top: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.difficulty-button i {
+  margin-right: 10px;
+}
+
+/* Button Colours*/
+.difficulty-button::before {
+  content: "";
+  width: 0;
+  height: 3em;
+  border-radius: 30em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.difficulty-button:hover::before {
+  width: 9em;
+}
+
 .board {
   width: 600px;
   height: 540px;
@@ -108,7 +170,6 @@ header a {
   flex-wrap: wrap;
   background-size: cover;
   background-position: center;
-  margin: auto;
   padding: 20px;
   margin-top: 10px;
   border-radius: 15px;
