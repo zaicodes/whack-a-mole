@@ -1,3 +1,4 @@
+// Game variables and constants
 const instructionButtons = document.querySelector("#instructions-button");
 const modal = document.querySelector(".modal");
 const close = document.querySelector(".close");
@@ -10,10 +11,31 @@ const mediumButton = document.querySelector(".medium-button");
 const hardButton = document.querySelector(".hard-button");
 const reset = document.getElementById("reset-button");
 let board = document.querySelector(".board");
+const userName = document.getElementById("userName");
+const saveButton = document.getElementById("saveButton");
+const savedNameDisplay = document.getElementById("savedNameDisplay");
 let currMoleHole;
 let currRabbitHole;
 let score = 0;
 let gameOver = false;
+
+// Username in the localStorage
+saveButton.addEventListener("click", function () {
+  const name = userName.value;
+  if (name) {
+    localStorage.setItem("savedName", name);
+    savedNameDisplay.textContent = name;
+  }
+});
+
+// Display username from local storage on page load or refresh
+window.addEventListener("load", () => {
+  const savedName = localStorage.getItem("savedName");
+  if (savedName) {
+    userName.value = savedName;
+    savedNameDisplay.textContent = savedName;
+  }
+});
 
 // Reset game
 function gameRefreshed() {
