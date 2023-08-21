@@ -14,6 +14,7 @@ let board = document.querySelector(".board");
 const userName = document.getElementById("userName");
 const saveButton = document.getElementById("saveButton");
 const savedNameDisplay = document.getElementById("savedNameDisplay");
+const form = document.querySelector(".form");
 let currMoleHole;
 let currRabbitHole;
 let score = 0;
@@ -25,6 +26,7 @@ saveButton.addEventListener("click", function () {
   if (name) {
     localStorage.setItem("savedName", name);
     savedNameDisplay.textContent = name;
+    form.classList.add("hidden");
   }
 });
 
@@ -34,6 +36,7 @@ window.addEventListener("load", () => {
   if (savedName) {
     userName.value = savedName;
     savedNameDisplay.textContent = savedName;
+    form.classList.add("hidden");
   }
 });
 
