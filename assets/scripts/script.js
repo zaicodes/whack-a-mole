@@ -15,6 +15,7 @@ const userName = document.getElementById("userName");
 const saveButton = document.getElementById("saveButton");
 const savedNameDisplay = document.getElementById("savedNameDisplay");
 const form = document.querySelector(".form");
+const difficultyMain = document.querySelector(".difficulty-main");
 let currMoleHole;
 let currRabbitHole;
 let score = 0;
@@ -36,7 +37,6 @@ window.addEventListener("load", () => {
   if (savedName) {
     userName.value = savedName;
     savedNameDisplay.textContent = savedName;
-    form.classList.add("hidden");
   }
 });
 
@@ -45,27 +45,41 @@ function gameRefreshed() {
   location.reload();
 }
 
+reset.addEventListener("click", gameRefreshed);
+
 // Difficulty Settings
 
 // Easy
 easyButton.addEventListener("click", function () {
+  hidDifficultyButtons();
   setInterval(createMole, 1500);
   setInterval(createRabbit, 3000);
 });
 
 // Medium
 mediumButton.addEventListener("click", function () {
+  hidDifficultyButtons();
   setInterval(createMole, 1000);
   setInterval(createRabbit, 1500);
 });
 
 // Hard
 hardButton.addEventListener("click", function () {
+  hidDifficultyButtons();
   setInterval(createMole, 900);
   setInterval(createRabbit, 2000);
 });
 
-reset.addEventListener("click", gameRefreshed);
+// Hide buttons once
+const hideDifficulty = localStorage.getItem("difficultyMain");
+if (hideDifficulty) {
+  difficultyMain.classList.add("hidden");
+}
+
+// Hide Buttons
+function hidDifficultyButtons() {
+  difficultyMain.classList.add("hidden");
+}
 
 // Music control settings //
 musicButton.addEventListener("click", () => {
