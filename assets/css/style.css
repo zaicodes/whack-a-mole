@@ -216,6 +216,7 @@ header a {
 }
 
 .modal {
+  z-index: 2;
   position: absolute;
   background-color: white;
   max-width: 900px;
