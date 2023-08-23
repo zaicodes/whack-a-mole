@@ -142,6 +142,10 @@ input::placeholder {
   margin: 7px 0;
 }
 
+.index {
+  z-index: 1;
+}
+
 .settings-button {
   background-color: white;
   width: 9em;
@@ -151,7 +155,6 @@ input::placeholder {
   box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
   position: relative;
   overflow: hidden;
-  z-index: 1;
   text-transform: uppercase;
   font-size: 18px;
   font-weight: bold;
@@ -392,7 +395,8 @@ input::placeholder {
   height: 100vh;
   top: 0;
   left: 0;
-  z-index: -1;
+  /* z-index: -1; */
+  backdrop-filter: blur(10px);
 }
 
 /* Footer */

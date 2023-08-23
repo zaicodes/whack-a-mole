@@ -1,4 +1,5 @@
 // Game variables and constants
+const settingButton = document.querySelectorAll(".settings-button");
 const instructionButtons = document.querySelector("#instructions-button");
 const modal = document.querySelector(".modal");
 const close = document.querySelector(".close");
@@ -24,12 +25,31 @@ let gameOver = false;
 // Username in the localStorage
 saveButton.addEventListener("click", function () {
   const name = userName.value;
+  // hide the overlay of username
+  hideOverlay();
   if (name) {
     localStorage.setItem("savedName", name);
     savedNameDisplay.textContent = name;
     form.classList.add("hidden");
   }
 });
+
+// Show Overlay
+function showOverlay() {
+  overlay.classList.remove("hidden");
+  settingButton.forEach((button) => {
+    button.classList.remove("index");
+  });
+}
+showOverlay;
+
+// Hide Overlay
+function hideOverlay() {
+  overlay.classList.add("hidden");
+  settingButton.forEach((button) => {
+    button.classList.add("index");
+  });
+}
 
 // Display username from local storage on page load or refresh
 window.addEventListener("load", () => {
@@ -39,6 +59,8 @@ window.addEventListener("load", () => {
     savedNameDisplay.textContent = savedName;
   }
 });
+
+overlay.classList.remove("hidden");
 
 // Reset game
 function gameRefreshed() {
