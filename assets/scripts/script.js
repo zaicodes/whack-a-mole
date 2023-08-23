@@ -6,7 +6,7 @@ const close = document.querySelector(".close");
 const play = document.querySelector(".play-game");
 const overlay = document.querySelector(".overlay");
 const musicButton = document.getElementById("music-button");
-const audio = document.querySelector("audio");
+const audio = document.querySelector(".audio");
 const easyButton = document.querySelector(".easy-button");
 const mediumButton = document.querySelector(".medium-button");
 const hardButton = document.querySelector(".hard-button");
@@ -17,6 +17,8 @@ const saveButton = document.getElementById("saveButton");
 const savedNameDisplay = document.getElementById("savedNameDisplay");
 const form = document.querySelector(".form");
 const difficultyMain = document.querySelector(".difficulty-main");
+const hitMoleSound = document.querySelector(".hit-mole-sound");
+const failSound = document.querySelector(".fail-sound");
 let currMoleHole;
 let currRabbitHole;
 let score = 0;
@@ -206,9 +208,11 @@ function selectMole() {
   if (this == currMoleHole) {
     score += 10;
     document.querySelector(".score").innerHTML = score.toString();
+    hitMoleSound.play();
   } else if (this == currRabbitHole) {
     document.querySelector(".score").innerHTML = "Game Over" + score.toString();
     gameOver = true;
+    failSound.play();
   }
 }
 
