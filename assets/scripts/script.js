@@ -19,6 +19,9 @@ const form = document.querySelector(".form");
 const difficultyMain = document.querySelector(".difficulty-main");
 const hitMoleSound = document.querySelector(".hit-mole-sound");
 const failSound = document.querySelector(".fail-sound");
+const gameOverEffect = document.querySelector(".game-over");
+const gameOverBox = document.querySelector(".game-over-box");
+const playGameAgain = document.querySelector(".play-game-again");
 let currMoleHole;
 let currRabbitHole;
 let score = 0;
@@ -213,8 +216,14 @@ function selectMole() {
     document.querySelector(".score").innerHTML = "Game Over" + score.toString();
     gameOver = true;
     failSound.play();
+    gameOverEffect.classList.add("effect");
+    gameOverBox.classList.remove("hidden");
   }
 }
+
+playGameAgain.addEventListener("click", function () {
+  location.reload();
+});
 
 close.addEventListener("click", closeInstruction);
 instructionButtons.addEventListener("click", instructionList);

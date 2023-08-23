@@ -386,6 +386,86 @@ input::placeholder {
   text-align: center;
 }
 
+/* Game Over Effect */
+
+.effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #2b2b2b5a;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-over-box {
+  margin: auto;
+  max-width: 600px;
+  padding: 50px;
+  background-color: white;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-over-box h1 {
+  font-size: 4rem;
+  font-family: "Leckerli One";
+  text-align: center;
+  color: #a00;
+  text-shadow: 2px 2px 0px #ffffff;
+  animation: glowAnimation 2s infinite;
+  margin: 40px 0;
+}
+
+.game-over-box h2 {
+  font-size: 2.5rem;
+  font-family: "Handjet";
+  text-align: center;
+  color: #a00;
+  margin: 40px 0;
+}
+
+.play-game-again {
+  background-color: white;
+  width: 9em;
+  height: 3em;
+  border-radius: 30em;
+  border: none;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Handjet";
+  cursor: pointer;
+  z-index: 1;
+}
+
+.play-game-again::before {
+  content: "";
+  width: 0;
+  height: 3em;
+  border-radius: 30em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.play-game-again:hover::before {
+  width: 9em;
+}
+
+/* Scoreboard */
+
 /* Overlay Part */
 
 .overlay {
