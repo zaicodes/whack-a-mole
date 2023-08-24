@@ -258,8 +258,8 @@ input::placeholder {
 }
 
 .board {
-  width: 600px;
-  height: 540px;
+  width: 590px;
+  height: 420px;
   background-image: url(/assets/images/soil.webp);
   display: flex;
   flex-wrap: wrap;
@@ -273,7 +273,7 @@ input::placeholder {
 
 .board div {
   width: 180px;
-  height: 180px;
+  height: 110px;
   margin: auto;
   text-align: center;
   background-image: url(/assets/images/hole.webp);
