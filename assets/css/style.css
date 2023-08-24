@@ -27,14 +27,13 @@ body {
 header h1 {
   font-family: "Leckerli One";
   font-size: 4rem;
-  text-align: center;
+  text-align: left;
+  padding-left: 35px;
   color: #a00;
   text-shadow: 2px 2px 0px #ffffff;
   animation: glowAnimation 2s infinite;
-  margin: 40px 0;
-}
-header a {
-  text-decoration: none;
+  margin-bottom: 20px;
+  margin-top: 40px;
 }
 
 @keyframes glowAnimation {
@@ -47,6 +46,10 @@ header a {
     color: #03a01f;
     text-shadow: 0 0 10px rgb(255, 255, 255);
   }
+}
+
+header a {
+  text-decoration: none;
 }
 
 /* Input Section */
@@ -139,7 +142,7 @@ input::placeholder {
   display: flex;
   gap: 30px;
   justify-content: center;
-  margin: 7px 0;
+  margin-bottom: 7px;
 }
 
 .index {
