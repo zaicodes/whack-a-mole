@@ -46,7 +46,7 @@ function showOverlay() {
     button.classList.remove("index");
   });
 }
-showOverlay;
+showOverlay();
 
 // Hide Overlay
 function hideOverlay() {
