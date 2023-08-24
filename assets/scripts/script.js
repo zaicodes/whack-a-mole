@@ -217,9 +217,11 @@ function selectMole() {
     gameOver = true;
     failSound.play();
     gameOverEffect.classList.add("effect");
-    gameOverBox.classList.remove("hidden");
+    gameOverBox.style = "display: block";
   }
 }
+
+gameOverBox.style = "display: none";
 
 playGameAgain.addEventListener("click", function () {
   location.reload();
