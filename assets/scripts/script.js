@@ -210,7 +210,12 @@ function createRabbit() {
 function selectMole() {
   if (this == currMoleHole) {
     score += 10;
-    document.querySelector(".score").innerHTML = score.toString();
+    var scoreElements = document.querySelectorAll(".score");
+
+    for (var i = 0; i < scoreElements.length; i++) {
+      scoreElements[i].innerHTML = score.toString();
+    }
+
     hitMoleSound.play();
   } else if (this == currRabbitHole) {
     document.querySelector(".score").innerHTML = "Game Over" + score.toString();
