@@ -2,43 +2,1257 @@
 
 /* 1400px wide and below */
 @media screen and (max-width: 1400px) {
-    #soil {
-        width: 50%;
-        margin: auto;
-    }
+  body {
+    width: 100%;
+    height: auto;
+  }
 
-    button {
-        font-size: 1rem;
-    }
+  header h1 {
+    font-size: 2.6rem;
+    padding-left: 35px;
+  }
+
+  .game-settings {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 7px;
+    margin-top: 20px;
+  }
+
+  .difficulty-main {
+    width: 40%;
+    margin: auto;
+  }
+  .difficulty-button {
+    font-size: 1.6rem;
+    margin: 10px 3px;
+  }
+
+  .footer-container {
+    width: 100%;
+    height: 15%;
+  }
+
+  .footer-content {
+    display: flex;
+  }
+
+  .footer-left h1 {
+    font-size: 1.3rem;
+    padding-left: 40px;
+    padding-bottom: 2rem;
+  }
+
+  .footer-middle p {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .footer-right {
+    padding-right: 30px;
+    padding-bottom: 30px;
+  }
+
+  .footer-right h4 {
+    font-size: 1.6rem;
+  }
+
+  .footer-right .links {
+    margin-right: 0.2rem;
+    margin-top: 3px;
+  }
+
+  .social-links a {
+    font-size: 1.6rem;
+    color: green;
+    margin-right: 2rem;
+  }
+}
+
+/* 1200px wide and below */
+@media screen and (max-width: 1200px) {
+  body {
+    width: 100%;
+    height: auto;
+  }
+
+  header h1 {
+    font-size: 2.6rem;
+    padding-left: 35px;
+  }
+
+  .game-settings {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 7px;
+    margin-top: 20px;
+  }
+
+  .difficulty-main {
+    width: 49%;
+    margin: auto;
+  }
+  .difficulty-button {
+    font-size: 1.6rem;
+    margin: 10px 3px;
+  }
+
+  .footer-container {
+    width: 100%;
+    height: 15%;
+  }
+
+  .footer-content {
+    display: flex;
+  }
+
+  .footer-left h1 {
+    font-size: 1.3rem;
+    padding-left: 40px;
+    padding-bottom: 2rem;
+  }
+
+  .footer-middle p {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .footer-right {
+    padding-right: 30px;
+    padding-bottom: 30px;
+  }
+
+  .footer-right h4 {
+    font-size: 1.6rem;
+  }
+
+  .footer-right .links {
+    margin-right: 0.2rem;
+    margin-top: 3px;
+  }
+
+  .social-links a {
+    font-size: 1.6rem;
+    color: green;
+    margin-right: 2rem;
+  }
+}
+
+/* 1000px wide and below */
+@media screen and (max-width: 1000px) {
+  body {
+    width: 100%;
+    height: auto;
+  }
+
+  header h1 {
+    font-size: 2.6rem;
+    padding-left: 35px;
+  }
+
+  .game-settings {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 7px;
+    margin-top: 20px;
+  }
+
+  .difficulty-main {
+    width: 60%;
+    margin: auto;
+  }
+  .difficulty-button {
+    font-size: 1.6rem;
+    margin: 10px 3px;
+  }
+
+  .footer-container {
+    width: 100%;
+    height: 14%;
+  }
+
+  .footer-content {
+    display: flex;
+  }
+
+  .footer-left h1 {
+    font-size: 1.3rem;
+    padding-left: 40px;
+    padding-bottom: 2rem;
+  }
+
+  .footer-middle p {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .footer-right {
+    padding-right: 30px;
+    padding-bottom: 30px;
+  }
+
+  .footer-right h4 {
+    font-size: 1.6rem;
+  }
+
+  .footer-right .links {
+    margin-right: 0.2rem;
+    margin-top: 3px;
+  }
+
+  .social-links a {
+    font-size: 1.6rem;
+    color: green;
+    margin-right: 2rem;
+  }
+}
+
+/* 900px wide and below */
+@media screen and (max-width: 900px) {
+  body {
+    width: 100%;
+    height: auto;
+  }
+
+  header h1 {
+    font-size: 2.6rem;
+    padding-left: 35px;
+  }
+
+  .game-settings {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 7px;
+    margin-top: 20px;
+  }
+
+  .settings-button {
+    font-size: 1.6rem;
+    margin: 10px 3px;
+  }
+
+  .difficulty-main {
+    width: 70%;
+    margin: auto;
+  }
+  .difficulty-button {
+    font-size: 1.6rem;
+    margin: 10px 3px;
+  }
+
+  .board {
+    width: 80%;
+    height: auto;
+  }
+  .board div {
+    width: 165px;
+    height: 110px;
+  }
+
+  .footer-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer-content {
+    display: flex;
+  }
+
+  .footer-left h1 {
+    font-size: 1.3rem;
+    padding-left: 40px;
+    padding-bottom: 2rem;
+  }
+
+  .footer-middle p {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .footer-right {
+    padding-right: 30px;
+    padding-bottom: 30px;
+  }
+
+  .footer-right h4 {
+    font-size: 1.2rem;
+  }
+
+  .footer-right .links {
+    margin-right: 0.2rem;
+    margin-top: 3px;
+  }
+
+  .social-links a {
+    font-size: 1.6rem;
+    color: green;
+    margin-right: 2rem;
+  }
+}
+
+/* 800px wide and below */
+@media screen and (max-width: 800px) {
+  body {
+    width: 100%;
+    height: auto;
+  }
+
+  header h1 {
+    font-size: 2.6rem;
+    padding-left: 35px;
+  }
+
+  .game-settings {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 7px;
+    margin-top: 20px;
+  }
+
+  .settings-button {
+    font-size: 1.6rem;
+    margin: 10px 3px;
+  }
+
+  .difficulty-main {
+    width: 70%;
+    margin: auto;
+  }
+  .difficulty-button {
+    font-size: 1.6rem;
+    margin: 10px 3px;
+  }
+
+  .board {
+    width: 80%;
+    height: auto;
+  }
+  .board div {
+    width: 165px;
+    height: 110px;
+  }
+
+  .footer-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer-content {
+    display: flex;
+  }
+
+  .footer-left h1 {
+    font-size: 1.3rem;
+    padding-left: 40px;
+    padding-bottom: 2rem;
+  }
+
+  .footer-middle p {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .footer-right {
+    padding-right: 30px;
+    padding-bottom: 30px;
+  }
+
+  .footer-right h4 {
+    font-size: 1.2rem;
+  }
+
+  .footer-right .links {
+    margin-right: 0.2rem;
+    margin-top: 3px;
+  }
+
+  .social-links a {
+    font-size: 1.6rem;
+    color: green;
+    margin-right: 2rem;
+  }
 }
 
 /* 770px wide and below */
 @media screen and (max-width: 770px) {
-    .game-area {
-        width: 100%;
-    }
+  body {
+    width: 100%;
+    height: auto;
+  }
 
-    #soil {
-        width: auto;
-        max-width: 100%;
-    }
+  header h1 {
+    font-size: 2.6rem;
+    padding-left: 35px;
+  }
 
-    .game-settings {
-        width: auto;
-        margin: auto;
-    }
+  .game-settings {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 7px;
+    margin-top: 20px;
+  }
 
-    .modal {
-        padding: 1px;
-    }
+  .settings-button {
+    font-size: 1.6rem;
+    margin: 10px 3px;
+  }
 
-    .modal-content {
-        font-size: 1.2rem;
-        width: 80%;
-    }
+  .difficulty-main {
+    width: 80%;
+    margin: auto;
+  }
+  .difficulty-button {
+    font-size: 1.6rem;
+    margin: 10px 3px;
+  }
 
-    button {
-        font-size: 0.7rem;
-    }
+  .board {
+    width: 80%;
+    height: auto;
+  }
+  .board div {
+    width: 165px;
+    height: 110px;
+  }
 
+  .footer-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer-content {
+    display: flex;
+  }
+
+  .footer-left h1 {
+    font-size: 1.1rem;
+    padding-left: 40px;
+    padding-bottom: 2rem;
+  }
+
+  .footer-middle p {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .footer-right {
+    padding-right: 20px;
+    padding-bottom: 35px;
+  }
+
+  .footer-right h4 {
+    font-size: 1.1rem;
+  }
+
+  .footer-right .links {
+    margin-right: 0.2rem;
+    margin-top: 3px;
+  }
+
+  .social-links a {
+    font-size: 1rem;
+    color: green;
+    margin-right: 2rem;
+  }
+}
+
+/* 700px wide and below */
+@media screen and (max-width: 700px) {
+  body {
+    width: 100%;
+    height: auto;
+  }
+
+  header h1 {
+    font-size: 2.6rem;
+    padding-left: 35px;
+  }
+
+  .game-settings {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 7px;
+    margin-top: 20px;
+  }
+
+  .settings-button {
+    font-size: 1.6rem;
+    margin: 10px 3px;
+  }
+
+  .difficulty-main {
+    width: 80%;
+    margin: auto;
+  }
+  .difficulty-button {
+    font-size: 1.6rem;
+    margin: 10px 3px;
+  }
+
+  .board {
+    width: 80%;
+    height: auto;
+  }
+  .board div {
+    width: 165px;
+    height: 110px;
+  }
+
+  .footer-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer-content {
+    display: flex;
+  }
+
+  .footer-left h1 {
+    font-size: 1.1rem;
+    padding-left: 40px;
+    padding-top: 15px;
+  }
+
+  .footer-middle p {
+    font-size: 1rem;
+    margin: 0;
+    padding-top: 20px;
+  }
+
+  .footer-right {
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+
+  .footer-right h4 {
+    font-size: 1.1rem;
+    padding-bottom: 10px;
+  }
+
+  .footer-right .links {
+    margin-right: 0.2rem;
+    margin-top: 3px;
+  }
+
+  .social-links a {
+    font-size: 1rem;
+    color: green;
+    margin-right: 2rem;
+  }
+}
+
+/* 675px wide and below */
+/* @media screen and (max-width: 675px) {
+  body {
+    width: 100%;
+    height: auto;
+  }
+  header h1 {
+    font-size: 2.6rem;
+    padding-left: 35px;
+  }
+
+  .game-settings {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 7px;
+    margin-top: 20px;
+  }
+
+  .settings-button {
+    font-size: 1.6rem;
+    margin: 10px 3px;
+  }
+
+  .difficulty-main {
+    width: 70%;
+    margin: auto;
+  }
+  .difficulty-button {
+    font-size: 1.2rem;
+    margin: 10px 3px;
+  }
+
+  .board {
+    width: 70%;
+    height: auto;
+  }
+  .board div {
+    width: 120px;
+    height: 120px;
+  }
+
+  .board div img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .modal {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 30px;
+  }
+
+  .modal h1 {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .modal h2 {
+    font-family: "Handjet";
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+  .modal p {
+    font-family: sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.3;
+    margin: 10px 0;
+  }
+
+  .footer-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer-content {
+    display: block;
+  }
+
+  .footer-left h1 {
+    font-size: 1.1rem;
+    text-align: center;
+    margin: auto;
+    margin-bottom: -20px;
+    padding: auto;
+  }
+
+  .footer-middle p {
+    font-size: 1rem;
+    margin: auto;
+    text-align: center;
+    padding: auto;
+  }
+
+  .footer-right h4 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    padding: auto;
+  }
+
+  .social-links a {
+    font-size: 1.2rem;
+    color: green;
+  }
+}  */
+
+/* 600px wide and below */
+@media screen and (max-width: 600px) {
+  body {
+    width: 100%;
+    height: auto;
+  }
+  header h1 {
+    font-size: 2.6rem;
+    padding-left: 35px;
+  }
+
+  .game-settings {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 7px;
+    margin-top: 20px;
+  }
+
+  .settings-button {
+    font-size: 1.6rem;
+    margin: 10px 3px;
+  }
+
+  .difficulty-main {
+    width: 80%;
+    margin: auto;
+  }
+  .difficulty-button {
+    font-size: 1.2rem;
+    margin: 10px 3px;
+  }
+
+  .board {
+    width: 70%;
+    height: auto;
+  }
+  .board div {
+    width: 100px;
+    height: 100px;
+  }
+
+  .board div img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .footer-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer-content {
+    display: block;
+  }
+
+  .footer-left h1 {
+    font-size: 1.1rem;
+    text-align: center;
+    margin: auto;
+    margin-bottom: -20px;
+    padding: auto;
+  }
+
+  .footer-middle p {
+    font-size: 1rem;
+    margin: auto;
+    text-align: center;
+    padding: auto;
+  }
+
+  .footer-right h4 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    padding: auto;
+  }
+
+  .social-links a {
+    font-size: 1.2rem;
+    color: green;
+  }
+}
+
+/* 550px wide and below */
+@media screen and (max-width: 550px) {
+  body {
+    width: 100%;
+    height: auto;
+  }
+  header h1 {
+    font-size: 2.6rem;
+    padding-left: 35px;
+  }
+
+  .game-settings {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 7px;
+    margin-top: 20px;
+  }
+
+  .settings-button {
+    font-size: 1.6rem;
+    margin: 10px 3px;
+  }
+
+  .difficulty-main {
+    width: 80%;
+    margin: auto;
+  }
+  .difficulty-button {
+    font-size: 1.2rem;
+    margin: 10px 3px;
+  }
+
+  .board {
+    width: 70%;
+    height: auto;
+  }
+  .board div {
+    width: 100px;
+    height: 100px;
+  }
+
+  .board div img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .footer-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer-content {
+    display: block;
+  }
+
+  .footer-left h1 {
+    font-size: 1.1rem;
+    text-align: center;
+    margin: auto;
+    margin-bottom: -20px;
+    padding: auto;
+  }
+
+  .footer-middle p {
+    font-size: 1rem;
+    margin: auto;
+    text-align: center;
+    padding: auto;
+  }
+
+  .footer-right h4 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    padding: auto;
+  }
+
+  .social-links a {
+    font-size: 1.2rem;
+    color: green;
+  }
+}
+
+/* 500px wide and below */
+@media screen and (max-width: 500px) {
+  body {
+    width: 100%;
+    height: auto;
+  }
+  header h1 {
+    font-size: 2.6rem;
+    padding-left: 35px;
+  }
+
+  .game-settings {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 7px;
+    margin-top: 20px;
+    padding: 0;
+  }
+
+  .settings-button {
+    font-size: 1.6rem;
+    margin: 10px 3px;
+  }
+
+  .difficulty-main {
+    width: 80%;
+    margin: auto;
+  }
+  .difficulty-button {
+    font-size: 1.2rem;
+    margin: 10px 3px;
+  }
+
+  .board {
+    width: 70%;
+    height: auto;
+  }
+  .board div {
+    width: 100px;
+    height: 100px;
+  }
+
+  .board div img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .footer-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer-content {
+    display: block;
+  }
+
+  .footer-left h1 {
+    font-size: 1.1rem;
+    text-align: center;
+    margin: auto;
+    margin-bottom: -20px;
+    padding: auto;
+  }
+
+  .footer-middle p {
+    font-size: 1rem;
+    margin: auto;
+    text-align: center;
+    padding: auto;
+  }
+
+  .footer-right h4 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    padding: auto;
+  }
+
+  .social-links a {
+    font-size: 1.2rem;
+    color: green;
+  }
+}
+
+/* 450px wide and below */
+@media screen and (max-width: 450px) {
+  body {
+    width: 100%;
+    height: auto;
+  }
+  header h1 {
+    font-size: 2.6rem;
+    padding-left: 35px;
+  }
+
+  .game-settings {
+    display: flex;
+    align-items: center;
+  }
+
+  .settings-button {
+    font-size: 1.6rem;
+    margin: -1px 0;
+  }
+
+  .difficulty-main {
+    width: 50%;
+    margin: 50px 0;
+  }
+  .difficulty {
+    font-size: 1.7rem;
+  }
+  .difficulty-button {
+    font-size: 1.6rem;
+    margin: 10px 3px;
+  }
+
+  .board {
+    width: 80%;
+    height: auto;
+  }
+  .board div {
+    width: 80px;
+    height: 80px;
+  }
+
+  .board div img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .footer-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer-content {
+    display: block;
+  }
+
+  .footer-left h1 {
+    font-size: 1.1rem;
+    text-align: center;
+    margin: auto;
+    margin-bottom: -20px;
+    padding: auto;
+  }
+
+  .footer-middle p {
+    font-size: 1rem;
+    margin: auto;
+    text-align: center;
+    padding: auto;
+  }
+
+  .footer-right h4 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    padding: auto;
+  }
+
+  .social-links a {
+    font-size: 1.2rem;
+    color: green;
+  }
+}
+
+/* 400px wide and below */
+@media screen and (max-width: 400px) {
+  body {
+    width: 100%;
+    height: auto;
+  }
+  header h1 {
+    font-size: 2.6rem;
+    padding-left: 35px;
+  }
+
+  .game-settings {
+    display: flex;
+    align-items: center;
+  }
+
+  .settings-button {
+    font-size: 1.6rem;
+    margin: -1px 0;
+  }
+
+  .difficulty-main {
+    width: 50%;
+    margin: 50px 0;
+  }
+  .difficulty {
+    font-size: 1.7rem;
+  }
+  .difficulty-button {
+    font-size: 1.6rem;
+    margin: 10px 3px;
+  }
+
+  .board {
+    width: 80%;
+    height: auto;
+  }
+  .board div {
+    width: 80px;
+    height: 80px;
+  }
+
+  .board div img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .footer-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer-content {
+    display: block;
+  }
+
+  .footer-left h1 {
+    font-size: 1.1rem;
+    text-align: center;
+    margin: auto;
+    margin-bottom: -20px;
+    padding: auto;
+  }
+
+  .footer-middle p {
+    font-size: 1rem;
+    margin: auto;
+    text-align: center;
+    padding: auto;
+  }
+
+  .footer-right h4 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    padding: auto;
+  }
+
+  .social-links a {
+    font-size: 1.2rem;
+    color: green;
+  }
+}
+
+/* 350px wide and below */
+@media screen and (max-width: 350px) {
+  body {
+    width: 100%;
+    height: auto;
+  }
+  header h1 {
+    font-size: 2.6rem;
+    padding-left: 35px;
+  }
+
+  .game-settings {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 7px;
+    margin-top: 20px;
+    padding: 0;
+  }
+
+  .settings-button {
+    font-size: 1rem;
+    margin: 10px 3px;
+  }
+
+  .difficulty-main {
+    width: 80%;
+    margin: auto;
+  }
+  .difficulty-button {
+    font-size: 1.2rem;
+    margin: 10px 3px;
+  }
+
+  .board {
+    width: 70%;
+    height: auto;
+  }
+  .board div {
+    width: 100px;
+    height: 100px;
+  }
+
+  .board div img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .footer-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer-content {
+    display: block;
+  }
+
+  .footer-left h1 {
+    font-size: 1.1rem;
+    text-align: center;
+    margin: auto;
+    margin-bottom: -20px;
+    padding: auto;
+  }
+
+  .footer-middle p {
+    font-size: 1rem;
+    margin: auto;
+    text-align: center;
+    padding: auto;
+  }
+
+  .footer-right h4 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    padding: auto;
+  }
+
+  .social-links a {
+    font-size: 1.2rem;
+    color: green;
+  }
+}
+
+/* 300px wide and below */
+@media screen and (max-width: 300px) {
+  body {
+    width: 100%;
+    height: auto;
+  }
+  header h1 {
+    font-size: 2.2rem;
+    padding-left: 35px;
+  }
+
+  .game-settings {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 7px;
+    margin-top: 20px;
+    padding: 0;
+  }
+
+  .settings-button {
+    font-size: 1.6rem;
+    margin: 10px 3px;
+  }
+
+  .difficulty-main {
+    width: 80%;
+    margin: auto;
+  }
+  .difficulty-button {
+    font-size: 1.2rem;
+    margin: 10px 3px;
+  }
+
+  .board {
+    width: 70%;
+    height: auto;
+  }
+  .board div {
+    width: 100px;
+    height: 100px;
+  }
+
+  .board div img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .footer-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer-content {
+    display: block;
+  }
+
+  .footer-left h1 {
+    font-size: 1rem;
+    text-align: center;
+    margin: auto;
+    margin-bottom: -20px;
+    padding: auto;
+  }
+
+  .footer-middle p {
+    font-size: 0.9rem;
+    margin: auto;
+    text-align: center;
+    padding: auto;
+  }
+
+  .footer-right h4 {
+    font-size: 1rem;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    padding: auto;
+  }
+
+  .social-links a {
+    font-size: 1rem;
+    color: green;
+  }
 }

@@ -526,6 +526,7 @@ input::placeholder {
 .footer-middle p {
   font-size: 1.4rem;
   font-family: "Handjet";
+  color: #505050b8;
   font-weight: 600;
   letter-spacing: 1px;
   text-align: center;
@@ -535,6 +536,7 @@ input::placeholder {
 
 .footer-middle a {
   text-decoration: none;
+  color: #03a020ae;
 }
 
 .footer-right {
@@ -552,7 +554,6 @@ input::placeholder {
 }
 
 .footer-right .links {
-  font-size: 2rem;
   margin-right: 1.5rem;
   text-decoration: none;
   margin-top: 3px;
