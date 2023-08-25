@@ -13,7 +13,7 @@ html {
 /* Body */
 
 body {
-  background: url("./assets/images/background.jpg");
+  background: url("/assets/images/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -266,7 +266,7 @@ input::placeholder {
 .board {
   width: 590px;
   height: 420px;
-  background-image: url(assets/images/soil.webp);
+  background-image: url(/assets/images/soil.webp);
   display: flex;
   flex-wrap: wrap;
   background-size: cover;
