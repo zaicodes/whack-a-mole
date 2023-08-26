@@ -339,6 +339,7 @@ input::placeholder {
 }
 
 /* closing the instructions - x button*/
+
 .close {
   border-radius: 10px;
   position: absolute;
@@ -352,6 +353,7 @@ input::placeholder {
 }
 
 /* close the instructions - play button */
+
 .close-button {
   width: 9em;
   height: 3em;
@@ -369,6 +371,7 @@ input::placeholder {
 }
 
 /* Play Button colours*/
+
 .close-button::before {
   content: "";
   width: 0;
