@@ -13,7 +13,7 @@ html {
 /* Body */
 
 .body {
-  background: url("/assets/images/background.jpg");
+  background: url("../images/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -267,7 +267,7 @@ input::placeholder {
 .board {
   width: 590px;
   height: 420px;
-  background-image: url(/assets/images/soil.webp);
+  background-image: url(../images/soil.webp);
   display: flex;
   flex-wrap: wrap;
   background-size: cover;
@@ -283,7 +283,7 @@ input::placeholder {
   height: 110px;
   margin: auto;
   text-align: center;
-  background-image: url(/assets/images/hole.webp);
+  background-image: url(../images/hole.webp);
   background-size: contain;
   background-repeat: no-repeat;
 }
