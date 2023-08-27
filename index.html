@@ -61,147 +61,154 @@
   </head>
 
   <body>
-    <!-- Header -->
-    <header>
-      <a href="index.html"><h1>Whack a Mole!</h1></a>
-    </header>
+    <div class="body">
+      <!-- Header -->
+      <header>
+        <a href="index.html"><h1>Whack a Mole!</h1></a>
+      </header>
 
-    <!-- Username Savage-->
-    <section class="form">
-      <input type="text" id="userName" placeholder="Enter your name" required />
-      <button id="saveButton" type="submit">Save</button>
-      <p>Your saved name is : <span id="savedNameDisplay"></span></p>
-    </section>
-
-    <!-- Game Area -->
-    <main class="game-area">
-      <!-- Settings -->
-      <section class="game-settings">
-        <button class="settings-button index" id="music-button">
-          <i class="fa fa-music" aria-hidden="true"></i>Play Music
-        </button>
-        <button class="settings-button index" id="instructions-button">
-          <i class="fa fa-commenting" aria-hidden="true"></i>
-          Instructions
-        </button>
-        <button class="settings-button index" id="reset-button">
-          <i class="fa fa-repeat" aria-hidden="true"></i>Reset
-        </button>
+      <!-- Username Savage-->
+      <section class="form">
+        <input
+          type="text"
+          id="userName"
+          placeholder="Enter your name"
+          required
+        />
+        <button id="saveButton" type="submit">Save</button>
+        <p>Your saved name is : <span id="savedNameDisplay"></span></p>
       </section>
 
-      <!--Modal instructions box-->
-      <aside class="instruction-box">
-        <div class="modal hidden">
-          <div class="modal-content">
-            <h1>Welcome to Whack A Mole</h1>
-            <div class="close">X</div>
-            <h2>Objectives:</h2>
-            <p>
-              In this game, your goal is to score points by hitting moles that
-              pop up from holes. Each successful mole hit earns you 5 points.
-            </p>
-            <h2>Avoid Hitting Rabbits:</h2>
-            <p>
-              Avoid clicking on rabbits, as hitting them will reduce your score
-              and end the game. The game lasts for 30 seconds.
-            </p>
+      <!-- Game Area -->
+      <main class="game-area">
+        <!-- Settings -->
+        <section class="game-settings">
+          <button class="settings-button index" id="music-button">
+            <i class="fa fa-music" aria-hidden="true"></i>Play Music
+          </button>
+          <button class="settings-button index" id="instructions-button">
+            <i class="fa fa-commenting" aria-hidden="true"></i>
+            Instructions
+          </button>
+          <button class="settings-button index" id="reset-button">
+            <i class="fa fa-repeat" aria-hidden="true"></i>Reset
+          </button>
+        </section>
 
-            <p>Whack moles, avoid rabbits, and aim for the highest score.</p>
-            <p>
-              Hit the reset button to restart the game at any point and the
-              play/stop music button to control music. If you need a refresh on
-              the rules, then click the instructions button.
-            </p>
-            <h2>Tips:</h2>
-            <p>
-              Stay focused, click quickly for moles, and refrain from clicking
-              rabbits to maximize your score.
-            </p>
-            <div class="play-game">
-              <button class="close-button">Play Game</button>
+        <!--Modal instructions box-->
+        <aside class="instruction-box">
+          <div class="modal hidden">
+            <div class="modal-content">
+              <h1>Welcome to Whack A Mole</h1>
+              <div class="close">X</div>
+              <h2>Objectives:</h2>
+              <p>
+                In this game, your goal is to score points by hitting moles that
+                pop up from holes. Each successful mole hit earns you 5 points.
+              </p>
+              <h2>Avoid Hitting Rabbits:</h2>
+              <p>
+                Avoid clicking on rabbits, as hitting them will reduce your
+                score and end the game. The game lasts for 30 seconds.
+              </p>
+
+              <p>Whack moles, avoid rabbits, and aim for the highest score.</p>
+              <p>
+                Hit the reset button to restart the game at any point and the
+                play/stop music button to control music. If you need a refresh
+                on the rules, then click the instructions button.
+              </p>
+              <h2>Tips:</h2>
+              <p>
+                Stay focused, click quickly for moles, and refrain from clicking
+                rabbits to maximize your score.
+              </p>
+              <div class="play-game">
+                <button class="close-button">Play Game</button>
+              </div>
             </div>
           </div>
-        </div>
-      </aside>
+        </aside>
 
-      <!-- Game Board -->
-      <section class="game-board">
-        <div class="difficulty-main">
-          <h2 class="difficulty">Difficulty</h2>
-          <div class="btns">
-            <div class="difficulty-button easy-button">Easy</div>
-            <div class="difficulty-button medium-button">Medium</div>
-            <div class="difficulty-button hard-button">Hard</div>
+        <!-- Game Board -->
+        <section class="game-board">
+          <div class="difficulty-main">
+            <h2 class="difficulty">Difficulty</h2>
+            <div class="btns">
+              <div class="difficulty-button easy-button">Easy</div>
+              <div class="difficulty-button medium-button">Medium</div>
+              <div class="difficulty-button hard-button">Hard</div>
+            </div>
+          </div>
+          <div class="board"></div>
+        </section>
+
+        <!-- ScoreBoard -->
+        <section class="score-board" id="score">
+          <h2>Score</h2>
+          <h2 class="score">0</h2>
+        </section>
+      </main>
+
+      <!-- Overlay Part -->
+      <div class="overlay hidden"></div>
+
+      <!-- Footer -->
+
+      <footer class="footer-container">
+        <div class="footer-content">
+          <div class="footer-left">
+            <a href="index.html"><h1>Whack a Mole!</h1></a>
+          </div>
+          <div class="footer-middle">
+            <p>
+              Developed by
+              <a href="https://github.com/zaicodes">Zainab Ismail</a> - Code
+              Institute's Second Milestone Project - 2023
+            </p>
+          </div>
+          <div class="footer-right">
+            <h4>Follow us:</h4>
+            <ul class="social-links">
+              <li class="links">
+                <a href="https://www.facebook.com/">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="links">
+                <a href="https://twitter.com/">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="links">
+                <a href="https://www.instagram.com/">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="links">
+                <a href="https://www.youtube.com/">
+                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="board"></div>
-      </section>
+      </footer>
 
-      <!-- ScoreBoard -->
-      <section class="score-board" id="score">
-        <h2>Score</h2>
-        <h2 class="score">0</h2>
-      </section>
-    </main>
-
-    <!-- Overlay Part -->
-    <div class="overlay hidden"></div>
-
-    <!-- Footer -->
-
-    <footer class="footer-container">
-      <div class="footer-content">
-        <div class="footer-left">
-          <a href="index.html"><h1>Whack a Mole!</h1></a>
-        </div>
-        <div class="footer-middle">
-          <p>
-            Developed by
-            <a href="https://github.com/zaicodes">Zainab Ismail</a> - Code
-            Institute's Second Milestone Project - 2023
-          </p>
-        </div>
-        <div class="footer-right">
-          <h4>Follow us:</h4>
-          <ul class="social-links">
-            <li class="links">
-              <a href="https://www.facebook.com/">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li class="links">
-              <a href="https://twitter.com/">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li class="links">
-              <a href="https://www.instagram.com/">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li class="links">
-              <a href="https://www.youtube.com/">
-                <i class="fa fa-youtube-play" aria-hidden="true"></i>
-              </a>
-            </li>
-          </ul>
+      <!-- Game Over Effect -->
+      <div class="game-over">
+        <div class="game-over-box">
+          <h1>Game Over</h1>
+          <h2>Your Score is: <span class="score"></span></h2>
+          <button class="play-game-again">Play Again</button>
         </div>
       </div>
-    </footer>
 
-    <!-- Game Over Effect -->
-    <div class="game-over">
-      <div class="game-over-box">
-        <h1>Game Over</h1>
-        <h2>Your Score is: <span class="score"></span></h2>
-        <button class="play-game-again">Play Again</button>
-      </div>
+      <!-- Music -->
+      <audio class="audio" src="assets/music/Wallpaper.mp3" loop></audio>
+      <audio class="hit-mole-sound" src="assets/music/hit-mole.mp3"></audio>
+      <audio class="fail-sound" src="assets/music/fail.mp3"></audio>
     </div>
-
-    <!-- Music -->
-    <audio class="audio" src="assets/music/Wallpaper.mp3" loop></audio>
-    <audio class="hit-mole-sound" src="assets/music/hit-mole.mp3"></audio>
-    <audio class="fail-sound" src="assets/music/fail.mp3"></audio>
 
     <!-- JavaScript File -->
     <script src="assets/scripts/script.js"></script>
