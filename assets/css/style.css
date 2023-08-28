@@ -18,7 +18,7 @@ html {
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
-  height: 100vh;
+  height: auto;
   padding-top: 20px;
   font-family: sans-serif;
 }
@@ -478,19 +478,19 @@ input::placeholder {
 /* Scoreboard */
 
 .score-board {
-  padding: 50px;
+  padding-bottom: 40px;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 .score-board h2 {
-  font-family: "Leckerli One";
+  font-family: "handjet";
   font-size: 3.5rem;
   margin-top: 20px;
 }
 
 .score-board img {
-  width: 80px;
+  width: 70px;
 }
 
 .score-board .score {
@@ -502,8 +502,8 @@ input::placeholder {
 }
 .score-board p {
   position: relative;
-  font-size: 24px;
-  font-family: "Leckerli One";
+  font-size: 30px;
+  font-family: "Handjet";
 }
 
 /* Overlay Part */
