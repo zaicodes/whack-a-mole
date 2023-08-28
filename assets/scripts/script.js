@@ -169,7 +169,7 @@ function createMole() {
   }
 
   let mole = document.createElement("img");
-  mole.src = "../images/mole.webp";
+  mole.src = "assets/images/mole.webp";
 
   let num = randomHole();
   if (currRabbitHole && currRabbitHole.id == num) {
@@ -196,7 +196,7 @@ function createRabbit() {
     currRabbitHole.innerHTML = "";
   }
   rabbit = document.createElement("img");
-  rabbit.src = "../images/rabbit.webp";
+  rabbit.src = "assets/images/rabbit.webp";
   let num = randomHole();
 
   if (currMoleHole && currMoleHole.id == num) {
