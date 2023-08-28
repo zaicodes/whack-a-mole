@@ -477,8 +477,33 @@ input::placeholder {
 
 /* Scoreboard */
 
+.score-board {
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 .score-board h2 {
-  text-align: center;
+  font-family: "Leckerli One";
+  font-size: 3.5rem;
+  margin-top: 20px;
+}
+
+.score-board img {
+  width: 80px;
+}
+
+.score-board .score {
+  right: 30px;
+  top: 20px;
+}
+.score-board span {
+  color: rgb(0, 0, 0);
+}
+.score-board p {
+  position: relative;
+  font-size: 24px;
+  font-family: "Leckerli One";
 }
 
 /* Overlay Part */
@@ -497,7 +522,6 @@ input::placeholder {
 
 .footer-container {
   background-color: #ffffffc7;
-  position: absolute;
   bottom: 0;
   width: 100%;
   border-top: 3px solid #03a0203f;

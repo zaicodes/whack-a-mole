@@ -146,12 +146,26 @@
         <!-- ScoreBoard -->
         <section class="score-board" id="score">
           <h2>Score</h2>
-          <h2 class="score">0</h2>
+          <p>
+          Your score is :<span class="score">0</span>
+            <img
+              src="assets/images/leaf.png"
+              alt="leaf picture"
+          />
+          </p>
         </section>
-      </main>
 
       <!-- Overlay Part -->
       <div class="overlay hidden"></div>
+
+      <!-- Game Over Effect -->
+      <div class="game-over">
+        <div class="game-over-box">
+          <h1>Game Over</h1>
+          <h2>Your Score is: <span class="score"></span></h2>
+          <button class="play-game-again">Play Again</button>
+        </div>
+      </div>
 
       <!-- Footer -->
 
@@ -194,15 +208,6 @@
           </div>
         </div>
       </footer>
-
-      <!-- Game Over Effect -->
-      <div class="game-over">
-        <div class="game-over-box">
-          <h1>Game Over</h1>
-          <h2>Your Score is: <span class="score"></span></h2>
-          <button class="play-game-again">Play Again</button>
-        </div>
-      </div>
 
       <!-- Music -->
       <audio class="audio" src="assets/music/Wallpaper.mp3" loop></audio>

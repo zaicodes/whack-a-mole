@@ -6,7 +6,7 @@
 
 ## Project Goals
 
-This project aims at creating an interactive website where the user is able to play a fun yet challenging puzzle game called Whack A Mole.
+This project aims at creating an interactive website where the user is able to play a fun yet challenging game called Whack A Mole.
 
 ### Initial discussion
 
@@ -17,7 +17,7 @@ The game is designed to provide an interactive experience through the use of Jav
 
 - Intuitive Gameplay: The user can tap or click to whack moles and navigate around rabbits. The controls are simple and responsive, making it easy for players of all ages to enjoy.
 
-- Sound Settings: Users can adjust the game's soundscape with the music button. Play, pause, or stop the background music as they prefer.
+- Sound Settings: Users can adjust the game's soundscape with the music button. Play or stop the background music as they prefer.
 
 - Instructions: The game has an instruction button which offers clear guidance on how to play, ensuring a smooth start for everyone. There are three ways to close it: an x button, play button as well as the escape button from keyboard.
 
@@ -56,7 +56,7 @@ Psychographics:
 
 - Players are presented with the choice of striking either a mole or a rabbit on the game-board. Whacking a mole rewards them with 10 points, while accidentally hitting a rabbit results in an immediate game over.
 
-- Users have the ability to customise the auditory environment using the music button. They can effortlessly play, pause, or even stop the background music according to their personal preference.
+- Users have the ability to customise the auditory environment using the music button. They can effortlessly play or stop the background music according to their personal preference.
 
 - The game clearly communicate how to play the game through the instructions section. Users can close the instruction window using three methods: clicking the 'x' button located in the top-right corner, clicking the 'play game' button, or pressing the 'escape' key on the keyboard.
 
@@ -83,6 +83,29 @@ I used three fonts for this project:
 - Leckerli One, for the logo.
 - Handjet, for the buttons.
 - Sans-serif for the rest of text in body.
+
+### Images and Background
+
+- The background of leaves was picked to give a feeling of a simple cartoonish and nature vibe. This choice aligns with the game's concept, as the mole's holes are naturally found in soil. The background seamlessly complements the gameplay while incorporating white spaces strategically to avoid overwhelming/distracting users.
+
+- Other in-game images were also chosen for their simplicity and cartoon-inspired aesthetic. These visuals introduce a touch of uplifting emotional response that resonates both with children and adults, maintaining a level of appeal across ages.
+
+- For references of these images can be found in credits below.
+
+### Style
+
+- The style I chose is very minimalistic with an emphasis on clean design and simplicity. There are wide usage of white spaces.
+- To maintain the child-friendly theme, I incorporated rounded corners for boxes and containers, mirroring the corners found in many real-life memory cards designed for children. Consistently applying this rounded corner pattern across the page ensures design harmony and a cohesive look that ties all elements together seamlessly.
+
+### Icons
+
+- Each icon was deliberately chosen based on its clear and intuitive meaning, ensuring universal understanding for all users.
+
+### Sound effects and music
+
+- To further capture the essence of a children's game, I incorporated button click sounds reminiscent of those found in physical toys.
+- This addition aims to evoke a sense of familiarity and playfulness, enhancing the overall experience.
+- Furthermore, when interacting with the moles, a distinct hammer hitting sound confirms accurate clicks on the intended target. Conversely, clicking on the incorrect area, symbolized by the rabbit, triggers a losing sound effect, indicating an unsuccessful move.
 
 ## Features
 
@@ -166,6 +189,7 @@ To clone the Whack-a-Mole repository:
 ### Media
 
 Images:
+
 The images used in this project are from the following links:
 
 - [Soil-and-Holes](https://www.freepik.com/free-photos-vectors/soil-cartoon)
@@ -173,9 +197,12 @@ The images used in this project are from the following links:
 - [Mole](https://www.pngwing.com/en/free-png-twlbm)
 - [Rabbit](https://www.pngwing.com/en/free-png-bppwo)
 - [Hammer](https://www.pngwing.com/en/free-png-zybiy)
+- [Leaf](https://pngtree.com/freepng/green-dewy-cartoon-leaves_4283695.html)
 
-Music:
-The music used in the game is by [Wallpaper-by-Kevin-MacLeod](https://www.chosic.com/download-audio/45420/)
+Music and sound:
+
+- [Music](https://www.chosic.com/download-audio/45420/)
+- [Sound effects](https://pixabay.com/sound-effects/)
 
 ### Acknowledgements
 
@@ -186,3 +213,5 @@ I wish to express profound gratitude to those who offered their invaluable assis
 - Peter W. – for the weekly stand-ups which were very helpful and informative.
 
 - Asim S. (Preply) – an online tutor, who helped me learn how to code and develop this skill (highly recommend him).
+
+- Harry (CI mentor) and Alita (my fellow CI student) - for helping me fix images file paths from absolute to relative.
