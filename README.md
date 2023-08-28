@@ -68,9 +68,15 @@ Psychographics:
 
 ### Wireframes
 
-![Home](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/Home.png)
+- [Username](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/wireframes/Username.png)
 
-![Instructions](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/Instructions.png)
+- [Difficulty](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/wireframes/Diffiuclty.png)
+
+- [Instructions](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/wireframes/Instructions%20Modal.png)
+
+- [Game area - Main](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/wireframes/Game%20area%20-%20Main.png)
+
+- [Game Over](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/wireframes/Game%20Over.png)
 
 ### Colour Scheme
 
