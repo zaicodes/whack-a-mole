@@ -156,12 +156,12 @@ To view testing click [here](https://github.com/zaicodes/whack-a-mole/blob/main/
 
 Github Pages was used to deploy the live website. The instructions to achieve this are below:
 
-Log in (or sign up) to Github.
-Find the repository for this project, Beyond-Photos-Photography.
-Click on the Settings link.
-Click on the Pages link in the left hand side navigation bar.
-In the Source section, choose main from the drop down select branch menu. Select Root from the drop down select folder menu.
-Click Save. Your live Github Pages site is now deployed at the URL shown.
+- Log in (or sign up) to Github.
+  Find the repository for this project, Whack-a-Mole.
+- Click on the Settings link.
+- Click on the Pages link in the left hand side navigation bar.
+- In the Source section, choose main from the drop down select branch menu. Select Root from the drop down select folder menu.
+- Click Save. Your live Github Pages site is now deployed at the URL shown.
 
 You can visit the live website here [Link]
 
@@ -189,7 +189,8 @@ To clone the Whack-a-Mole repository:
 
 ### Code
 
-- The game was inspired by [this-YouTube-video](https://www.youtube.com/watch?v=ej8SatOj3V4)
+- The game was inspired by [this-YouTube-video](https://www.youtube.com/watch?v=ej8SatOj3V4) but the entire code is created by me.
+
 - buttons: Buttons used in this project is from [here](https://uiverse.io/xueyuantan/rotten-pig-19)
 
 ### Content
