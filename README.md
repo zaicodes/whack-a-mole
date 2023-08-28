@@ -80,6 +80,10 @@ Psychographics:
 
 ### Colour Scheme
 
+- The game's color palette is derived from nature's own hues, encompassing tones of greens and vibrant red.
+- Black typography to ensures readability, while white spaces create a balanced visual experience.
+- Buttons are adorned with a clean white with hover effect created of green tones, contributing to the overall harmonious design.
+
 ![Colour Palette](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/colour-palette.png)
 
 ### Typography
