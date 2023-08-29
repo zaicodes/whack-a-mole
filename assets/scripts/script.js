@@ -110,7 +110,7 @@ function hidDifficultyButtons() {
 }
 
 // Music control settings //
-musicButton.addEventListener("click", () => {
+function PlayMusic() {
   if (audio.paused) {
     audio.volume = 0.2;
     audio.play();
@@ -121,7 +121,11 @@ musicButton.addEventListener("click", () => {
     musicButton.innerHTML =
       '<i class="fa fa-music" aria-hidden="true"></i> Play Music';
   }
-});
+}
+musicButton.addEventListener("click", PlayMusic);
+window.onload = function (params) {
+  PlayMusic();
+};
 
 // modal instructions //
 function instructionList() {
