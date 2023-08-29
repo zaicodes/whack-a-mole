@@ -1,8 +1,8 @@
 # whack-a-mole - Milestone Project 2
 
-[Live link to website](link)
+![Am-I-responsive](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/amiresponsive.png)
 
-![Am-I-responsive](link)
+[Live link to website](https://zaicodes.github.io/whack-a-mole/)
 
 ## Project Goals
 
