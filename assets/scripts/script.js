@@ -80,22 +80,22 @@ reset.addEventListener("click", gameRefreshed);
 // Easy
 easyButton.addEventListener("click", function () {
   hidDifficultyButtons();
-  setInterval(createMole, 1500);
-  setInterval(createRabbit, 3000);
+  setInterval(createMole, 1300);
+  setInterval(createRabbit, 1400);
 });
 
 // Medium
 mediumButton.addEventListener("click", function () {
   hidDifficultyButtons();
-  setInterval(createMole, 1000);
-  setInterval(createRabbit, 1500);
+  setInterval(createMole, 900);
+  setInterval(createRabbit, 1000);
 });
 
 // Hard
 hardButton.addEventListener("click", function () {
   hidDifficultyButtons();
-  setInterval(createMole, 900);
-  setInterval(createRabbit, 2000);
+  setInterval(createMole, 500);
+  setInterval(createRabbit, 700);
 });
 
 // Hide buttons once
