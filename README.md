@@ -207,7 +207,7 @@ The images used in this project are from the following links:
 - [Background](https://www.freepik.com/free-photos-vectors/green-white-background)
 - [Mole](https://www.pngwing.com/en/free-png-twlbm)
 - [Rabbit](https://www.pngwing.com/en/free-png-bppwo)
-- [Hammer](https://www.pngwing.com/en/free-png-zybiy)
+- [Hammer](https://icons8.com/icons/set/hammer)
 - [Leaf](https://pngtree.com/freepng/green-dewy-cartoon-leaves_4283695.html)
 
 Music and sound:

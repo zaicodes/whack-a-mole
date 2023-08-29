@@ -265,6 +265,7 @@ input::placeholder {
 }
 
 .board {
+  cursor: url("../images/hammer.png"), auto;
   width: 590px;
   height: 420px;
   background-image: url("../images/soil.webp");
