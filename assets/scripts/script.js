@@ -115,7 +115,7 @@ function PlayMusic() {
     audio.volume = 0.2;
     audio.play();
     musicButton.innerHTML =
-      '<i class="fa fa-stop" aria-hidden="true"></i> Pause Music';
+      '<i class="fa fa-stop" aria-hidden="true"></i> Stop Music';
   } else {
     audio.pause();
     musicButton.innerHTML =
