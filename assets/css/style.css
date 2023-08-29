@@ -484,11 +484,6 @@ input::placeholder {
   align-items: center;
   flex-direction: column;
 }
-.score-board h2 {
-  font-family: "handjet";
-  font-size: 3.5rem;
-  margin-top: 20px;
-}
 
 .score-board img {
   width: 70px;
