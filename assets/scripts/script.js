@@ -26,6 +26,7 @@ let currMoleHole;
 let currRabbitHole;
 let score = 0;
 let gameOver = false;
+let moleClicked = false;
 
 // Username in the localStorage
 saveButton.addEventListener("click", function () {
@@ -209,14 +210,23 @@ function createRabbit() {
 // Score
 function selectMole() {
   if (this == currMoleHole) {
-    score += 10;
-    var scoreElements = document.querySelectorAll(".score");
+    if (!moleClicked) {
+      moleClicked = true;
+      score += 10;
+      var scoreElements = document.querySelectorAll(".score");
+      for (var i = 0; i < scoreElements.length; i++) {
+        scoreElements[i].innerHTML = score.toString();
+      }
 
-    for (var i = 0; i < scoreElements.length; i++) {
-      scoreElements[i].innerHTML = score.toString();
+      hitMoleSound.play();
+
+      this.removeEventListener("click", selectMole);
+
+      setTimeout(() => {
+        this.addEventListener("click", selectMole);
+        moleClicked = false;
+      }, 1000);
     }
-
-    hitMoleSound.play();
   } else if (this == currRabbitHole) {
     document.querySelector(".score").innerHTML = "Game Over" + score.toString();
     gameOver = true;
