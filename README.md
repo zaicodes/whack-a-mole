@@ -133,7 +133,6 @@ I used three fonts for this project:
 
 ### Libraries and frameworks
 
-- Bootstrap 5 - CSS framework.
 - Git - for version control.
 - Gihub - to store the project's code after being pushed from Git.
 - Visual Studio Code - to code my project
