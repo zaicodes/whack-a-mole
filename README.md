@@ -1,5 +1,7 @@
 # whack-a-mole - Milestone Project 2
 
+![Logo](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/logo.png)
+
 ![Am-I-responsive](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/amiresponsive.png)
 
 [Live link to website](https://zaicodes.github.io/whack-a-mole/)
