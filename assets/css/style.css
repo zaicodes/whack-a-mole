@@ -86,7 +86,7 @@ input::placeholder {
   color: green;
 }
 
-#saveButton {
+.btn {
   background-color: white;
   display: block;
   margin: 10px auto;
@@ -106,7 +106,7 @@ input::placeholder {
   cursor: pointer;
 }
 
-#saveButton::before {
+.btn::before {
   content: "";
   width: 0;
   height: 2em;
@@ -120,7 +120,7 @@ input::placeholder {
   z-index: -1;
 }
 
-#saveButton:hover::before {
+.btn:hover::before {
   width: 9em;
 }
 
@@ -135,6 +135,28 @@ input::placeholder {
 
 #savedNameDisplay {
   color: green;
+}
+
+.difficulty-main {
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 50px;
+  border: 3px solid #f2f2f2;
+  border-radius: 40px;
+  box-shadow: 6px 6px 12px #505050;
+  text-align: center;
+}
+
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.difficulty {
+  font-size: 2.5rem;
 }
 
 /* Game Settings */
@@ -197,71 +219,6 @@ input::placeholder {
   grid-template-columns: 1fr;
   gap: 20px;
   place-items: center;
-}
-
-.difficulty-main {
-  background-color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 50px;
-  border: 3px solid #f2f2f2;
-  border-radius: 40px;
-  box-shadow: 6px 6px 12px #505050;
-  text-align: center;
-}
-
-.btns {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.difficulty {
-  font-size: 2.5rem;
-}
-
-.difficulty-button {
-  margin: 20px;
-  background-color: white;
-  width: 9em;
-  height: 3em;
-  border-radius: 30em;
-  border: none;
-  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  text-transform: uppercase;
-  font-size: 18px;
-  font-weight: bold;
-  font-family: "Handjet";
-  padding-top: 20px;
-  text-align: center;
-  cursor: pointer;
-}
-
-.difficulty-button i {
-  margin-right: 10px;
-}
-
-/* Button Colours*/
-.difficulty-button::before {
-  content: "";
-  width: 0;
-  height: 3em;
-  border-radius: 30em;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
-  transition: 0.5s ease;
-  display: block;
-  z-index: -1;
-}
-
-.difficulty-button:hover::before {
-  width: 9em;
 }
 
 .board {
@@ -354,43 +311,6 @@ input::placeholder {
   cursor: pointer;
 }
 
-/* close the instructions - play button */
-
-.close-button {
-  width: 9em;
-  height: 3em;
-  border-radius: 30em;
-  border: none;
-  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  text-transform: uppercase;
-  font-size: 20px;
-  font-weight: bolder;
-  font-family: "Handjet";
-  cursor: pointer;
-}
-
-/* Play Button colours*/
-
-.close-button::before {
-  content: "";
-  width: 0;
-  height: 3em;
-  border-radius: 30em;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
-  transition: 0.5s ease;
-  display: block;
-  z-index: -1;
-}
-
-.close-button:hover::before {
-  width: 9em;
-}
 .play-game {
   text-align: center;
 }
@@ -439,37 +359,6 @@ input::placeholder {
   text-align: center;
   color: #a00;
   margin: 40px 0;
-}
-
-.play-game-again {
-  background-color: white;
-  width: 9em;
-  height: 3em;
-  border-radius: 30em;
-  border: none;
-  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
-  position: relative;
-  overflow: hidden;
-  text-transform: uppercase;
-  font-size: 18px;
-  font-weight: bold;
-  font-family: "Handjet";
-  cursor: pointer;
-  z-index: 1;
-}
-
-.play-game-again::before {
-  content: "";
-  width: 0;
-  height: 3em;
-  border-radius: 30em;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
-  transition: 0.5s ease;
-  display: block;
-  z-index: -1;
 }
 
 .play-game-again:hover::before {
@@ -527,9 +416,6 @@ input::placeholder {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.footer-left {
 }
 
 .footer-left h1 {
