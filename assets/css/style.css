@@ -306,12 +306,12 @@ input::placeholder {
   margin: 20px auto;
   padding: 30px;
 }
-.modal h1 {
+.modal h2 {
   text-align: center;
   font-size: 3.5rem;
 }
 
-.modal h2 {
+.modal h3 {
   font-family: "Handjet";
   font-size: 2.5rem;
   letter-spacing: 2px;
