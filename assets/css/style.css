@@ -86,6 +86,8 @@ input::placeholder {
   color: green;
 }
 
+/* Buttons */
+
 .btn {
   background-color: white;
   display: block;
@@ -124,6 +126,16 @@ input::placeholder {
   width: 9em;
 }
 
+.btns .btn {
+  padding: 15px;
+  width: 5.5em;
+  height: 2.5em;
+}
+
+.btns .btn::before {
+  height: 2.5em;
+}
+
 .form p {
   font-size: 17px;
   margin: 10px 0;
@@ -153,6 +165,7 @@ input::placeholder {
 .btns {
   display: flex;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
 .difficulty {
@@ -297,6 +310,15 @@ input::placeholder {
   margin: 10px 0;
 }
 
+.play-game .btn {
+  width: 7em;
+  height: 3em;
+}
+
+.play-game .btn:before {
+  height: 3em;
+}
+
 /* closing the instructions - x button*/
 
 .close {
@@ -361,8 +383,13 @@ input::placeholder {
   margin: 40px 0;
 }
 
-.play-game-again:hover::before {
-  width: 9em;
+.game-over .btn {
+  width: 7em;
+  height: 3em;
+}
+
+.game-over .btn:before {
+  height: 3em;
 }
 
 /* Scoreboard */
