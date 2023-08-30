@@ -113,7 +113,7 @@ function hidDifficultyButtons() {
 function PlayMusic() {
   if (audio.paused) {
     audio.volume = 0.2;
-    audio.play();
+    // audio.play();
     musicButton.innerHTML =
       '<i class="fa fa-stop" aria-hidden="true"></i> Stop Music';
   } else {
