@@ -1,7 +1,7 @@
 # whack-a-mole - Testing
 
-[Visit Live Game Here!](link)
-[Main READ ME FILE Here](link)
+[Visit Live Game Here!](https://zaicodes.github.io/whack-a-mole/)
+[Main READ ME FILE Here](https://github.com/zaicodes/whack-a-mole)
 
 ## Table of Contents
 
@@ -13,9 +13,23 @@
 
 ## testing using other screen size devices
 
+## Validator
+
+## Lighthouse
+
+### Initial lighthouse results
+
+### Current lighthouse results
+
 ## Bugs discovered
 
 ### Solved bugs
+
+#### Mentor sessions
+
+#### Code review
+
+#### Other bugs found
 
 ### Unsolved bugs
 
