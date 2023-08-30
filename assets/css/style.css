@@ -403,6 +403,7 @@ input::placeholder {
 
 .score-board img {
   width: 70px;
+  height: auto;
 }
 
 .score-board .score {
