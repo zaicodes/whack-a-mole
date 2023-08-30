@@ -54,6 +54,7 @@ header a {
 }
 
 /* Input Section */
+
 .form {
   z-index: 2;
   background-color: white;
@@ -66,6 +67,7 @@ header a {
   transform: translate(-50%, -50%);
   border-radius: 40px;
 }
+
 .form input {
   text-transform: capitalize;
   padding: 10px 10px;
@@ -79,11 +81,22 @@ header a {
   font-family: "Handjet";
   letter-spacing: 1px;
 }
+
 .form input:focus {
   color: #aa0000;
 }
+
 input::placeholder {
   color: green;
+}
+
+.form div {
+  font-size: 3rem;
+  color: #aa0000;
+  padding: 10px;
+  text-align: center;
+  font-family: "Handjet";
+  letter-spacing: 3px;
 }
 
 /* Buttons */
