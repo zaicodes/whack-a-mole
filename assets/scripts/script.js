@@ -11,7 +11,6 @@ const easyButton = document.querySelector(".easy-button");
 const mediumButton = document.querySelector(".medium-button");
 const hardButton = document.querySelector(".hard-button");
 const reset = document.getElementById("reset-button");
-let board = document.querySelector(".board");
 const userName = document.getElementById("userName");
 const saveButton = document.getElementById("saveButton");
 const savedNameDisplay = document.getElementById("savedNameDisplay");
@@ -21,7 +20,9 @@ const hitMoleSound = document.querySelector(".hit-mole-sound");
 const failSound = document.querySelector(".fail-sound");
 const gameOverEffect = document.querySelector(".game-over");
 const gameOverBox = document.querySelector(".game-over-box");
-const playGameAgain = document.querySelector(".play-game-again");
+const playGameAgain = document.querySelectorAll(".play-game-again");
+const gameWin = document.getElementById("celebration");
+let board = document.querySelector(".board");
 let currMoleHole;
 let currRabbitHole;
 let score = 0;
@@ -82,6 +83,7 @@ easyButton.addEventListener("click", function () {
   hidDifficultyButtons();
   setInterval(createMole, 1300);
   setInterval(createRabbit, 1400);
+  setInterval(showCelebration, 30000);
 });
 
 // Medium
@@ -89,6 +91,7 @@ mediumButton.addEventListener("click", function () {
   hidDifficultyButtons();
   setInterval(createMole, 900);
   setInterval(createRabbit, 1000);
+  setInterval(showCelebration, 30000);
 });
 
 // Hard
@@ -96,6 +99,7 @@ hardButton.addEventListener("click", function () {
   hidDifficultyButtons();
   setInterval(createMole, 500);
   setInterval(createRabbit, 700);
+  setInterval(showCelebration, 30000);
 });
 
 // Hide buttons once
@@ -232,7 +236,7 @@ function selectMole() {
       }, 1000);
     }
   } else if (this == currRabbitHole) {
-    document.querySelector(".score").innerHTML = "Game Over" + score.toString();
+    document.querySelector(".score").innerHTML = score.toString();
     gameOver = true;
     failSound.play();
     gameOverEffect.classList.add("effect");
@@ -240,11 +244,29 @@ function selectMole() {
   }
 }
 
+// Game Over
 gameOverBox.style = "display: none";
 
-playGameAgain.addEventListener("click", function () {
+// Play game again button
+function playAgain() {
   location.reload();
+}
+playGameAgain.forEach(function (button) {
+  button.addEventListener("click", playAgain);
 });
+
+// Game Win
+const showCelebration = function () {
+  if (score >= 10) {
+    console.log(score);
+    gameWin.classList.remove("hidden");
+  } else {
+    gameOverEffect.classList.add("effect");
+    gameOverBox.style = "display: block";
+  }
+};
+
+// Event Listeners
 
 close.addEventListener("click", closeInstruction);
 instructionButtons.addEventListener("click", instructionList);
