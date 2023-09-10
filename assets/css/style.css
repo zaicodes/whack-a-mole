@@ -163,6 +163,7 @@ input::placeholder {
 }
 
 .difficulty-main {
+  z-index: 1;
   background-color: white;
   position: absolute;
   top: 50%;
