@@ -18,7 +18,6 @@ html {
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
-  height: auto;
   padding-top: 20px;
   font-family: sans-serif;
 }
@@ -34,7 +33,7 @@ header h1 {
   text-shadow: 2px 2px 0px #ffffff;
   animation: glowAnimation 2s infinite;
   margin-bottom: 20px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 @keyframes glowAnimation {
@@ -62,9 +61,7 @@ header a {
   margin: auto;
   padding: 50px;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 200px;
   border-radius: 40px;
 }
 
@@ -166,9 +163,7 @@ input::placeholder {
   z-index: 1;
   background-color: white;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 200px;
   padding: 50px;
   border: 3px solid #f2f2f2;
   border-radius: 40px;
@@ -190,10 +185,11 @@ input::placeholder {
 
 .game-settings {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
   margin-bottom: 7px;
-  margin-top: -30px;
+  margin-top: 20px;
 }
 
 .index {
@@ -242,6 +238,7 @@ input::placeholder {
 /* Main game area - Soil and Holes */
 
 .game-board {
+  margin: 20px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
@@ -250,8 +247,8 @@ input::placeholder {
 
 .board {
   cursor: url("../images/hammer.png"), auto;
-  width: 590px;
-  height: 420px;
+  max-width: 590px;
+  /* height: 420px; */
   background-image: url("../images/soil.webp");
   display: flex;
   flex-wrap: wrap;
@@ -456,6 +453,8 @@ input::placeholder {
 
 .footer-content {
   display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
   justify-content: space-between;
   align-items: center;
 }
@@ -493,7 +492,6 @@ input::placeholder {
 }
 
 .footer-right {
-  padding-right: 90px;
   text-decoration: none;
 }
 
