@@ -266,6 +266,11 @@ const showCelebration = function () {
   }
 };
 
+// Overlay height
+window.addEventListener("resize", function () {
+  overlay.style.height = window.innerHeight + "px";
+});
+
 // Event Listeners
 
 close.addEventListener("click", closeInstruction);

@@ -1,6 +1,51 @@
 /* Media Queries */
-@media (max-width: 900px) {
+@media (max-width: 920px) {
+  .footer-container {
+    background-color: #ffffffc7;
+    transition: 0.5s;
+    margin-top: 80px;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media (max-width: 820px) {
   .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
     justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 760px) {
+  .footer-container {
+    background-color: #ffffffc7;
+    transition: 0.5s;
+    margin-top: 80px;
+    position: relative;
+    bottom: 0;
+  }
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .board div {
+    width: 120px;
+    height: 80px;
+  }
+  /* Mole & Rabbit */
+
+  .board div img {
+    /* all img tags inside tiles */
+    width: 60px;
+    height: 60px;
   }
 }

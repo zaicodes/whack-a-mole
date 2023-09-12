@@ -62,127 +62,128 @@
   </head>
 
   <body>
-    <div class="body">
-      <!-- Header -->
-      <header>
-        <a href="index.html"><h1>Whack a Mole!</h1></a>
-      </header>
+    <!-- Header -->
+    <header>
+      <a href="index.html"><h1>Whack a Mole!</h1></a>
+    </header>
 
-      <!-- Game Area -->
-      <main class="game-area">
-        <!-- Settings -->
-        <div>
-          <div class="game-settings">
-            <button class="settings-button index" id="music-button">
-              <i class="fa fa-music" aria-hidden="true"></i>Play Music
-            </button>
-            <button class="settings-button index" id="instructions-button">
-              <i class="fa fa-commenting" aria-hidden="true"></i>
-              Instructions
-            </button>
-            <button class="settings-button index" id="reset-button">
-              <i class="fa fa-repeat" aria-hidden="true"></i>Reset
-            </button>
-          </div>
+    <!-- Game Area -->
+    <main class="game-area">
+      <!-- Settings -->
+      <div>
+        <div class="game-settings">
+          <button class="settings-button index" id="music-button">
+            <i class="fa fa-music" aria-hidden="true"></i>Play Music
+          </button>
+          <button class="settings-button index" id="instructions-button">
+            <i class="fa fa-commenting" aria-hidden="true"></i>
+            Instructions
+          </button>
+          <button class="settings-button index" id="reset-button">
+            <i class="fa fa-repeat" aria-hidden="true"></i>Reset
+          </button>
         </div>
+      </div>
 
-        <!--Modal instructions box-->
-        <aside class="instruction-box">
-          <div class="modal hidden">
-            <div class="modal-content">
-              <h2>Welcome to Whack A Mole</h2>
-              <div class="close">X</div>
-              <h3>Objectives:</h3>
-              <p>
-                In this game, your goal is to score points by hitting moles that
-                pop up from holes. Each successful mole hit earns you 5 points.
-              </p>
-              <h3>Avoid Hitting Rabbits:</h3>
-              <p>
-                Avoid clicking on rabbits, as hitting them will reduce your
-                score and end the game. The game lasts for 30 seconds.
-              </p>
+      <!--Modal instructions box-->
+      <aside class="instruction-box">
+        <div class="modal hidden">
+          <div class="modal-content">
+            <h2>Welcome to Whack A Mole</h2>
+            <div class="close">X</div>
+            <h3>Objectives:</h3>
+            <p>
+              In this game, your goal is to score points by hitting moles that
+              pop up from holes. Each successful mole hit earns you 5 points.
+            </p>
+            <h3>Avoid Hitting Rabbits:</h3>
+            <p>
+              Avoid clicking on rabbits, as hitting them will reduce your score
+              and end the game. The game lasts for 30 seconds.
+            </p>
 
-              <p>Whack moles, avoid rabbits, and aim for the highest score.</p>
-              <p>
-                Hit the reset button to restart the game at any point and the
-                play/stop music button to control music. If you need a refresh
-                on the rules, then click the instructions button.
-              </p>
-              <h3>Tips:</h3>
-              <p>
-                Stay focused, click quickly for moles, and refrain from clicking
-                rabbits to maximize your score.
-              </p>
-              <div class="play-game">
-                <button class="close-button btn">Play Game</button>
-              </div>
+            <p>Whack moles, avoid rabbits, and aim for the highest score.</p>
+            <p>
+              Hit the reset button to restart the game at any point and the
+              play/stop music button to control music. If you need a refresh on
+              the rules, then click the instructions button.
+            </p>
+            <h3>Tips:</h3>
+            <p>
+              Stay focused, click quickly for moles, and refrain from clicking
+              rabbits to maximize your score.
+            </p>
+            <div class="play-game">
+              <button class="close-button btn">Play Game</button>
             </div>
           </div>
-        </aside>
+        </div>
+      </aside>
 
-        <!-- Game Board -->
-        <div class="game-board">
-          <div class="difficulty-main">
-            <h2 class="difficulty">Difficulty</h2>
-            <div class="btns">
-              <div class="btn easy-button">Easy</div>
-              <div class="btn medium-button">Medium</div>
-              <div class="btn hard-button">Hard</div>
-            </div>
-          </div>
-          <div class="board"></div>
-
-          <!-- Username Savage-->
-          <div class="form">
-            <div>Welcome!</div>
-            <input
-              type="text"
-              id="userName"
-              placeholder="Enter your name"
-              required
-            />
-            <button id="saveButton" class="btn" type="submit">Save</button>
-            <p>Your saved name is : <span id="savedNameDisplay"></span></p>
+      <!-- Game Board -->
+      <div class="game-board">
+        <div class="difficulty-main">
+          <h2 class="difficulty">Difficulty</h2>
+          <div class="btns">
+            <div class="btn easy-button">Easy</div>
+            <div class="btn medium-button">Medium</div>
+            <div class="btn hard-button">Hard</div>
           </div>
         </div>
+        <div class="board"></div>
+        <!-- Username Savage-->
 
-        <!-- ScoreBoard -->
-        <div class="score-board" id="score">
-          <p>
-            Your score is : <span class="score">0</span>
-            <img src="assets/images/leaf.webp" alt="leaf picture" />
-          </p>
+        <div class="form">
+          <div>Welcome!</div>
+          <input
+            type="text"
+            id="userName"
+            placeholder="Enter your name"
+            required
+          />
+          <button id="saveButton" class="btn" type="submit">Save</button>
+          <p>Your saved name is : <span id="savedNameDisplay"></span></p>
         </div>
-      </main>
+      </div>
 
-      <!-- Overlay Part -->
-      <div class="overlay hidden"></div>
+      <!-- ScoreBoard -->
+      <div class="score-board" id="score">
+        <p>
+          Your score is : <span class="score">0</span>
+          <img src="assets/images/leaf.webp" alt="leaf picture" />
+        </p>
+      </div>
+    </main>
 
-      <!-- Game Over Effect -->
-      <div class="game-over">
+    <!-- Overlay Part -->
+    <div class="overlay hidden"></div>
+
+    <!-- Game Over Effect -->
+    <div class="game-over">
+      <div class="game-over-box">
+        <h1>Game Over!</h1>
+        <h2>Your score is : <span class="score"> 0 </span></h2>
+        <button class="play-game-again btn">Play Again</button>
+      </div>
+    </div>
+
+    <!-- Game Win Effect -->
+
+    <div id="celebration" class="hidden">
+      <div class="game-over effect">
         <div class="game-over-box">
-          <h1>Game Over!</h1>
+          <h1>You Won!</h1>
           <h2>Your score is : <span class="score"> 0 </span></h2>
           <button class="play-game-again btn">Play Again</button>
         </div>
       </div>
+    </div>
 
-      <!-- Game Win Effect -->
+    <!-- Footer -->
 
-      <div id="celebration" class="hidden">
-        <div class="game-over effect">
-          <div class="game-over-box">
-            <h1>You Won!</h1>
-            <h2>Your score is : <span class="score"> 0 </span></h2>
-            <button class="play-game-again btn">Play Again</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Footer -->
-
-      <footer class="footer-container">
+    <footer class="footer-container animationupside">
+      <button class="btn-pullup">Pull up</button>
+      <div class="container">
         <div class="footer-content">
           <div class="footer-left">
             <a href="index.html"><h1>Whack a Mole!</h1></a>
@@ -240,13 +241,13 @@
             </ul>
           </div>
         </div>
-      </footer>
+      </div>
+    </footer>
 
-      <!-- Music -->
-      <audio class="audio" src="assets/music/Wallpaper.mp3" loop></audio>
-      <audio class="hit-mole-sound" src="assets/music/hit-mole.mp3"></audio>
-      <audio class="fail-sound" src="assets/music/fail.mp3"></audio>
-    </div>
+    <!-- Music -->
+    <audio class="audio" src="assets/music/Wallpaper.mp3" loop></audio>
+    <audio class="hit-mole-sound" src="assets/music/hit-mole.mp3"></audio>
+    <audio class="fail-sound" src="assets/music/fail.mp3"></audio>
 
     <!-- JavaScript File -->
     <script src="assets/scripts/script.js"></script>
