@@ -417,7 +417,11 @@ input::placeholder {
   margin: auto;
   border-top-left-radius: 100px;
   border-bottom-right-radius: 100px;
-  background-color: rgba(69, 150, 2, 0.907);
+  background-image: linear-gradient(
+    to right,
+    rgb(62, 130, 5) 0%,
+    rgb(171, 224, 81) 100%
+  );
 }
 
 .score-board img {
