@@ -219,6 +219,7 @@ input::placeholder {
 }
 
 /* Button Colours*/
+
 .settings-button::before {
   content: "";
   width: 0;
@@ -250,7 +251,6 @@ input::placeholder {
 .board {
   cursor: url("../images/hammer.png"), auto;
   max-width: 590px;
-  /* height: 420px; */
   background-image: url("../images/soil.webp");
   display: flex;
   flex-wrap: wrap;
@@ -363,7 +363,7 @@ input::placeholder {
   top: 0;
   left: 0;
   backdrop-filter: blur(10px);
-  z-index: 1; /* Adjust the z-index to make sure it's above other content */
+  z-index: 1;
 }
 
 .game-over-box {
@@ -447,24 +447,7 @@ input::placeholder {
 }
 
 /* Footer */
-/* .btn-pullup {
-  padding: 12px 18px;
-  border: none;
-  border-radius: 5px;
-  background-color: rgb(108, 117, 125);
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  position: absolute;
-  right: 80px;
-  top: -40px;
-  } */
 
-/* .animationupside {
-  position: relative;
-  transform: translateY(300px);
-  transition: all 0.5s;
-  } */
 .footer-container {
   background-color: #ffffffc7;
   transition: 0.5s;
