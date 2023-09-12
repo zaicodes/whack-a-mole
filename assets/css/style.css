@@ -413,6 +413,11 @@ input::placeholder {
   display: flex;
   align-items: center;
   flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  background-color: rgba(69, 150, 2, 0.907);
 }
 
 .score-board img {
@@ -425,10 +430,13 @@ input::placeholder {
   top: 20px;
 }
 .score-board span {
-  color: rgb(0, 0, 0);
+  font-weight: 700;
+  font-family: sans-serif;
+  color: rgb(255, 255, 255);
 }
 .score-board p {
   position: relative;
+  color: #ffffff;
   font-size: 30px;
   font-family: "Handjet";
 }
