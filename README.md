@@ -194,6 +194,8 @@ To clone the Whack-a-Mole repository:
 
 - buttons: Buttons used in this project is from [here](https://uiverse.io/xueyuantan/rotten-pig-19)
 
+- Celebration effect: the code used in celebration effect is from [here](https://www.codehim.com/animation-effects/javascript-confetti-explosion-effect/)
+
 ### Content
 
 - The website's textual content has been written by me.
