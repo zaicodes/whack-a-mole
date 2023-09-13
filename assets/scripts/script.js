@@ -257,11 +257,11 @@ playGameAgain.forEach(function (button) {
 
 // Game Win
 const showCelebration = function () {
-  if (score >= 10) {
+  if (!gameOver && score >= 10) {
     console.log(score);
     gameWin.classList.remove("hidden");
     document.querySelector("canvas").classList.remove("hidden");
-  } else {
+  } else if (gameOver) {
     gameOverEffect.classList.add("effect");
     gameOverBox.style = "display: block";
   }
