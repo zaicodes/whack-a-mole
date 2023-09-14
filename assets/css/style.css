@@ -471,8 +471,8 @@ input::placeholder {
 .footer-container {
   background-color: #ffffffc7;
   transition: 0.5s;
-  margin-top: 80px;
 }
+
 .container {
   padding: 40px 20px;
   margin: auto;
@@ -536,4 +536,28 @@ li {
   font-size: 2rem;
   color: green;
   margin-right: 1.5rem;
+}
+
+/* Footer Pull-up feature */
+.btn-pullup {
+  display: flex;
+  justify-content: right;
+  margin: 0 60px;
+}
+.btn-pullup button {
+  background-image: linear-gradient(
+    to right,
+    rgb(62, 130, 5) 0%,
+    rgb(171, 224, 81) 100%
+  );
+  color: white;
+  font-family: "Handjet";
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: none;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px black;
 }

@@ -400,8 +400,21 @@ window.addEventListener("resize", function () {
 window.addEventListener("click", function () {
   initConfetti();
 });
-
 // End of Celebration Effect
+
+// Footer Pull-up feature
+document.querySelector(".pull").addEventListener("click", () => {
+  const footerContainer = document.querySelector(".footer-container");
+  footerContainer.classList.toggle("hidden");
+
+  if (footerContainer.classList.contains("hidden")) {
+    document.querySelector(".pull").innerHTML = "PULL UP ⬆";
+    document.querySelector(".pull").style = "transform:translateY(0px)";
+  } else {
+    document.querySelector(".pull").innerHTML = "PUSH DOWN ⬇";
+    document.querySelector(".pull").style = "transform:translateY(0px)";
+  }
+});
 
 close.addEventListener("click", closeInstruction);
 instructionButtons.addEventListener("click", instructionList);
