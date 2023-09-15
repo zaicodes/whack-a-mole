@@ -409,10 +409,10 @@ document.querySelector(".pull").addEventListener("click", () => {
 
   if (footerContainer.classList.contains("hidden")) {
     document.querySelector(".pull").innerHTML = "PULL UP ⬆";
-    document.querySelector(".pull").style = "transform:translateY(0px)";
+    document.querySelector("footer").style = "margin-top: 0px";
   } else {
     document.querySelector(".pull").innerHTML = "PUSH DOWN ⬇";
-    document.querySelector(".pull").style = "transform:translateY(0px)";
+    document.querySelector("footer").style = "margin-top: -88px";
   }
 });
 
