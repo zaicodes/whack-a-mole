@@ -250,7 +250,7 @@ input::placeholder {
 
 .board {
   cursor: url("../images/hammer.png"), auto;
-  max-width: 590px;
+  max-width: 580px;
   background-image: url("../images/soil.webp");
   display: flex;
   flex-wrap: wrap;
@@ -263,8 +263,8 @@ input::placeholder {
 }
 
 .board div {
-  width: 180px;
-  height: 110px;
+  width: 160px;
+  height: 90px;
   margin: auto;
   text-align: center;
   background-image: url("../images/hole.webp");
@@ -275,8 +275,8 @@ input::placeholder {
 
 .board div img {
   /* all img tags inside tiles */
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   -ms-user-select: none;
   -moz-user-select: none;
   -webkit-user-drag: none;
@@ -417,7 +417,7 @@ input::placeholder {
 /* Scoreboard */
 
 .score-board {
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -433,7 +433,7 @@ input::placeholder {
 }
 
 .score-board img {
-  width: 70px;
+  width: 40px;
   height: fit-content;
 }
 
