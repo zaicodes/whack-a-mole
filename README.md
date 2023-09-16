@@ -212,6 +212,7 @@ The images used in this project are from the following links:
 - [Rabbit](https://www.pngwing.com/en/free-png-bppwo)
 - [Hammer](https://icons8.com/icons/set/hammer)
 - [Leaf](https://pngtree.com/freepng/green-dewy-cartoon-leaves_4283695.html)
+- [LeaderBoard-icon](https://www.freepik.com/icon/leaderboard_7321894)
 
 Music and sound:
 
