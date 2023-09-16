@@ -61,9 +61,9 @@ function hideOverlay() {
 // Display username from local storage on page load or refresh
 window.addEventListener("load", () => {
   const savedName = localStorage.getItem("savedName");
+  hideOverlay();
   if (savedName) {
-    userName.value = savedName;
-    savedNameDisplay.textContent = savedName;
+    form.classList.add("hidden");
   }
 });
 
@@ -71,6 +71,7 @@ overlay.classList.remove("hidden");
 
 // Reset game
 function gameRefreshed() {
+  localStorage.removeItem("savedName");
   location.reload();
 }
 
