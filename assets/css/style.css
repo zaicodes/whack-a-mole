@@ -548,11 +548,12 @@ li {
   font-family: "Handjet";
   color: #505050b8;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   text-align: center;
 }
 
 .footer-middle a {
+  font-size: 1.7rem;
   color: #03a020ae;
 }
 
