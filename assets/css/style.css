@@ -446,7 +446,7 @@ input::placeholder {
 .leaderboard-info {
   display: flex;
   margin-top: 20px;
-  justify-content: center;
+  justify-content: space-around;
   gap: 50px;
 }
 
