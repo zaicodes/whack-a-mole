@@ -238,6 +238,12 @@ input::placeholder {
   width: 9em;
 }
 
+#Leaderboard img {
+  width: 20px;
+  position: relative;
+  top: 5px;
+}
+
 /* Main game area - Soil and Holes */
 
 .game-board {
@@ -412,6 +418,42 @@ input::placeholder {
   top: 0;
   height: 100vh;
   z-index: 1;
+}
+
+/* LeaderBoard */
+.leaderboard {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-self: self-start;
+  margin: 30px;
+}
+
+.main-leaderboard {
+  box-shadow: 0px 0px 10px black;
+  border-radius: 20px;
+  padding: 50px;
+  background-color: #fff;
+}
+
+.main-leaderboard h2 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.leaderboard-info {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  gap: 50px;
+}
+
+.leaderboard-info h3 {
+  color: #000000;
+  font-size: 2.5rem;
+  font-family: "Handjet";
 }
 
 /* Scoreboard */
