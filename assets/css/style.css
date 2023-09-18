@@ -338,16 +338,16 @@ input::placeholder {
   height: 3em;
 }
 
-/* closing the instructions - x button*/
+/* closing the instructions and LeaderBoard - x button*/
 
-.close {
+.closingbtn {
   border-radius: 10px;
   position: absolute;
   top: 25px;
   right: 25px;
   padding: 0 10px;
   font-size: 2rem;
-  background-color: black;
+  background-color: #03a020ae;
   color: white;
   cursor: pointer;
 }
@@ -432,8 +432,9 @@ input::placeholder {
 }
 
 .main-leaderboard {
-  box-shadow: 0px 0px 10px black;
-  border-radius: 20px;
+  position: relative;
+  box-shadow: 6px 6px 12px #505050;
+  border-radius: 40px;
   padding: 50px;
   background-color: #fff;
 }

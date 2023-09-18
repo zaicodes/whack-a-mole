@@ -22,6 +22,9 @@ const gameOverEffect = document.querySelector(".game-over");
 const gameOverBox = document.querySelector(".game-over-box");
 const playGameAgain = document.querySelectorAll(".play-game-again");
 const gameWin = document.getElementById("celebration");
+const leaderBoard = document.querySelector(".main-leaderboard");
+const leaderBoardButton = document.getElementById("Leaderboard");
+const closeLeaderBoard = document.querySelector(".close-leaderboard");
 let board = document.querySelector(".board");
 let currMoleHole;
 let currRabbitHole;
@@ -147,6 +150,7 @@ function closeInstruction() {
 function closingEscape(e) {
   if (e.key === "Escape") {
     closeInstruction();
+    hideLeaderBoard();
   }
 }
 
@@ -416,6 +420,20 @@ document.querySelector(".pull").addEventListener("click", () => {
     document.querySelector("footer").style = "margin-top: -88px";
   }
 });
+
+// LeaderBoard
+const hideLeaderBoard = () => {
+  leaderBoard.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
+
+const ShowLeaderBoard = () => {
+  leaderBoard.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+};
+
+closeLeaderBoard.addEventListener("click", hideLeaderBoard);
+leaderBoardButton.addEventListener("click", ShowLeaderBoard);
 
 close.addEventListener("click", closeInstruction);
 instructionButtons.addEventListener("click", instructionList);
