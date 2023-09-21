@@ -25,6 +25,7 @@ const gameWin = document.getElementById("celebration");
 const leaderBoard = document.querySelector(".main-leaderboard");
 const leaderBoardButton = document.getElementById("Leaderboard");
 const closeLeaderBoard = document.querySelector(".close-leaderboard");
+const allBtnSound = document.querySelector(".allbtnsound");
 let board = document.querySelector(".board");
 let currMoleHole;
 let currRabbitHole;
@@ -35,6 +36,8 @@ let moleClicked = false;
 // Username in the localStorage
 saveButton.addEventListener("click", function () {
   const name = userName.value;
+  allBtnSound.play();
+
   // hide the overlay of username
   hideOverlay();
   if (name) {
@@ -79,6 +82,7 @@ overlay.classList.remove("hidden");
 function gameRefreshed() {
   localStorage.removeItem("savedName");
   location.reload();
+  allBtnSound.play();
 }
 
 reset.addEventListener("click", gameRefreshed);
@@ -91,6 +95,7 @@ easyButton.addEventListener("click", function () {
   setInterval(createMole, 1300);
   setInterval(createRabbit, 1400);
   setInterval(showCelebration, 30000);
+  allBtnSound.play();
 });
 
 // Medium
@@ -99,6 +104,7 @@ mediumButton.addEventListener("click", function () {
   setInterval(createMole, 900);
   setInterval(createRabbit, 1000);
   setInterval(showCelebration, 30000);
+  allBtnSound.play();
 });
 
 // Hard
@@ -107,6 +113,7 @@ hardButton.addEventListener("click", function () {
   setInterval(createMole, 500);
   setInterval(createRabbit, 700);
   setInterval(showCelebration, 30000);
+  allBtnSound.play();
 });
 
 // Hide buttons once
@@ -137,6 +144,14 @@ musicButton.addEventListener("click", PlayMusic);
 window.onload = function (params) {
   PlayMusic();
 };
+
+// Button sounds
+
+settingButton.forEach((button) => {
+  button.addEventListener("click", function () {
+    allBtnSound.play();
+  });
+});
 
 // modal instructions //
 function instructionList() {
