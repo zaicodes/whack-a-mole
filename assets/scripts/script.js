@@ -32,6 +32,7 @@ let currRabbitHole;
 let score = 0;
 let gameOver = false;
 let moleClicked = false;
+allBtnSound.volume = 0.2;
 
 // Username in the localStorage
 saveButton.addEventListener("click", function () {
