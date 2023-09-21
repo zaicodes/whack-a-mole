@@ -39,6 +39,8 @@ saveButton.addEventListener("click", function () {
   hideOverlay();
   if (name) {
     localStorage.setItem("savedName", name);
+    const savedName = localStorage.getItem("savedName");
+    console.log(savedName);
     savedNameDisplay.textContent = name;
     form.classList.add("hidden");
   }
@@ -64,6 +66,7 @@ function hideOverlay() {
 // Display username from local storage on page load or refresh
 window.addEventListener("load", () => {
   const savedName = localStorage.getItem("savedName");
+  console.log(savedName);
   hideOverlay();
   if (savedName) {
     form.classList.add("hidden");
@@ -226,6 +229,9 @@ function selectMole() {
     if (!moleClicked) {
       moleClicked = true;
       score += 10;
+      localStorage.setItem("playerScore", score);
+      const playerScore = localStorage.getItem("playerScore");
+      console.log(playerScore);
       var scoreElements = document.querySelectorAll(".score");
       for (var i = 0; i < scoreElements.length; i++) {
         scoreElements[i].innerHTML = score.toString();
@@ -422,6 +428,32 @@ document.querySelector(".pull").addEventListener("click", () => {
 });
 
 // LeaderBoard
+
+// localStorage.setItem("playerName");
+// const playerName = localStorage.getItem("PlayerName");
+
+// if (playerName) {
+//   savedNameDisplay.textContent = playerName;
+//   form.classList.add("hidden");
+// }
+
+// let leaderBoardData = [];
+// function gameEnded() {
+//   if (!gameOver) {
+//     const playerName = localStorage.getItem("playerName");
+//     if (playerName) {
+//       leaderBoard.push({ name: playerName, score });
+//       leaderBoardData((a, b) => b.score - a.score);
+//       updateLeaderBoardDisplay();
+//     }
+//   }
+// }
+
+// function updateLeaderBoardDisplay() {
+//   const leaderBoardNames = document.querySelector(".names");
+//   const leaderBoardScores = document.querySelector(".scores");
+// }
+
 const hideLeaderBoard = () => {
   leaderBoard.classList.add("hidden");
   overlay.classList.add("hidden");
