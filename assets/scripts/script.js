@@ -26,6 +26,7 @@ const leaderBoard = document.querySelector(".main-leaderboard");
 const leaderBoardButton = document.getElementById("Leaderboard");
 const closeLeaderBoard = document.querySelector(".close-leaderboard");
 const allBtnSound = document.querySelector(".allbtnsound");
+const playAgainSound = document.querySelector(".play-again-sound");
 let board = document.querySelector(".board");
 let currMoleHole;
 let currRabbitHole;
@@ -33,6 +34,7 @@ let score = 0;
 let gameOver = false;
 let moleClicked = false;
 allBtnSound.volume = 0.2;
+playAgainSound.volume = 0.2;
 
 // Username in the localStorage
 saveButton.addEventListener("click", function () {
@@ -146,7 +148,7 @@ window.onload = function (params) {
   PlayMusic();
 };
 
-// Button sounds
+// Buttons sound
 
 settingButton.forEach((button) => {
   button.addEventListener("click", function () {
@@ -279,6 +281,7 @@ function playAgain() {
   location.reload();
 }
 playGameAgain.forEach(function (button) {
+  playAgainSound.play();
   button.addEventListener("click", playAgain);
 });
 
