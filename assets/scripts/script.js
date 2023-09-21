@@ -144,9 +144,6 @@ function PlayMusic() {
   }
 }
 musicButton.addEventListener("click", PlayMusic);
-window.onload = function (params) {
-  PlayMusic();
-};
 
 // Buttons sound
 
