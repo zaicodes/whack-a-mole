@@ -37,6 +37,10 @@ allBtnSound.volume = 0.2;
 playAgainSound.volume = 0.2;
 
 // Username in the localStorage
+userName.addEventListener("input", function () {
+  savedNameDisplay.textContent = userName.value;
+});
+
 saveButton.addEventListener("click", function () {
   const name = userName.value;
   allBtnSound.play();
@@ -47,7 +51,6 @@ saveButton.addEventListener("click", function () {
     localStorage.setItem("savedName", name);
     const savedName = localStorage.getItem("savedName");
     console.log(savedName);
-    savedNameDisplay.textContent = name;
     form.classList.add("hidden");
   }
 });
