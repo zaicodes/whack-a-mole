@@ -457,6 +457,18 @@ input::placeholder {
   font-family: "Handjet";
 }
 
+.playerinfo {
+  margin: 20px 0;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.scoreinfo {
+  margin: 20px 0;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
 /* Scoreboard */
 
 .score-board {

@@ -87,6 +87,7 @@ overlay.classList.remove("hidden");
 // Reset game
 function gameRefreshed() {
   localStorage.removeItem("savedName");
+  localStorage.removeItem("playerScore");
   location.reload();
   allBtnSound.play();
 }
@@ -178,7 +179,6 @@ function closingEscape(e) {
 // Holes grid
 function startGame() {
   for (let i = 0; i < 9; i++) {
-    console.log(i);
     let hole = document.createElement("div");
     hole.id = i.toString();
     hole.addEventListener("click", selectMole);
@@ -448,31 +448,50 @@ document.querySelector(".pull").addEventListener("click", () => {
 
 // LeaderBoard
 
-// localStorage.setItem("playerName");
-// const playerName = localStorage.getItem("PlayerName");
+function displayLeaderBoard() {
+  const namesContainer = document.querySelector(".playerinfo");
+  const scoresContainer = document.querySelector(".scoreinfo");
 
-// if (playerName) {
-//   savedNameDisplay.textContent = playerName;
-//   form.classList.add("hidden");
-// }
+  // Retrieve the leaderBoard data from local storage
+  const leaderBoardData =
+    JSON.parse(localStorage.getItem("leaderBoardData")) || [];
 
-// let leaderBoardData = [];
-// function gameEnded() {
-//   if (!gameOver) {
-//     const playerName = localStorage.getItem("playerName");
-//     if (playerName) {
-//       leaderBoard.push({ name: playerName, score });
-//       leaderBoardData((a, b) => b.score - a.score);
-//       updateLeaderBoardDisplay();
-//     }
-//   }
-// }
+  // Sort the leaderBoard data by scores in descending order
+  leaderBoardData.sort((a, b) => b.score - a.score);
 
-// function updateLeaderBoardDisplay() {
-//   const leaderBoardNames = document.querySelector(".names");
-//   const leaderBoardScores = document.querySelector(".scores");
-// }
+  // check the new player score
+  const newPlayerScore = localStorage.getItem("playerScore");
+  if (newPlayerScore) {
+    const playerName = localStorage.getItem("savedName") || "Anonymous";
+    leaderBoardData.push({ name: playerName, score: parseInt(newPlayerScore) });
+    localStorage.removeItem("playerScore");
+  }
+  // Display the top 10 players
+  for (let i = 0; i < Math.min(leaderBoardData.length); i++) {
+    const player = leaderBoardData[i];
+    const playerName = player.name;
+    const playerScore = player.score;
 
+    // Create elements to display player names and scores
+    const nameElement = document.createElement("li");
+    const scoreElement = document.createElement("li");
+
+    nameElement.textContent = playerName;
+    scoreElement.textContent = playerScore;
+
+    // Append the elements to the containers
+    namesContainer.appendChild(nameElement);
+    scoresContainer.appendChild(scoreElement);
+  }
+  leaderBoardData.sort((a, b) => b.score - a.score);
+  localStorage.setItem("leaderBoardData", JSON.stringify(leaderBoardData));
+}
+
+// Call the displayLeaderBoard function to display the leaderBoard
+
+displayLeaderBoard();
+
+// Showing and hiding the leaderBoard when clicked on
 const hideLeaderBoard = () => {
   leaderBoard.classList.add("hidden");
   overlay.classList.add("hidden");
