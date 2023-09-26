@@ -456,9 +456,6 @@ function displayLeaderBoard() {
   const leaderBoardData =
     JSON.parse(localStorage.getItem("leaderBoardData")) || [];
 
-  // Sort the leaderBoard data by scores in descending order
-  leaderBoardData.sort((a, b) => b.score - a.score);
-
   // check the new player score
   const newPlayerScore = localStorage.getItem("playerScore");
   if (newPlayerScore) {
@@ -466,6 +463,10 @@ function displayLeaderBoard() {
     leaderBoardData.push({ name: playerName, score: parseInt(newPlayerScore) });
     localStorage.removeItem("playerScore");
   }
+
+  // Sort the leaderBoard data by scores in descending order
+  leaderBoardData.sort((a, b) => b.score - a.score);
+
   // Display the top 10 players
   for (let i = 0; i < Math.min(leaderBoardData.length); i++) {
     const player = leaderBoardData[i];
@@ -483,7 +484,13 @@ function displayLeaderBoard() {
     namesContainer.appendChild(nameElement);
     scoresContainer.appendChild(scoreElement);
   }
-  leaderBoardData.sort((a, b) => b.score - a.score);
+  // Optionally, you can remove access elements if there are more than 10 players
+  while (namesContainer.children.length > 10) {
+    namesContainer.removeChild(namesContainer.lastChild);
+    scoresContainer.removeChild(scoresContainer.lastChild);
+  }
+
+  // Update the leaderBoard data in the local storage
   localStorage.setItem("leaderBoardData", JSON.stringify(leaderBoardData));
 }
 
