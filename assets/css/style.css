@@ -415,8 +415,7 @@ input::placeholder {
 #screenshotimage {
   width: 750px;
   height: 400px;
-  outline: 5px solid #545554b9;
-  outline-offset: 3px;
+  border: 5px solid #5050507d;
   border-radius: 50%;
   border-radius: 20px;
 }
@@ -437,6 +436,7 @@ input::placeholder {
   font-family: "Handjet";
   font-size: 2.5rem;
   font-weight: 700;
+  letter-spacing: 1px;
 }
 
 /* Celebration effect */
