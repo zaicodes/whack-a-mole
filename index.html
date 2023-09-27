@@ -201,14 +201,29 @@
 
     <div id="celebration" class="hidden">
       <div class="game-over effect">
-        <div class="game-over-box">
-          <h1>You Won!</h1>
-          <h2>Your score is : <span class="score"> 0 </span></h2>
-          <button class="play-game-again btn">Play Again</button>
+        <div id="capture">
+          <div class="game-over-box">
+            <h1>You Won!</h1>
+            <h2>Your score is : <span class="score"> 0 </span></h2>
+            <button class="play-game-again btn">Play Again</button>
+            <button id="screenshotbtn" class="btn">Screenshot</button>
+          </div>
         </div>
       </div>
     </div>
 
+    <!-- Screen Capture Part-->
+    <div class="screenshot-main">
+      <div class="screenshot-layer">
+        <div class="close closing-screenshot closingbtn">X</div>
+        <a class="screenshot-link" href=""
+          ><img id="screenshotimage" src="" alt="screenshot"
+        /></a>
+        <button class="share btn">Share</button>
+      </div>
+    </div>
+
+    <!-- Celebration effect -->
     <canvas class="confetti hidden" id="canvas"></canvas>
 
     <!-- Footer -->
@@ -294,5 +309,8 @@
 
     <!-- JavaScript File -->
     <script src="assets/scripts/script.js"></script>
+
+    <!-- javascript library for Screenshots -->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
   </body>
 </html>

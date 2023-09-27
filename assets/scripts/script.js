@@ -27,6 +27,12 @@ const leaderBoardButton = document.getElementById("Leaderboard");
 const closeLeaderBoard = document.querySelector(".close-leaderboard");
 const allBtnSound = document.querySelector(".allbtnsound");
 const playAgainSound = document.querySelector(".play-again-sound");
+const screenshotButton = document.getElementById("screenshotbtn");
+const screenshotImage = document.getElementById("screenshotimage");
+const screenshotLayer = document.querySelector(".screenshot-layer");
+const link = document.querySelector(".screenshot-link");
+const closingScreenshot = document.querySelector(".closing-screenshot");
+const screenshotName = document.querySelector(".screenshot-main");
 let board = document.querySelector(".board");
 let currMoleHole;
 let currRabbitHole;
@@ -101,7 +107,7 @@ easyButton.addEventListener("click", function () {
   hidDifficultyButtons();
   setInterval(createMole, 1300);
   setInterval(createRabbit, 1400);
-  setInterval(showCelebration, 30000);
+  setInterval(showCelebration, 3000);
   allBtnSound.play();
 });
 
@@ -110,7 +116,7 @@ mediumButton.addEventListener("click", function () {
   hidDifficultyButtons();
   setInterval(createMole, 900);
   setInterval(createRabbit, 1000);
-  setInterval(showCelebration, 30000);
+  setInterval(showCelebration, 3000);
   allBtnSound.play();
 });
 
@@ -119,7 +125,7 @@ hardButton.addEventListener("click", function () {
   hidDifficultyButtons();
   setInterval(createMole, 500);
   setInterval(createRabbit, 700);
-  setInterval(showCelebration, 30000);
+  setInterval(showCelebration, 3000);
   allBtnSound.play();
 });
 
@@ -503,11 +509,33 @@ const hideLeaderBoard = () => {
   leaderBoard.classList.add("hidden");
   overlay.classList.add("hidden");
 };
-
 const ShowLeaderBoard = () => {
   leaderBoard.classList.remove("hidden");
   overlay.classList.remove("hidden");
 };
+
+// Taking a Screenshot functionality
+
+document.addEventListener("DOMContentLoaded", function () {
+  const captureElement = document.body;
+  screenshotLayer.classList.add("hidden");
+  screenshotButton.addEventListener("click", function () {
+    html2canvas(captureElement, {
+      useCORS: true,
+      onclone: function () {},
+    }).then(function (canvas) {
+      const screenshotDataUrl = canvas.toDataURL("image/png");
+      screenshotImage.src = screenshotDataUrl;
+      link.href = screenshotDataUrl;
+    });
+    screenshotName.classList.add("effect");
+    screenshotLayer.classList.remove("hidden");
+  });
+});
+closingScreenshot.addEventListener("click", function () {
+  screenshotLayer.classList.add("hidden");
+  screenshotName.classList.remove("effect");
+});
 
 closeLeaderBoard.addEventListener("click", hideLeaderBoard);
 leaderBoardButton.addEventListener("click", ShowLeaderBoard);
