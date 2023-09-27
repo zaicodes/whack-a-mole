@@ -414,7 +414,7 @@ input::placeholder {
 
 #screenshotimage {
   width: 750px;
-  height: 500px;
+  height: 400px;
   outline: 5px solid #545554b9;
   outline-offset: 3px;
   border-radius: 50%;
@@ -430,7 +430,13 @@ input::placeholder {
 }
 
 .share {
-  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  font-family: "Handjet";
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 
 /* Celebration effect */
