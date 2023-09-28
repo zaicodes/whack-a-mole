@@ -287,7 +287,6 @@ function playAgain() {
   location.reload();
 }
 playGameAgain.forEach(function (button) {
-  playAgainSound.play();
   button.addEventListener("click", playAgain);
 });
 
