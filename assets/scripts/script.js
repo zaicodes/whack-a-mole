@@ -514,7 +514,7 @@ const ShowLeaderBoard = () => {
 };
 
 // Taking a Screenshot functionality
-
+screenshotLayer.classList.add("hidden");
 document.addEventListener("DOMContentLoaded", function () {
   const captureElement = document.body;
   screenshotLayer.classList.add("hidden");
