@@ -33,6 +33,7 @@ const screenshotLayer = document.querySelector(".screenshot-layer");
 const link = document.querySelector(".screenshot-link");
 const closingScreenshot = document.querySelector(".closing-screenshot");
 const screenshotName = document.querySelector(".screenshot-main");
+const hiddenLinks = document.querySelector(".hidden-links");
 let board = document.querySelector(".board");
 let currMoleHole;
 let currRabbitHole;
@@ -504,6 +505,7 @@ function displayLeaderBoard() {
 displayLeaderBoard();
 
 // Showing and hiding the leaderBoard when clicked on
+
 const hideLeaderBoard = () => {
   leaderBoard.classList.add("hidden");
   overlay.classList.add("hidden");
@@ -514,6 +516,8 @@ const ShowLeaderBoard = () => {
 };
 
 // Taking a Screenshot functionality
+
+let screenshotDataUrl;
 screenshotLayer.classList.add("hidden");
 document.addEventListener("DOMContentLoaded", function () {
   const captureElement = document.body;
@@ -523,7 +527,7 @@ document.addEventListener("DOMContentLoaded", function () {
       useCORS: true,
       onclone: function () {},
     }).then(function (canvas) {
-      const screenshotDataUrl = canvas.toDataURL("image/png");
+      screenshotDataUrl = canvas.toDataURL("image/png");
       screenshotImage.src = screenshotDataUrl;
       function shareonfacebook() {
         const screenshotdataurl = screenshotImage;
@@ -550,3 +554,18 @@ close.addEventListener("click", closeInstruction);
 instructionButtons.addEventListener("click", instructionList);
 play.addEventListener("click", closeInstruction);
 document.addEventListener("keydown", closingEscape);
+
+// Define a function to capture the screenshot
+
+hiddenLinks.style = "display: none";
+function captureScreenshotAndShare() {
+  // Create a link for downloading the screenshot
+  const downloadLink = document.createElement("a");
+  downloadLink.href = screenshotDataUrl;
+  downloadLink.download = "screenshot.png";
+  hiddenLinks.style = "display: block";
+  downloadLink.click();
+}
+document
+  .querySelector(".download-button")
+  .addEventListener("click", captureScreenshotAndShare);
