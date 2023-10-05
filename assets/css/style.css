@@ -34,3 +34,9 @@ body {
 #instructions-button {
   font-family: "Handjet" !important;
 }
+
+.modal {
+  margin: 20px;
+  top: 20px;
+  position: absolute;
+}
