@@ -1,0 +1,722 @@
+/* Universal CSS Properties */
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+/* Body */
+
+body {
+  background: url("../images/background.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  padding-top: 20px;
+  font-family: sans-serif;
+}
+
+/* Header */
+
+header h1 {
+  font-family: "Leckerli One";
+  font-size: 3.5rem;
+  text-align: left;
+  padding-left: 35px;
+  color: #a00;
+  text-shadow: 2px 2px 0px #ffffff;
+  animation: glowAnimation 2s infinite;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+@keyframes glowAnimation {
+  0%,
+  100% {
+    color: #a00;
+    text-shadow: 0 0 10px #fff;
+  }
+  50% {
+    color: #03a01f;
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+  }
+}
+
+header a {
+  text-decoration: none;
+}
+
+/* Input Section */
+
+.form {
+  margin: 20px;
+  z-index: 2;
+  background-color: white;
+  max-width: 800px;
+  margin: auto;
+  padding: 50px;
+  position: absolute;
+  top: 200px;
+  border-radius: 40px;
+}
+
+.form input {
+  text-transform: capitalize;
+  padding: 10px 10px;
+  padding-right: 60px;
+  border-radius: 10px;
+  outline: none;
+  border: 2px solid rgb(20, 193, 69);
+  color: #aa0000;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Handjet";
+  letter-spacing: 1px;
+}
+
+.form input:focus {
+  color: #aa0000;
+}
+
+input::placeholder {
+  color: green;
+}
+
+.form div {
+  font-size: 3rem;
+  color: #aa0000;
+  padding: 10px;
+  text-align: center;
+  font-family: "Handjet";
+  letter-spacing: 3px;
+}
+
+/* Buttons */
+
+.btn {
+  background-color: white;
+  display: block;
+  margin: 10px auto;
+  padding: 0 9px;
+  width: 5em;
+  height: 2em;
+  border-radius: 30em;
+  border: none;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: "Handjet";
+  cursor: pointer;
+}
+
+.btn::before {
+  content: "";
+  width: 0;
+  height: 2em;
+  border-radius: 30em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.btn:hover::before {
+  width: 9em;
+}
+
+.btns .btn {
+  padding: 15px;
+  width: 5.5em;
+  height: 2.5em;
+}
+
+.btns .btn::before {
+  height: 2.5em;
+}
+
+.form p {
+  font-size: 17px;
+  margin: 10px 0;
+  text-transform: capitalize;
+  font-family: sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+#savedNameDisplay {
+  color: green;
+}
+
+.difficulty-main {
+  margin: 20px;
+  z-index: 1;
+  background-color: white;
+  position: absolute;
+  top: 200px;
+  padding: 50px;
+  border: 3px solid #f2f2f2;
+  border-radius: 40px;
+  box-shadow: 6px 6px 12px #505050;
+  text-align: center;
+}
+
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.difficulty {
+  font-size: 2.5rem;
+}
+
+/* Game Settings */
+
+.game-settings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 7px;
+  margin-top: 20px;
+}
+
+.index {
+  z-index: 1;
+}
+
+.settings-button {
+  background-color: white;
+  width: 9em;
+  height: 3em;
+  border-radius: 30em;
+  border: none;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Handjet";
+  cursor: pointer;
+}
+
+.settings-button i {
+  margin-right: 10px;
+}
+
+/* Button Colours*/
+
+.settings-button::before {
+  content: "";
+  width: 0;
+  height: 3em;
+  border-radius: 30em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.settings-button:hover::before {
+  width: 9em;
+}
+
+#Leaderboard img {
+  width: 20px;
+  position: relative;
+  top: 5px;
+}
+
+/* Main game area - Soil and Holes */
+
+.game-board {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  place-items: center;
+}
+
+.board {
+  cursor: url("../images/hammer.png"), auto;
+  max-width: 580px;
+  background-image: url("../images/soil.webp");
+  display: flex;
+  flex-wrap: wrap;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 40px;
+  border: rgba(255, 166, 0, 0.584) solid 3px;
+}
+
+.board div {
+  width: 160px;
+  height: 90px;
+  margin: auto;
+  text-align: center;
+  background-image: url("../images/hole.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/* Mole & Rabbit */
+
+.board div img {
+  /* all img tags inside tiles */
+  width: 70px;
+  height: 70px;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Modal instructions box */
+
+.instruction-box {
+  display: flex;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  z-index: 2;
+  position: absolute;
+  background-color: white;
+  max-width: 900px;
+  border: 3px solid #f2f2f2;
+  border-radius: 40px;
+  box-shadow: 6px 6px 12px #505050;
+  margin: 20px auto;
+  padding: 30px;
+}
+.modal h2 {
+  text-align: center;
+  font-size: 3.5rem;
+}
+
+.modal h3 {
+  font-family: "Handjet";
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+.modal p {
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.3;
+  margin: 10px 0;
+}
+
+.play-game .btn {
+  width: 7em;
+  height: 3em;
+}
+
+.play-game .btn:before {
+  height: 3em;
+}
+
+/* closing the instructions and LeaderBoard - x button*/
+
+.closingbtn {
+  border-radius: 10px;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  padding: 0 10px;
+  font-size: 2rem;
+  background-color: #03a020ae;
+  color: white;
+  cursor: pointer;
+}
+
+.play-game {
+  text-align: center;
+}
+
+/* Game Over & Game Win Effect */
+
+.effect {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.game-over-box {
+  margin: auto;
+  max-width: 600px;
+  padding: 50px;
+  background-color: white;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #f2f2f2;
+  border-radius: 40px;
+  box-shadow: 6px 6px 12px #505050;
+}
+
+.game-over-box h1 {
+  font-size: 4rem;
+  font-family: "Leckerli One";
+  text-align: center;
+  color: #a00;
+  text-shadow: 2px 2px 0px #ffffff;
+  animation: glowAnimation 2s infinite;
+  margin: 40px 0;
+}
+
+.game-over-box h2 {
+  font-size: 2.5rem;
+  font-family: "Handjet";
+  text-align: center;
+  color: #a00;
+  margin: 40px 0;
+}
+
+.game-over .btn {
+  width: 7em;
+  height: 3em;
+}
+
+.game-over .btn:before {
+  height: 3em;
+}
+
+/* Screenshot layer */
+
+#screenshotimage {
+  width: 100%;
+  height: 400px;
+  border: 5px solid #5050507d;
+  border-radius: 50%;
+  border-radius: 20px;
+}
+
+.screenshot-layer {
+  margin: 20px;
+  max-width: 750px;
+  position: relative;
+  padding: 50px;
+  box-shadow: 0px 0px 10px grey;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+
+/* Download the screenshot - code from https://uiverse.io/andrew-demchenk0/happy-elephant-43 */
+
+.download-button {
+  margin: 20px auto;
+  --main-focus: #2d8cf0;
+  --font-color: #323232;
+  --bg-color-sub: #dedede;
+  --bg-color: #eee;
+  --main-color: #323232;
+  position: relative;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.dowload-button,
+.button__icon,
+.button__text {
+  transition: all 0.3s;
+}
+
+.download-button .button__text {
+  transform: translateX(22px);
+  color: var(--font-color);
+  font-weight: 600;
+}
+
+.download-button .button__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 39px;
+  background-color: var(--bg-color-sub);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.download-button .svg {
+  width: 20px;
+  fill: var(--main-color);
+}
+
+.download-button:hover {
+  background: var(--bg-color);
+}
+
+.download-button:hover .button__text {
+  color: transparent;
+}
+
+.download-button:hover .button__icon {
+  width: 148px;
+  transform: translateX(0);
+}
+
+.download-button:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0px 0px var(--main-color);
+}
+
+/* Share message */
+
+.share-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  font-family: "Handjet";
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Celebration effect */
+
+.confetti {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  z-index: 1;
+}
+
+/* LeaderBoard */
+
+.leaderboard {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-self: self-start;
+  margin: 30px;
+}
+
+.main-leaderboard {
+  position: relative;
+  box-shadow: 6px 6px 12px #505050;
+  border-radius: 40px;
+  padding: 50px;
+  background-color: #fff;
+}
+
+.main-leaderboard h2 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.leaderboard-info {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-around;
+  gap: 50px;
+}
+
+.leaderboard-info h3 {
+  color: #000000;
+  font-size: 2.5rem;
+  font-family: "Handjet";
+}
+
+.playerinfo {
+  margin: 20px 0;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.scoreinfo {
+  margin: 20px 0;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Scoreboard */
+
+.score-board {
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  background-image: linear-gradient(
+    to right,
+    rgb(62, 130, 5) 0%,
+    rgb(171, 224, 81) 100%
+  );
+}
+
+.score-board img {
+  width: 40px;
+  height: fit-content;
+}
+
+.score-board .score {
+  right: 30px;
+  top: 20px;
+}
+.score-board span {
+  font-weight: 700;
+  font-family: sans-serif;
+  color: rgb(255, 255, 255);
+}
+.score-board p {
+  position: relative;
+  color: #ffffff;
+  font-size: 30px;
+  font-family: "Handjet";
+}
+
+/* Overlay Part */
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.436);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(10px);
+  z-index: 1; /* Adjust the z-index to make sure it's above other content */
+}
+
+/* Footer */
+
+.footer-container {
+  background-color: #ffffffc7;
+  transition: 0.5s;
+}
+
+.container {
+  padding: 40px 20px;
+  margin: auto;
+  max-width: 1800px;
+}
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left h1 {
+  font-family: "Leckerli One";
+  font-size: 1.7rem;
+  color: #a00;
+  text-shadow: 2px 2px 0px #ffffff;
+  animation: glowAnimation 2s infinite;
+}
+
+footer a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+.footer-middle p {
+  font-size: 1.4rem;
+  font-family: "Handjet";
+  color: #505050b8;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.footer-middle a {
+  font-size: 1.7rem;
+  color: #03a020ae;
+}
+
+.footer-right h2 {
+  font-size: 2rem;
+  font-family: "Handjet";
+  letter-spacing: 2px;
+  text-align: center;
+  color: #a00;
+}
+
+.footer-right .links {
+  margin-right: 1.5rem;
+  margin-top: 3px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social-links a {
+  font-size: 2rem;
+  color: green;
+  margin-right: 1.5rem;
+}
+
+/* Footer Pull-up feature */
+.btn-pullup {
+  display: flex;
+  justify-content: right;
+  margin: 0 60px;
+}
+.btn-pullup button {
+  background-image: linear-gradient(
+    to right,
+    rgb(62, 130, 5) 0%,
+    rgb(171, 224, 81) 100%
+  );
+  color: white;
+  font-family: "Handjet";
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: none;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px black;
+}

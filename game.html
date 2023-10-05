@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Engage in the classic online game of Whack-a-Mole! Test your reflexes by whacking moles as they pop up from their holes, but be careful to avoid hitting the rabbits. Enjoy hours of fun and challenge. Play now for free!"
+    />
+    <meta
+      name="keywords"
+      content="Whack-a-Mole, online game, reflex game, mole whacking, rabbit avoiding, classic game, free, entertainment, fun, challenge"
+    />
+
+    <!-- Instructs search engines to consider this as the primary webpage -->
+    <link rel="canonical" href="https://zaicodes.github.io/whack-a-mole/" />
+
+    <!-- Font Awesome and Google fonts links -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Leckerli+One&family=Lugrasimo&family=Montserrat:wght@200;500&family=Narnoor&family=Playfair+Display+SC:ital,wght@1,900&family=Roboto+Mono:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Handjet&family=Leckerli+One&family=Lugrasimo&family=Montserrat:wght@200;500&family=Narnoor&family=Playfair+Display+SC:ital,wght@1,900&family=Roboto+Mono:ital@1&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS files -->
+    <link rel="stylesheet" href="assets/css/game.css" />
+    <link rel="stylesheet" href="assets/css/media.css" />
+
+    <!-- Favicons-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Browser Tab Title -->
+    <title>Whack-a-Mole Game</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <a href="index.html"><h1>Whack a Mole!</h1></a>
+    </header>
+
+    <!-- Game Area -->
+    <main class="game-area">
+      <!-- Settings -->
+      <div>
+        <div class="game-settings">
+          <button class="settings-button index" id="Leaderboard">
+            <img src="assets/images/leaderboard.png" alt="leaderboard icon" />
+            Leaderboard
+          </button>
+          <button class="settings-button index" id="music-button">
+            <i class="fa fa-music" aria-hidden="true"></i>Play Music
+          </button>
+          <button class="settings-button index" id="instructions-button">
+            <i class="fa fa-commenting" aria-hidden="true"></i>
+            Instructions
+          </button>
+          <button class="settings-button index" id="reset-button">
+            <i class="fa fa-repeat" aria-hidden="true"></i>Reset
+          </button>
+        </div>
+      </div>
+
+      <!--Modal instructions box-->
+      <aside class="instruction-box">
+        <div class="modal hidden">
+          <div class="modal-content">
+            <h2>Welcome to Whack A Mole</h2>
+            <div class="close closingbtn">X</div>
+            <h3>Objectives:</h3>
+            <p>
+              In this game, your goal is to score points by hitting moles that
+              pop up from holes. Each successful mole hit earns you 10 points.
+            </p>
+            <h3>Avoid Hitting Rabbits:</h3>
+            <p>
+              Avoid clicking on rabbits, as hitting them will reduce your score
+              and end the game. The game lasts for 30 seconds.
+            </p>
+
+            <p>Whack moles, avoid rabbits, and aim for the highest score.</p>
+            <p>
+              Hit the reset button to restart the game at any point and the
+              play/stop music button to control music. If you need a refresh on
+              the rules, then click the instructions button.
+            </p>
+            <h3>Tips:</h3>
+            <p>
+              Stay focused, click quickly for moles, and refrain from clicking
+              rabbits to maximize your score.
+            </p>
+            <div class="play-game">
+              <button class="close-button btn">Play Game</button>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Game Board -->
+      <div class="game-board">
+        <!-- LeaderBoard -->
+        <div class="leaderboard">
+          <div class="main-leaderboard hidden">
+            <div class="leaderboard-heading">
+              <div class="close-leaderboard closingbtn">X</div>
+              <h2>🏆LEADERBOARD</h2>
+            </div>
+            <div class="leaderboard-info">
+              <div class="names">
+                <h3>Names</h3>
+                <ul>
+                  <li class="playerinfo"></li>
+                </ul>
+              </div>
+              <div class="scores">
+                <h3>Scores</h3>
+                <ul>
+                  <li class="scoreinfo"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Difficulty buttons-->
+        <div class="difficulty-main">
+          <h2 class="difficulty">Difficulty</h2>
+          <div class="btns">
+            <div class="btn easy-button">Easy</div>
+            <div class="btn medium-button">Medium</div>
+            <div class="btn hard-button">Hard</div>
+          </div>
+        </div>
+        <div class="board"></div>
+
+        <!-- Username Savage-->
+
+        <div class="form">
+          <div>Welcome!</div>
+          <input
+            type="text"
+            id="userName"
+            placeholder="Enter your name"
+            required
+          />
+          <button id="saveButton" class="btn" type="submit">Save</button>
+          <p>Your saved name is : <span id="savedNameDisplay"></span></p>
+        </div>
+      </div>
+
+      <!-- ScoreBoard -->
+      <div class="score-board" id="score">
+        <p>
+          Your score is : <span class="score">0</span>
+          <img src="assets/images/leaf.webp" alt="leaf picture" />
+        </p>
+      </div>
+    </main>
+
+    <!-- Overlay Part -->
+    <div class="overlay hidden"></div>
+
+    <!-- Game Over Effect -->
+    <div class="game-over">
+      <div class="game-over-box">
+        <h1>Game Over!</h1>
+        <h2>Your score is : <span class="score"> 0 </span></h2>
+        <button class="play-game-again btn">Play Again</button>
+      </div>
+    </div>
+
+    <!-- Game Win Effect -->
+
+    <div id="celebration" class="hidden">
+      <div class="game-over effect">
+        <div id="capture">
+          <div class="game-over-box">
+            <h1>You Won!</h1>
+            <h2>Your score is : <span class="score"> 0 </span></h2>
+            <button class="play-game-again btn">Play Again</button>
+            <button id="screenshotbtn" class="btn">Screenshot</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Screen Capture Part-->
+
+    <div class="screenshot-main">
+      <div class="screenshot-layer">
+        <div class="close closing-screenshot closingbtn">X</div>
+        <div class="screenshot-link">
+          <img id="screenshotimage" src="" alt="screenshot" />
+        </div>
+
+        <!-- Let user to save the screenshot locally - code from https://uiverse.io/andrew-demchenk0/happy-elephant-43-->
+        <button class="download-button" type="button">
+          <span class="button__text">Download</span>
+          <span class="button__icon"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 35 35"
+              id="bdd05811-e15d-428c-bb53-8661459f9307"
+              data-name="Layer 2"
+              class="svg"
+            >
+              <path
+                d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z"
+              ></path>
+              <path
+                d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z"
+              ></path>
+              <path
+                d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z"
+              ></path></svg
+          ></span>
+        </button>
+
+        <!-- Share on social media -->
+        <div class="hidden-links hidden">
+          <h2 class="share-message">Share with your friends:</h2>
+          <ul class="social-links">
+            <li class="links">
+              <a
+                href="https://www.facebook.com/"
+                class="facebook-share"
+                aria-label="Facebook"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fa-brands fa-facebook fa-xl" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li class="links">
+              <a
+                href="https://twitter.com/"
+                aria-label="Twitter"
+                target="_blank"
+                rel="noopener"
+              >
+                <i
+                  class="fa-brands fa-square-x-twitter fa-xl"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </li>
+            <li class="links">
+              <a
+                href="https://www.instagram.com/"
+                aria-label="Instagram"
+                target="_blank"
+                rel="noopener"
+              >
+                <i
+                  class="fa-brands fa-square-instagram fa-xl"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Celebration effect -->
+    <canvas class="confetti hidden" id="canvas"></canvas>
+
+    <!-- Footer -->
+    <footer>
+      <!-- Footer Pull-up feature -->
+      <div class="btn-pullup">
+        <button class="pull">Pull Up ⬆</button>
+      </div>
+      <div class="footer-container hidden">
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-left">
+              <a href="index.html"><h1>Whack a Mole!</h1></a>
+            </div>
+            <div class="footer-middle">
+              <p>
+                Developed by
+                <a href="https://github.com/zaicodes"> Zainab Ismail</a> - 2023
+              </p>
+            </div>
+            <div class="footer-right">
+              <h2>Follow us:</h2>
+              <ul class="social-links">
+                <li class="links">
+                  <a
+                    href="https://www.facebook.com/"
+                    aria-label="Facebook"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li class="links">
+                  <a
+                    href="https://twitter.com/"
+                    aria-label="Twitter"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <i
+                      class="fa-brands fa-square-x-twitter"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </li>
+                <li class="links">
+                  <a
+                    href="https://www.instagram.com/"
+                    aria-label="Instagram"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <i
+                      class="fa-brands fa-square-instagram"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                </li>
+                <li class="links">
+                  <a
+                    href="https://www.youtube.com/"
+                    aria-label="YouTube"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Music -->
+    <audio class="audio" src="assets/music/Wallpaper.mp3" loop></audio>
+    <audio class="hit-mole-sound" src="assets/music/hit-mole.mp3"></audio>
+    <audio class="fail-sound" src="assets/music/fail.mp3"></audio>
+    <audio class="allbtnsound" src="assets/music/select.wav"></audio>
+    <audio class="play-again-sound" src="assets/music/play-again.wav"></audio>
+
+    <!-- JavaScript File -->
+    <script src="assets/scripts/script.js"></script>
+
+    <!-- javascript library for Screenshots -->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  </body>
+</html>
