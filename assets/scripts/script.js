@@ -529,14 +529,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }).then(function (canvas) {
       screenshotDataUrl = canvas.toDataURL("image/png");
       screenshotImage.src = screenshotDataUrl;
-      function shareonfacebook() {
-        const screenshotdataurl = screenshotImage;
-        const shareusrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-          screenshotdataurl
-        )}`;
-        window.open(shareusrl, "_blank");
-      }
-      link.href = screenshotDataUrl;
     });
     screenshotName.classList.add("effect");
     screenshotLayer.classList.remove("hidden");
