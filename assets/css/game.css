@@ -309,7 +309,7 @@ input::placeholder {
   border: 3px solid #f2f2f2;
   border-radius: 40px;
   box-shadow: 6px 6px 12px #505050;
-  margin: 20px auto;
+  margin: 20px;
   padding: 30px;
 }
 .modal h2 {
@@ -605,7 +605,6 @@ input::placeholder {
   color: rgb(255, 255, 255);
 }
 .score-board p {
-  position: relative;
   color: #ffffff;
   font-size: 30px;
   font-family: "Handjet";
@@ -629,6 +628,7 @@ input::placeholder {
 .footer-container {
   background-color: #ffffffc7;
   transition: 0.5s;
+  width: 100%;
 }
 
 .container {

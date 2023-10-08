@@ -1,9 +1,12 @@
 const instructionButtons = document.querySelector("#instructions-button");
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
+const allBtnSound = document.querySelector(".allbtnsound");
+const enterButton = document.querySelector("#enter-button");
 
 // modal instructions //
 function instructionList() {
+  allBtnSound.play();
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
 } // Close button
@@ -17,6 +20,10 @@ function closingEscape(e) {
     hideLeaderBoard();
   }
 }
+
 const close = document.querySelector(".close");
 close.addEventListener("click", closeInstruction);
 instructionButtons.addEventListener("click", instructionList);
+enterButton.addEventListener("click", () => {
+  allBtnSound.play();
+});
