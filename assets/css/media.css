@@ -35,9 +35,6 @@
     justify-content: center;
     align-items: center;
   }
-  .btn-pullup button {
-    display: none;
-  }
 }
 
 @media (max-width: 640px) {
@@ -45,23 +42,25 @@
     width: 120px;
     height: 80px;
   }
+
+  .btn-pullup button {
+    display: none;
+  }
+
+  footer {
+    padding-top: 80px;
+    position: static !important;
+  }
+
+  .footer-container {
+    display: block !important;
+  }
+
   /* Mole & Rabbit */
 
   .board div img {
     /* all img tags inside tiles */
     width: 60px;
     height: 60px;
-  }
-}
-
-@media (max-width: 670px) {
-  .footer-container {
-    margin-top: 20px;
-  }
-  .btn-pullup {
-    margin-bottom: 50px;
-  }
-  .footer-container {
-    display: block;
   }
 }
