@@ -25,7 +25,6 @@ const gameWin = document.getElementById("celebration");
 const leaderBoard = document.querySelector(".main-leaderboard");
 const leaderBoardButton = document.getElementById("Leaderboard");
 const closeLeaderBoard = document.querySelector(".close-leaderboard");
-const allBtnSound = document.querySelector(".allbtnsound");
 const playAgainSound = document.querySelector(".play-again-sound");
 const screenshotButton = document.getElementById("screenshotbtn");
 const screenshotImage = document.getElementById("screenshotimage");
@@ -34,40 +33,54 @@ const link = document.querySelector(".screenshot-link");
 const closingScreenshot = document.querySelector(".closing-screenshot");
 const screenshotName = document.querySelector(".screenshot-main");
 const hiddenLinks = document.querySelector(".hidden-links");
+let allBtnSound = document.querySelector(".allbtnsound");
 let board = document.querySelector(".board");
 let currMoleHole;
 let currRabbitHole;
 let score = 0;
 let gameOver = false;
 let moleClicked = false;
-allBtnSound.volume = 0.2;
-playAgainSound.volume = 0.2;
+if (allBtnSound) {
+  allBtnSound.volume = 0.2;
+}
+if (playAgainSound) {
+  playAgainSound.volume = 0.2;
+}
+
+// Game Over
+if (gameOverBox) {
+  gameOverBox.style.display = "none";
+}
 
 // Username in the localStorage
-userName.addEventListener("input", function () {
-  savedNameDisplay.textContent = userName.value;
-});
+if (userName) {
+  userName.addEventListener("input", function () {
+    savedNameDisplay.textContent = userName.value;
+  });
+}
+if (saveButton) {
+  saveButton.addEventListener("click", function () {
+    const name = userName.value;
+    allBtnSound.play();
 
-saveButton.addEventListener("click", function () {
-  const name = userName.value;
-  allBtnSound.play();
-
-  // hide the overlay of username
-  hideOverlay();
-  if (name) {
-    localStorage.setItem("savedName", name);
-    const savedName = localStorage.getItem("savedName");
-    console.log(savedName);
-    form.classList.add("hidden");
-  }
-});
+    // hide the overlay of username
+    hideOverlay();
+    if (name) {
+      localStorage.setItem("savedName", name);
+      const savedName = localStorage.getItem("savedName");
+      form.classList.add("hidden");
+    }
+  });
+}
 
 // Show Overlay
 function showOverlay() {
-  overlay.classList.remove("hidden");
-  settingButton.forEach((button) => {
-    button.classList.remove("index");
-  });
+  if (overlay) {
+    overlay.classList.add("hidden");
+    settingButton.forEach((button) => {
+      button.classList.remove("index");
+    });
+  }
 }
 showOverlay();
 
@@ -82,14 +95,17 @@ function hideOverlay() {
 // Display username from local storage on page load or refresh
 window.addEventListener("load", () => {
   const savedName = localStorage.getItem("savedName");
-  console.log(savedName);
   hideOverlay();
   if (savedName) {
     form.classList.add("hidden");
+  } else {
+    showOverlay();
   }
 });
 
-overlay.classList.remove("hidden");
+if (overlay) {
+  overlay.classList.remove("hidden");
+}
 
 // Reset game
 function gameRefreshed() {
@@ -98,37 +114,6 @@ function gameRefreshed() {
   location.reload();
   allBtnSound.play();
 }
-
-reset.addEventListener("click", gameRefreshed);
-
-// Difficulty Settings
-
-// Easy
-easyButton.addEventListener("click", function () {
-  hidDifficultyButtons();
-  setInterval(createMole, 1300);
-  setInterval(createRabbit, 1400);
-  setInterval(showCelebration, 3000);
-  allBtnSound.play();
-});
-
-// Medium
-mediumButton.addEventListener("click", function () {
-  hidDifficultyButtons();
-  setInterval(createMole, 900);
-  setInterval(createRabbit, 1000);
-  setInterval(showCelebration, 3000);
-  allBtnSound.play();
-});
-
-// Hard
-hardButton.addEventListener("click", function () {
-  hidDifficultyButtons();
-  setInterval(createMole, 500);
-  setInterval(createRabbit, 700);
-  setInterval(showCelebration, 3000);
-  allBtnSound.play();
-});
 
 // Hide buttons once
 const hideDifficulty = localStorage.getItem("difficultyMain");
@@ -154,7 +139,6 @@ function PlayMusic() {
       '<i class="fa fa-music" aria-hidden="true"></i> Play Music';
   }
 }
-musicButton.addEventListener("click", PlayMusic);
 
 // Buttons sound
 
@@ -185,11 +169,13 @@ function closingEscape(e) {
 
 // Holes grid
 function startGame() {
-  for (let i = 0; i < 9; i++) {
-    let hole = document.createElement("div");
-    hole.id = i.toString();
-    hole.addEventListener("click", selectMole);
-    board.appendChild(hole);
+  if (board) {
+    for (let i = 0; i < 9; i++) {
+      let hole = document.createElement("div");
+      hole.id = i.toString();
+      hole.addEventListener("click", selectMole);
+      board.appendChild(hole);
+    }
   }
 }
 startGame();
@@ -217,7 +203,6 @@ function createMole() {
   if (currRabbitHole && currRabbitHole.id == num) {
     return;
   }
-
   currMoleHole = document.getElementById(num);
   currMoleHole.appendChild(mole);
 }
@@ -256,7 +241,6 @@ function selectMole() {
       score += 10;
       localStorage.setItem("playerScore", score);
       const playerScore = localStorage.getItem("playerScore");
-      console.log(playerScore);
       var scoreElements = document.querySelectorAll(".score");
       for (var i = 0; i < scoreElements.length; i++) {
         scoreElements[i].innerHTML = score.toString();
@@ -280,9 +264,6 @@ function selectMole() {
   }
 }
 
-// Game Over
-gameOverBox.style = "display: none";
-
 // Play game again button
 function playAgain() {
   location.reload();
@@ -294,7 +275,6 @@ playGameAgain.forEach(function (button) {
 // Game Win
 const showCelebration = function () {
   if (!gameOver && score >= 10) {
-    console.log(score);
     gameWin.classList.remove("hidden");
     document.querySelector("canvas").classList.remove("hidden");
   } else if (gameOver) {
@@ -308,17 +288,177 @@ window.addEventListener("resize", function () {
   overlay.style.height = window.innerHeight + "px";
 });
 
-// Event Listeners
+// Footer Pull-up feature
+document.querySelector(".pull").addEventListener("click", () => {
+  const footerContainer = document.querySelector(".footer-container");
+  footerContainer.classList.toggle("hidden");
+
+  if (footerContainer.classList.contains("hidden")) {
+    document.querySelector(".pull").innerHTML = "PULL UP ⬆";
+    document.querySelector("footer").style = "margin-top: 0px";
+  } else {
+    document.querySelector(".pull").innerHTML = "PUSH DOWN ⬇";
+    document.querySelector("footer").style = "margin-top: -88px";
+  }
+});
+
+// LeaderBoard
+
+function displayLeaderBoard() {
+  const namesContainer = document.querySelector(".playerinfo");
+  const scoresContainer = document.querySelector(".scoreinfo");
+
+  // Retrieve the leaderBoard data from local storage
+  const leaderBoardData =
+    JSON.parse(localStorage.getItem("leaderBoardData")) || [];
+  // check the new player score
+  const newPlayerScore = localStorage.getItem("playerScore");
+  if (newPlayerScore) {
+    const playerName = localStorage.getItem("savedName") || "Anonymous";
+    leaderBoardData.push({ name: playerName, score: parseInt(newPlayerScore) });
+    localStorage.removeItem("playerScore");
+  }
+
+  // Sort the leaderBoard data by scores in descending order
+  leaderBoardData.sort((a, b) => b.score - a.score);
+
+  // Display the top 10 players
+  for (let i = 0; i < Math.min(leaderBoardData.length); i++) {
+    const player = leaderBoardData[i];
+    const playerName = player.name;
+    const playerScore = player.score;
+
+    // Create elements to display player names and scores
+    const nameElement = document.createElement("li");
+    const scoreElement = document.createElement("li");
+
+    nameElement.textContent = playerName;
+    scoreElement.textContent = playerScore;
+
+    // Append the elements to the containers
+    namesContainer.appendChild(nameElement);
+    scoresContainer.appendChild(scoreElement);
+  }
+  // Optionally, you can remove access elements if there are more than 10 players
+  if (namesContainer) {
+    while (namesContainer.children.length > 10) {
+      namesContainer.removeChild(namesContainer.lastChild);
+      scoresContainer.removeChild(scoresContainer.lastChild);
+    }
+  }
+  // Update the leaderBoard data in the local storage
+  localStorage.setItem("leaderBoardData", JSON.stringify(leaderBoardData));
+}
+
+// Call the displayLeaderBoard function to display the leaderBoard
+
+displayLeaderBoard();
+
+// Showing and hiding the leaderBoard when clicked on
+
+const hideLeaderBoard = () => {
+  leaderBoard.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
+const ShowLeaderBoard = () => {
+  leaderBoard.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+};
+
+// Taking a Screenshot functionality
+
+let screenshotDataUrl;
+if (screenshotLayer) {
+  screenshotLayer.classList.add("hidden");
+}
+document.addEventListener("DOMContentLoaded", function () {
+  const captureElement = document.body;
+  screenshotLayer.classList.add("hidden");
+  screenshotButton.addEventListener("click", function () {
+    html2canvas(captureElement, {
+      useCORS: true,
+      onclone: function () {},
+    }).then(function (canvas) {
+      screenshotDataUrl = canvas.toDataURL("image/png");
+      screenshotImage.src = screenshotDataUrl;
+    });
+    screenshotName.classList.add("effect");
+    screenshotLayer.classList.remove("hidden");
+  });
+});
+////////////////////////////////////////
+closingScreenshot.addEventListener("click", function () {
+  screenshotLayer.classList.add("hidden");
+  screenshotName.classList.remove("effect");
+});
+
+// Event Listeners for buttons
+
+// Difficulty Settings
+///////////////////////////////////////////////////
+// Easy
+easyButton.addEventListener("click", function () {
+  hidDifficultyButtons();
+  setInterval(createMole, 1300);
+  setInterval(createRabbit, 1400);
+  setInterval(showCelebration, 3000);
+  allBtnSound.play();
+});
+
+// Medium
+mediumButton.addEventListener("click", function () {
+  hidDifficultyButtons();
+  setInterval(createMole, 900);
+  setInterval(createRabbit, 1000);
+  setInterval(showCelebration, 3000);
+  allBtnSound.play();
+});
+
+// Hard
+hardButton.addEventListener("click", function () {
+  hidDifficultyButtons();
+  setInterval(createMole, 500);
+  setInterval(createRabbit, 700);
+  setInterval(showCelebration, 3000);
+  allBtnSound.play();
+});
+
+// event listners
+musicButton.addEventListener("click", PlayMusic);
+reset.addEventListener("click", gameRefreshed);
+closeLeaderBoard.addEventListener("click", hideLeaderBoard);
+leaderBoardButton.addEventListener("click", ShowLeaderBoard);
+close.addEventListener("click", closeInstruction);
+instructionButtons.addEventListener("click", instructionList);
+play.addEventListener("click", closeInstruction);
+document.addEventListener("keydown", closingEscape);
+
+// Define a function to capture the screenshot
+
+if (hiddenLinks) {
+  hiddenLinks.style = "display: none";
+}
+function captureScreenshotAndShare() {
+  // Create a link for downloading the screenshot
+  const downloadLink = document.createElement("a");
+  downloadLink.href = screenshotDataUrl;
+  downloadLink.download = "screenshot.png";
+  hiddenLinks.style = "display: block";
+  downloadLink.click();
+}
+document
+  .querySelector(".download-button")
+  .addEventListener("click", captureScreenshotAndShare);
 
 // Celebration effect - code from https://www.codehim.com/animation-effects/javascript-confetti-explosion-effect/
 
 //-----------Var Inits--------------
-canvas = document.getElementById("canvas");
-ctx = canvas.getContext("2d");
+let canvas = document.getElementById("canvas");
+let ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-cx = ctx.canvas.width / 2;
-cy = ctx.canvas.height / 2;
+let cx = ctx.canvas.width / 2;
+let cy = ctx.canvas.height / 2;
 
 let confetti = [];
 const confettiCount = 300;
@@ -337,16 +477,16 @@ const colors = [
 ];
 
 //-----------Functions--------------
-resizeCanvas = () => {
+let resizeCanvas = () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
   cx = ctx.canvas.width / 2;
   cy = ctx.canvas.height / 2;
 };
 
-randomRange = (min, max) => Math.random() * (max - min) + min;
+let randomRange = (min, max) => Math.random() * (max - min) + min;
 
-initConfetti = () => {
+let initConfetti = () => {
   for (let i = 0; i < confettiCount; i++) {
     confetti.push({
       color: colors[Math.floor(randomRange(0, colors.length))],
@@ -375,7 +515,7 @@ initConfetti = () => {
 };
 
 //---------Render-----------
-render = () => {
+let render = () => {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   confetti.forEach((confetto, index) => {
@@ -437,127 +577,3 @@ window.addEventListener("click", function () {
   initConfetti();
 });
 // End of Celebration Effect
-
-// Footer Pull-up feature
-document.querySelector(".pull").addEventListener("click", () => {
-  const footerContainer = document.querySelector(".footer-container");
-  footerContainer.classList.toggle("hidden");
-
-  if (footerContainer.classList.contains("hidden")) {
-    document.querySelector(".pull").innerHTML = "PULL UP ⬆";
-    document.querySelector("footer").style = "margin-top: 0px";
-  } else {
-    document.querySelector(".pull").innerHTML = "PUSH DOWN ⬇";
-    document.querySelector("footer").style = "margin-top: -88px";
-  }
-});
-
-// LeaderBoard
-
-function displayLeaderBoard() {
-  const namesContainer = document.querySelector(".playerinfo");
-  const scoresContainer = document.querySelector(".scoreinfo");
-
-  // Retrieve the leaderBoard data from local storage
-  const leaderBoardData =
-    JSON.parse(localStorage.getItem("leaderBoardData")) || [];
-
-  // check the new player score
-  const newPlayerScore = localStorage.getItem("playerScore");
-  if (newPlayerScore) {
-    const playerName = localStorage.getItem("savedName") || "Anonymous";
-    leaderBoardData.push({ name: playerName, score: parseInt(newPlayerScore) });
-    localStorage.removeItem("playerScore");
-  }
-
-  // Sort the leaderBoard data by scores in descending order
-  leaderBoardData.sort((a, b) => b.score - a.score);
-
-  // Display the top 10 players
-  for (let i = 0; i < Math.min(leaderBoardData.length); i++) {
-    const player = leaderBoardData[i];
-    const playerName = player.name;
-    const playerScore = player.score;
-
-    // Create elements to display player names and scores
-    const nameElement = document.createElement("li");
-    const scoreElement = document.createElement("li");
-
-    nameElement.textContent = playerName;
-    scoreElement.textContent = playerScore;
-
-    // Append the elements to the containers
-    namesContainer.appendChild(nameElement);
-    scoresContainer.appendChild(scoreElement);
-  }
-  // Optionally, you can remove access elements if there are more than 10 players
-  while (namesContainer.children.length > 10) {
-    namesContainer.removeChild(namesContainer.lastChild);
-    scoresContainer.removeChild(scoresContainer.lastChild);
-  }
-
-  // Update the leaderBoard data in the local storage
-  localStorage.setItem("leaderBoardData", JSON.stringify(leaderBoardData));
-}
-
-// Call the displayLeaderBoard function to display the leaderBoard
-
-displayLeaderBoard();
-
-// Showing and hiding the leaderBoard when clicked on
-
-const hideLeaderBoard = () => {
-  leaderBoard.classList.add("hidden");
-  overlay.classList.add("hidden");
-};
-const ShowLeaderBoard = () => {
-  leaderBoard.classList.remove("hidden");
-  overlay.classList.remove("hidden");
-};
-
-// Taking a Screenshot functionality
-
-let screenshotDataUrl;
-screenshotLayer.classList.add("hidden");
-document.addEventListener("DOMContentLoaded", function () {
-  const captureElement = document.body;
-  screenshotLayer.classList.add("hidden");
-  screenshotButton.addEventListener("click", function () {
-    html2canvas(captureElement, {
-      useCORS: true,
-      onclone: function () {},
-    }).then(function (canvas) {
-      screenshotDataUrl = canvas.toDataURL("image/png");
-      screenshotImage.src = screenshotDataUrl;
-    });
-    screenshotName.classList.add("effect");
-    screenshotLayer.classList.remove("hidden");
-  });
-});
-closingScreenshot.addEventListener("click", function () {
-  screenshotLayer.classList.add("hidden");
-  screenshotName.classList.remove("effect");
-});
-
-closeLeaderBoard.addEventListener("click", hideLeaderBoard);
-leaderBoardButton.addEventListener("click", ShowLeaderBoard);
-
-close.addEventListener("click", closeInstruction);
-instructionButtons.addEventListener("click", instructionList);
-play.addEventListener("click", closeInstruction);
-document.addEventListener("keydown", closingEscape);
-
-// Define a function to capture the screenshot
-
-hiddenLinks.style = "display: none";
-function captureScreenshotAndShare() {
-  // Create a link for downloading the screenshot
-  const downloadLink = document.createElement("a");
-  downloadLink.href = screenshotDataUrl;
-  downloadLink.download = "screenshot.png";
-  hiddenLinks.style = "display: block";
-  downloadLink.click();
-}
-document
-  .querySelector(".download-button")
-  .addEventListener("click", captureScreenshotAndShare);
