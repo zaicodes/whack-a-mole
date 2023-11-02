@@ -181,6 +181,7 @@ input::placeholder {
 
 .difficulty {
   font-size: 2.5rem;
+  padding-bottom: 20px;
 }
 
 /* Game Settings */
