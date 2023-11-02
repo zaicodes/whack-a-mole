@@ -52,6 +52,9 @@ if (gameOverBox) {
   gameOverBox.style.display = "none";
 }
 
+// Hide the difficulty window
+difficultyMain.classList.add("hidden");
+
 // Username in the localStorage
 if (userName) {
   userName.addEventListener("input", function () {
@@ -69,6 +72,7 @@ if (saveButton) {
       localStorage.setItem("savedName", name);
       const savedName = localStorage.getItem("savedName");
       form.classList.add("hidden");
+      difficultyMain.classList.remove("hidden");
     }
   });
 }
@@ -98,6 +102,7 @@ window.addEventListener("load", () => {
   hideOverlay();
   if (savedName) {
     form.classList.add("hidden");
+    difficultyMain.classList.remove("hidden");
   } else {
     showOverlay();
   }
@@ -395,7 +400,7 @@ closingScreenshot.addEventListener("click", function () {
 // Event Listeners for buttons
 
 // Difficulty Settings
-///////////////////////////////////////////////////
+
 // Easy
 easyButton.addEventListener("click", function () {
   hidDifficultyButtons();
