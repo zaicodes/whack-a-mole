@@ -164,7 +164,13 @@ function closeInstruction() {
   overlay.classList.add("hidden");
 }
 
-// Escape button function
+// Close Instruction and Leaderboard by clicking on overlay
+overlay.addEventListener("click", function () {
+  closeInstruction();
+  hideLeaderBoard();
+});
+
+// Close Instruction and Leaderboard by clicking on escape button
 function closingEscape(e) {
   if (e.key === "Escape") {
     closeInstruction();
