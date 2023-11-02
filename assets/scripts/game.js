@@ -406,7 +406,7 @@ easyButton.addEventListener("click", function () {
   hidDifficultyButtons();
   setInterval(createMole, 1300);
   setInterval(createRabbit, 1400);
-  setInterval(showCelebration, 3000);
+  setInterval(showCelebration, 30000);
   allBtnSound.play();
 });
 
@@ -415,7 +415,7 @@ mediumButton.addEventListener("click", function () {
   hidDifficultyButtons();
   setInterval(createMole, 900);
   setInterval(createRabbit, 1000);
-  setInterval(showCelebration, 3000);
+  setInterval(showCelebration, 30000);
   allBtnSound.play();
 });
 
@@ -424,7 +424,7 @@ hardButton.addEventListener("click", function () {
   hidDifficultyButtons();
   setInterval(createMole, 500);
   setInterval(createRabbit, 700);
-  setInterval(showCelebration, 3000);
+  setInterval(showCelebration, 30000);
   allBtnSound.play();
 });
 
