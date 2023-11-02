@@ -181,7 +181,7 @@ input::placeholder {
 
 .difficulty {
   font-size: 2.5rem;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 /* Game Settings */
@@ -316,6 +316,7 @@ input::placeholder {
 .modal h2 {
   text-align: center;
   font-size: 3.5rem;
+  margin-bottom: 20px;
 }
 
 .modal h3 {
@@ -330,15 +331,6 @@ input::placeholder {
   margin: 10px 0;
 }
 
-.play-game .btn {
-  width: 7em;
-  height: 3em;
-}
-
-.play-game .btn:before {
-  height: 3em;
-}
-
 /* closing the instructions and LeaderBoard - x button*/
 
 .closingbtn {
@@ -351,10 +343,6 @@ input::placeholder {
   background-color: #03a020ae;
   color: white;
   cursor: pointer;
-}
-
-.play-game {
-  text-align: center;
 }
 
 /* Game Over & Game Win Effect */
