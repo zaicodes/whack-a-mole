@@ -55,6 +55,12 @@
   .footer-container {
     display: block !important;
   }
+  .score-board {
+    max-width: 250px;
+  }
+  .score-board p {
+    font-size: 24px;
+  }
 
   /* Mole & Rabbit */
 
