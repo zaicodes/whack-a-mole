@@ -106,7 +106,7 @@ I used [JSLint](https://www.jslint.com/) to validate the Javascript code.
 
 The result had no errors but few warnings.
 
-![jslint](link)
+![jslint](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/testing/validator/jslint.png)
 
 ### Lighthouse
 
