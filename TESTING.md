@@ -102,9 +102,11 @@ passed with 7 warnings.
 
 ### JavaScript Validator
 
-I used [jshint](https://jshint.com/) to validate the Javascript code.
+I used [JSLint](https://www.jslint.com/) to validate the Javascript code.
 
 The result had no errors but few warnings.
+
+![jslint](link)
 
 ### Lighthouse
 
