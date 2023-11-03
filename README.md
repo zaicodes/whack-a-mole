@@ -165,7 +165,7 @@ The site also includes a hidden footer that can be revealed by clicking a button
 
 ![footer](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/footer.png)
 
-![pull-push-footer](lhttps://github.com/zaicodes/whack-a-mole/blob/main/documentation/pull-push-footer.png)
+![pull-push-footer](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/pull-push-footer.png)
 
 Additionally, the game includes two exciting features one of them is the celebratory effects in the form of confetti ribbons that appear when the user win the game.
 
