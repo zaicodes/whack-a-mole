@@ -54,17 +54,17 @@ Psychographics:
 
 ### Client Goals
 
-- The game should immediately engage first-time visitors through its colourful and cartoonish visuals, drawing them into the gameplay.
+- As a first time visitor, the game should immediately engage through its visuals, drawing me into the gameplay.
 
-- The game clearly communicate how to play the game through the instructions section. Users can close the instructions box using three methods: clicking the 'x' button located in the top-right corner, clicking anywhere outside the instruction box, or pressing the 'escape' key on the keyboard.
+- As a first time user, I'd like a game that is responsive to different devices and easy to navigate.
 
-- Players are presented with the choice of striking either a mole or a rabbit on the game-board. Whacking a mole rewards them with 10 points, while accidentally hitting a rabbit results in an immediate game over.
+- As a first time visitor, the game clearly communicate how to play it through the instructions section and be able to choose difficulty options.
 
-- Users have the ability to customise the auditory environment using the music button. They can effortlessly play or stop the background music according to their personal preference.
+- As a returning visitor, I want to be able to play different times and be able to monitor my performance and check my score.
 
-- Users want to be able to monitor their performance, by score presenting at the bottom of the screen. This feature encourages them to continually aim for better scores with each round.
+- As a frequent visitor, I have the ability to customise the auditory environment using the music button. I can also interact with the footer by either showing it or hiding it.
 
-- Moreover, players retain the autonomy to reset the game whenever they wish.
+- Moreover, as a frequent visitor, I want to retain the autonomy to reset the game whenever they wish.
 
 ## Design
 
@@ -127,47 +127,51 @@ The website consists of two main pages: a home page and a games page. Each page 
 
 A website has favicon displayed in the browser tab.
 
-![Favicon](link)
+![favicon](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/favicon.png)
 
 The home page features the site's logo, an image, and two buttons. One of these buttons provides access to the instructions, while the other simply reads "Enter," allowing users to start the game.
 
-![home](link)
+![home](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/home.png)
 
 Once inside the game page, the site has a title, prominently located at the left corner of the page. This title also serves as a clickable link, directing users back to the home page.
 
-![header](link)
+![header](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/header.png)
 
 It consists also of game settings with 4 buttons for user to control. reset button to reset the game at any point, music button to control the music, instruction button to reveal the instructions and finally a leaderboard button to display the top 10 scores.
 
-![game-settings](link)
+![game-settings](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/game-settings.png)
 
 Before the game start, the user will be prompted to enter their name and submit it so it can be shown in the leaderboard once the round is finished.
 
-![username](link)
+![username](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/username.png)
 
 Subsequently, the user will be presented with a selection of difficulty levels to choose from, including options for easy, medium, and hard.
 
-![difficulty](link)
+![difficulty](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/difficulty.png)
 
 Also, within the game page, there exists a leaderboard accessible by clicking the "Leaderboard" button within the game settings. This leaderboard will display the top 10 scores achieved by players.
 
-![leaderboard](link)
+![leaderboard](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/leaderboard.png)
 
 furthermore, there is a game board with an interactive mole that users must whack with their mouse or touch on mobile devices. Also, a rabbit that appears where users must avoid.
 
-![game-board](link)
+![game-board](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/game-board.png)
+
+There is a score displayed at the bottom of the game board while they are actively playing.
+
+![score](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/score.png)
 
 The site also includes a hidden footer that can be revealed by clicking a button. Once the footer is pulled up, the button transforms into a "Push Down" option, providing users with the ability to easily show or hide the footer as needed.
 
-![footer](link)
+![footer](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/footer.png)
 
-![pull-push-footer](link)
+![pull-push-footer](lhttps://github.com/zaicodes/whack-a-mole/blob/main/documentation/pull-push-footer.png)
 
 Additionally, the game includes two exciting features one of them is the celebratory effects in the form of confetti ribbons that appear when the user win the game.
 
 The second one is screenshot feature which becomes available when the user successfully wins the game. The user can click on the "Screenshot" option to capture the screen, after which they have the choice to either download it or click the 'X' to cancel. If they choose to download, the screenshot is saved on their computer for easy access.
 
-![screenshot](link)
+![screenshot](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/screenshot.png)
 
 ### Features left to implement
 
@@ -178,6 +182,16 @@ In the future, I'd like to introduce the following features, some of these were 
 - Developing distinct backend databases to store scores, facilitating users in comparing their performance against other players and across various difficulty levels.
 
 - Sharing the game's screenshot with friends on social media.
+
+## Accessibility
+
+I have been diligent in my coding efforts to make the website as user-friendly and accessible as possible. This has been accomplished through the following means:
+
+- Utilizing semantic HTML for a structured page layout.
+- Implementing ALT tags for hyperlinks, icons, and images to provide descriptive text alternatives.
+- Incorporating hover effects on all buttons to clearly indicate to users when they are interacting with a button.
+- Selecting a sans-serif font for paragraphs to enhance readability, particularly for individuals with dyslexia.
+- Ensuring that there is adequate colour contrast throughout the site, making content more discernible and accessible.
 
 ## Technologies and Frameworks
 
