@@ -86,15 +86,15 @@ I used [W3C](https://validator.w3.org/) to validate both the HTML and CSS on bot
 
 The results were pass with no errors found. It only showed Info for the trailing slash on void elements on many lines, which have no effect on code. They were left untouched, because they were not errors.
 
-![index.html]()
+![index.html](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/testing/validator/home-validation.png)
 
-![game.html]()
+![game.html](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/testing/validator/game-validation.png)
 
 - CSS Validator
 
-![style.css]() passed with 7 warnings.
+![style.css](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/testing/validator/home-css-validation.png) - passed with no errors or warnings.
 
-![game.css]() passed with no errors or warnings.
+![game.css](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/testing/validator/game-css-validation.png) - passed with 7 warnings.
 
 ### JavaScript Validator
 
@@ -106,14 +106,15 @@ The result had no errors but few warnings.
 
 I utilized Lighthouse, a feature within Chrome Developer Tools, to assess the website's performance, accessibility, adherence to best practices, and SEO.
 
-![home-desktop-lighthouse]()
+![home-desktop-lighthouse](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/testing/lighthouse/index-desktop-lighthouse.png)
 
-![home-mobile-lighthouse]()
+![home-mobile-lighthouse](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/testing/lighthouse/index-mobile-lighthouse.png)
 
 The Lighthouse results for both desktop and mobile of home page were deemed satisfactory.
 
-![Game-desktop-lighthouse]()
-![Game-mobile-lighthouse]()
+![Game-desktop-lighthouse](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/testing/lighthouse/game-desktop-lighthouse.png)
+
+![Game-mobile-lighthouse](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/testing/lighthouse/game-mobile-lighthouse.png)
 
 For the Game page, the img source (src) in the screenshot functionality remains empty initially, as the image is generated only after the user clicks the screenshot button. Consequently, in Lighthouse, the "Best Practices" category displayed a 95 percent score, primarily attributed to the "failed to load resource of screenshot" error.
 
