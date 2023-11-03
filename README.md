@@ -23,15 +23,15 @@ The game is designed to provide an interactive experience through the use of Jav
 
 - Instructions: The game has an instruction button which offers clear guidance on how to play, ensuring a smooth start for everyone. There are three ways to close it: an x button, play button as well as the escape button from keyboard.
 
-- Score Tracking: Users can keep tracking of their progress with a real-time score display at the bottom. They can aim for higher scores with each round.
+- Score Tracking: Users can keep tracking of their progress with score display at the bottom. They can also check their top score in LeaderBoard and aim for higher scores with each round.
 
 - Responsive Design: the game can be played seamlessly across desktops, tablets, and mobile phones. The game's design adapts to different devices for a consistent experience.
 
 - Cartoonish Visuals: The game has a delightful cartoonish graphics. The cohesive visual style adds charm to the user's gaming experience.
 
-- Accessibility: The game is designed with inclusivity in mind. Alternative cues for colour-based information, click sound and screen reader compatibility to ensure everyone can play.
+- Accessibility: The game is designed with inclusivity in mind. Alternative cues for colour-based information such as hover effect, click sound and screen reader compatibility to ensure everyone can play.
 
-- Consistent Design: The game has a consistent fonts, color schemes, and button styles across all screens.
+- Consistent Design: The game has a consistent fonts, colour schemes, and button styles across all screens.
 
 ### Target Audience
 
@@ -39,7 +39,7 @@ The intended audience for this online game can be described as follows:
 
 Demographics:
 
-- Age: Primarily targeted towards children, pre-teens, and casual gamers.
+- Age: Children, pre-teens, and casual gamers.
 - Gender: Can appeal to all genders.
 - Location: Global audience.
 - Tech Proficiency: Basic to moderate tech proficiency.
@@ -56,13 +56,13 @@ Psychographics:
 
 - The game should immediately engage first-time visitors through its colourful and cartoonish visuals, drawing them into the gameplay.
 
+- The game clearly communicate how to play the game through the instructions section. Users can close the instructions box using three methods: clicking the 'x' button located in the top-right corner, clicking anywhere outside the instruction box, or pressing the 'escape' key on the keyboard.
+
 - Players are presented with the choice of striking either a mole or a rabbit on the game-board. Whacking a mole rewards them with 10 points, while accidentally hitting a rabbit results in an immediate game over.
 
 - Users have the ability to customise the auditory environment using the music button. They can effortlessly play or stop the background music according to their personal preference.
 
-- The game clearly communicate how to play the game through the instructions section. Users can close the instruction window using three methods: clicking the 'x' button located in the top-right corner, clicking the 'play game' button, or pressing the 'escape' key on the keyboard.
-
-- Users want to be able to monitor their performance, by real-time score presentation at the bottom of the screen. This feature encourages them to continually aim for better scores with each round.
+- Users want to be able to monitor their performance, by score presenting at the bottom of the screen. This feature encourages them to continually aim for better scores with each round.
 
 - Moreover, players retain the autonomy to reset the game whenever they wish.
 
@@ -82,7 +82,7 @@ Psychographics:
 
 ### Colour Scheme
 
-- The game's color palette is derived from nature's own hues, encompassing tones of greens and vibrant red.
+- The game's colour palette is derived from nature's own hues, encompassing tones of greens, red and yellow.
 - Black typography to ensures readability, while white spaces create a balanced visual experience.
 - Buttons are adorned with a clean white with hover effect created of green tones, contributing to the overall harmonious design.
 
@@ -93,14 +93,14 @@ Psychographics:
 I used three fonts for this project:
 
 - Leckerli One, for the logo.
-- Handjet, for the buttons.
+- Handjet, for the buttons, main headlines and scoreboard.
 - Sans-serif for the rest of text in body.
 
 ### Images and Background
 
-- The background of leaves was picked to give a feeling of a simple cartoonish and nature vibe. This choice aligns with the game's concept, as the mole's holes are naturally found in soil. The background seamlessly complements the gameplay while incorporating white spaces strategically to avoid overwhelming/distracting users.
+- The background of leaves was picked to give a feeling of a simple nature vibe. This choice aligns with the game's concept, as the mole's holes are naturally found in soil. The background seamlessly complements the gameplay while incorporating white spaces strategically to avoid overwhelming/distracting users.
 
-- Other in-game images were also chosen for their simplicity and cartoon-inspired aesthetic. These visuals introduce a touch of uplifting emotional response that resonates both with children and adults, maintaining a level of appeal across ages.
+- Other in-game images were also chosen for their simplicity and nature-inspired aesthetic. These visuals introduce a touch of uplifting emotional response that resonates both with children and adults, maintaining a level of appeal across ages.
 
 - For references of these images can be found in credits below.
 
@@ -111,7 +111,7 @@ I used three fonts for this project:
 
 ### Icons
 
-- Each icon was deliberately chosen based on its clear and intuitive meaning, ensuring universal understanding for all users.
+- The setting buttons have icons. Each icon was deliberately chosen based on its clear and intuitive meaning, ensuring universal understanding for all users.
 
 ### Sound effects and music
 
@@ -121,9 +121,63 @@ I used three fonts for this project:
 
 ## Features
 
-### Exisiting Features
+The website consists of two main pages: a home page and a games page. Each page on the website is designed to be responsive to various screen sizes.
+
+### Existing Features
+
+A website has favicon displayed in the browser tab.
+
+![Favicon](link)
+
+The home page features the site's logo, an image, and two buttons. One of these buttons provides access to the instructions, while the other simply reads "Enter," allowing users to start the game.
+
+![home](link)
+
+Once inside the game page, the site has a title, prominently located at the left corner of the page. This title also serves as a clickable link, directing users back to the home page.
+
+![header](link)
+
+It consists also of game settings with 4 buttons for user to control. reset button to reset the game at any point, music button to control the music, instruction button to reveal the instructions and finally a leaderboard button to display the top 10 scores.
+
+![game-settings](link)
+
+Before the game start, the user will be prompted to enter their name and submit it so it can be shown in the leaderboard once the round is finished.
+
+![username](link)
+
+Subsequently, the user will be presented with a selection of difficulty levels to choose from, including options for easy, medium, and hard.
+
+![difficulty](link)
+
+Also, within the game page, there exists a leaderboard accessible by clicking the "Leaderboard" button within the game settings. This leaderboard will display the top 10 scores achieved by players.
+
+![leaderboard](link)
+
+furthermore, there is a game board with an interactive mole that users must whack with their mouse or touch on mobile devices. Also, a rabbit that appears where users must avoid.
+
+![game-board](link)
+
+The site also includes a hidden footer that can be revealed by clicking a button. Once the footer is pulled up, the button transforms into a "Push Down" option, providing users with the ability to easily show or hide the footer as needed.
+
+![footer](link)
+
+![pull-push-footer](link)
+
+Additionally, the game includes two exciting features one of them is the celebratory effects in the form of confetti ribbons that appear when the user win the game.
+
+The second one is screenshot feature which becomes available when the user successfully wins the game. The user can click on the "Screenshot" option to capture the screen, after which they have the choice to either download it or click the 'X' to cancel. If they choose to download, the screenshot is saved on their computer for easy access.
+
+![screenshot](link)
 
 ### Features left to implement
+
+In the future, I'd like to introduce the following features, some of these were suggested by my mentor but I couldn't implement them:
+
+- Exploring the possibility of transforming the game into a multiplayer experience, enabling teams to participate, thus enhancing the overall enjoyment.
+
+- Developing distinct backend databases to store scores, facilitating users in comparing their performance against other players and across various difficulty levels.
+
+- Sharing the game's screenshot with friends on social media.
 
 ## Technologies and Frameworks
 
@@ -190,7 +244,7 @@ To clone the Whack-a-Mole repository:
 
 ### Code
 
-- The game was inspired by [this-YouTube-video](https://www.youtube.com/watch?v=ej8SatOj3V4) but the entire code is created by me.
+- The game was inspired by [this-YouTube-video](https://www.youtube.com/watch?v=ej8SatOj3V4) but the code was developed by me.
 
 - buttons: Buttons used in this project is from [here](https://uiverse.io/xueyuantan/rotten-pig-19)
 
@@ -226,7 +280,7 @@ I wish to express profound gratitude to those who offered their invaluable assis
 
 - Narender S. - my mentor, for checking my progress and providing helpful feedback.
 
-- Peter W. – for the weekly stand-ups which were very helpful and informative.
+- Peter W. and Jessica I. – for the weekly stand-ups which were very helpful and informative.
 
 - Asim S. (Preply) – an online tutor, who helped me learn how to code and develop this skill (highly recommend him).
 

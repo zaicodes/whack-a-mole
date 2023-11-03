@@ -180,8 +180,9 @@ input::placeholder {
 }
 
 .difficulty {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 20px;
+  font-family: "Handjet";
 }
 
 /* Game Settings */
@@ -317,6 +318,7 @@ input::placeholder {
   text-align: center;
   font-size: 3.5rem;
   margin-bottom: 20px;
+  font-family: "Handjet";
 }
 
 .modal h3 {
@@ -534,6 +536,7 @@ input::placeholder {
 .main-leaderboard h2 {
   text-align: center;
   font-size: 3rem;
+  font-family: "Handjet";
 }
 
 .leaderboard-info {
