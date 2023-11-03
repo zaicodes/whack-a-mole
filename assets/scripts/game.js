@@ -46,7 +46,7 @@ if (playAgainSound) {
   playAgainSound.volume = 0.2;
 }
 
-// Game Over
+// Game Over Box
 if (gameOverBox) {
   gameOverBox.style.display = "none";
 }
@@ -54,7 +54,7 @@ if (gameOverBox) {
 // Hide the difficulty window
 difficultyMain.classList.add("hidden");
 
-// Username in the localStorage
+// Username stored in the localStorage
 if (userName) {
   userName.addEventListener("input", function () {
     savedNameDisplay.textContent = userName.value;

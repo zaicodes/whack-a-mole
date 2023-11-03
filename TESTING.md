@@ -92,9 +92,13 @@ The results were pass with no errors found. It only showed Info for the trailing
 
 - CSS Validator
 
-![style.css](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/testing/validator/home-css-validation.png) - passed with no errors or warnings.
+![style.css](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/testing/validator/home-css-validation.png)
 
-![game.css](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/testing/validator/game-css-validation.png) - passed with 7 warnings.
+passed with no errors or warnings.
+
+![game.css](https://github.com/zaicodes/whack-a-mole/blob/main/documentation/testing/validator/game-css-validation.png)
+
+passed with 7 warnings.
 
 ### JavaScript Validator
 
@@ -127,15 +131,15 @@ Additionally, the following issues have made negative impact on Performance on m
 
 ## Bugs discovered
 
-During development I noticed a few bugs that needed fixing.
+During development and deployment I noticed a few bugs that needed fixing.
 
 ### Solved bugs
 
-- When you click on mole multiple times, the score grows. This was fixed by
-- The music button showing play music with stop icon, and vice versa
+- When you click on mole multiple times, the score grows. This was fixed by using if statement: When a mole is clicked and the conditions are met, the following actions are taken: moleClicked is set to true, indicating that the mole has been clicked and the score is increased by 10.
+- The music button showing play music with stop icon, and vice versa.
 - Username showing each round of the game, this was fixed by making it appear when user reset the game only.
-- Issue with footer not being responsive.
-- scrollbar showing on game page, this was resolved by reducing the size of game board and score-board.
+- Issue with footer not being responsive, which was resolved using media-query css.
+- scrollbar showing on game page, this was resolved by reducing the size of game board and score-board slightly.
 - Lighthouse error: "play() failed because the user didn’t interact with the document first", this was solved by making the music to not play automatically.
 - Html validator showed warning: consider using the h1 elements as a top-level heading only. This was solved by changing the h1 element into h2 element.
 
