@@ -23,6 +23,7 @@ body {
   max-width: 250px;
   margin-right: -30px;
   margin-bottom: 20px;
+  height: fit-content;
 }
 
 /* Button container */
