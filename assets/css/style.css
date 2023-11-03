@@ -33,7 +33,7 @@ body {
   gap: 15px;
 }
 
-/* Styling the Enter a element */
+/* Styling the Enter a element individually */
 #enter-button {
   text-decoration: none;
   color: black;
@@ -46,6 +46,7 @@ body {
   font-family: "Handjet" !important;
 }
 
+/* The instructions box position */
 .modal {
   margin: 20px;
   top: 20px;

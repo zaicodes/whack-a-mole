@@ -52,7 +52,7 @@ header a {
   text-decoration: none;
 }
 
-/* Input Section */
+/* Username Input Section */
 
 .form {
   margin: 20px;
@@ -97,7 +97,20 @@ input::placeholder {
   letter-spacing: 3px;
 }
 
-/* Buttons */
+.form p {
+  font-size: 17px;
+  margin: 10px 0;
+  text-transform: capitalize;
+  font-family: sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+#savedNameDisplay {
+  color: green;
+}
+
+/* General buttons */
 
 .btn {
   background-color: white;
@@ -147,18 +160,7 @@ input::placeholder {
   height: 2.5em;
 }
 
-.form p {
-  font-size: 17px;
-  margin: 10px 0;
-  text-transform: capitalize;
-  font-family: sans-serif;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
-#savedNameDisplay {
-  color: green;
-}
+/* Difficulty Box */
 
 .difficulty-main {
   margin: 20px;
@@ -220,8 +222,6 @@ input::placeholder {
   margin-right: 10px;
 }
 
-/* Button Colours*/
-
 .settings-button::before {
   content: "";
   width: 0;
@@ -240,6 +240,7 @@ input::placeholder {
   width: 9em;
 }
 
+/* Leaderboard button image */
 #Leaderboard img {
   width: 20px;
   position: relative;
@@ -401,7 +402,7 @@ input::placeholder {
   height: 3em;
 }
 
-/* Screenshot layer */
+/* Screenshot feature */
 
 #screenshotimage {
   width: 100%;
@@ -489,7 +490,7 @@ input::placeholder {
   box-shadow: 0px 0px var(--main-color);
 }
 
-/* Share message */
+/* Share message inside screenshot box */
 
 .share-message {
   display: flex;
@@ -513,7 +514,7 @@ input::placeholder {
   z-index: 1;
 }
 
-/* LeaderBoard */
+/* LeaderBoard box */
 
 .leaderboard {
   position: absolute;

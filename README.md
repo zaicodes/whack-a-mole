@@ -264,6 +264,8 @@ To clone the Whack-a-Mole repository:
 
 - Celebration effect: the code used in celebration effect is from [here](https://www.codehim.com/animation-effects/javascript-confetti-explosion-effect/)
 
+- Download the screenshot functionality - code from [here](https://uiverse.io/andrew-demchenk0/happy-elephant-43)
+
 ### Content
 
 - The website's textual content has been written by me.

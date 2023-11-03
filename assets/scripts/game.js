@@ -51,6 +51,35 @@ if (gameOverBox) {
   gameOverBox.style.display = "none";
 }
 
+// Difficulty Settings
+
+// Easy
+easyButton.addEventListener("click", function () {
+  hidDifficultyButtons();
+  setInterval(createMole, 1300);
+  setInterval(createRabbit, 1400);
+  setInterval(showCelebration, 30000);
+  allBtnSound.play();
+});
+
+// Medium
+mediumButton.addEventListener("click", function () {
+  hidDifficultyButtons();
+  setInterval(createMole, 900);
+  setInterval(createRabbit, 1000);
+  setInterval(showCelebration, 30000);
+  allBtnSound.play();
+});
+
+// Hard
+hardButton.addEventListener("click", function () {
+  hidDifficultyButtons();
+  setInterval(createMole, 500);
+  setInterval(createRabbit, 700);
+  setInterval(showCelebration, 30000);
+  allBtnSound.play();
+});
+
 // Hide the difficulty window
 difficultyMain.classList.add("hidden");
 
@@ -151,6 +180,15 @@ settingButton.forEach((button) => {
     allBtnSound.play();
   });
 });
+
+// Event listeners for buttons
+musicButton.addEventListener("click", PlayMusic);
+reset.addEventListener("click", gameRefreshed);
+closeLeaderBoard.addEventListener("click", hideLeaderBoard);
+leaderBoardButton.addEventListener("click", ShowLeaderBoard);
+close.addEventListener("click", closeInstruction);
+instructionButtons.addEventListener("click", instructionList);
+document.addEventListener("keydown", closingEscape);
 
 // modal instructions //
 function instructionList() {
@@ -312,7 +350,7 @@ document.querySelector(".pull").addEventListener("click", () => {
   }
 });
 
-// LeaderBoard
+// LeaderBoard box
 
 function displayLeaderBoard() {
   const namesContainer = document.querySelector(".playerinfo");
@@ -375,7 +413,7 @@ const ShowLeaderBoard = () => {
   overlay.classList.remove("hidden");
 };
 
-// Taking a Screenshot functionality
+// Taking a Screenshot functionality - code from (https://uiverse.io/andrew-demchenk0/happy-elephant-43)
 
 let screenshotDataUrl;
 if (screenshotLayer) {
@@ -402,45 +440,7 @@ closingScreenshot.addEventListener("click", function () {
   screenshotName.classList.remove("effect");
 });
 
-// Difficulty Settings
-
-// Easy
-easyButton.addEventListener("click", function () {
-  hidDifficultyButtons();
-  setInterval(createMole, 1300);
-  setInterval(createRabbit, 1400);
-  setInterval(showCelebration, 30000);
-  allBtnSound.play();
-});
-
-// Medium
-mediumButton.addEventListener("click", function () {
-  hidDifficultyButtons();
-  setInterval(createMole, 900);
-  setInterval(createRabbit, 1000);
-  setInterval(showCelebration, 30000);
-  allBtnSound.play();
-});
-
-// Hard
-hardButton.addEventListener("click", function () {
-  hidDifficultyButtons();
-  setInterval(createMole, 500);
-  setInterval(createRabbit, 700);
-  setInterval(showCelebration, 30000);
-  allBtnSound.play();
-});
-
-// Event listeners for buttons
-musicButton.addEventListener("click", PlayMusic);
-reset.addEventListener("click", gameRefreshed);
-closeLeaderBoard.addEventListener("click", hideLeaderBoard);
-leaderBoardButton.addEventListener("click", ShowLeaderBoard);
-close.addEventListener("click", closeInstruction);
-instructionButtons.addEventListener("click", instructionList);
-document.addEventListener("keydown", closingEscape);
-
-// Define a function to capture the screenshot
+// Downloading the screenshot
 
 if (hiddenLinks) {
   hiddenLinks.style = "display: none";
