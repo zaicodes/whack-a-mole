@@ -3,7 +3,6 @@ const settingButton = document.querySelectorAll(".settings-button");
 const instructionButtons = document.querySelector("#instructions-button");
 const modal = document.querySelector(".modal");
 const close = document.querySelector(".close");
-const play = document.querySelector(".play-game");
 const overlay = document.querySelector(".overlay");
 const musicButton = document.getElementById("music-button");
 const audio = document.querySelector(".audio");
@@ -441,7 +440,6 @@ closeLeaderBoard.addEventListener("click", hideLeaderBoard);
 leaderBoardButton.addEventListener("click", ShowLeaderBoard);
 close.addEventListener("click", closeInstruction);
 instructionButtons.addEventListener("click", instructionList);
-play.addEventListener("click", closeInstruction);
 document.addEventListener("keydown", closingEscape);
 
 // Define a function to capture the screenshot

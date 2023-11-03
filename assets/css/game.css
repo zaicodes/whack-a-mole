@@ -701,6 +701,7 @@ li {
   margin: 0 60px;
 }
 .btn-pullup button {
+  cursor: pointer;
   background-image: linear-gradient(
     to right,
     rgb(62, 130, 5) 0%,
