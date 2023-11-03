@@ -82,15 +82,15 @@ No issues were reported when playing the game.
 
 I used [W3C](https://validator.w3.org/) to validate both the HTML and CSS on both pages of the website.
 
-The results were pass with no errors found.
+- HTML W3C Validator
+
+The results were pass with no errors found. It only showed Info for the trailing slash on void elements on many lines, which have no effect on code. They were left untouched, because they were not errors.
 
 ![index.html]()
 
 ![game.html]()
 
-The validator showed Info for the trailing slash on void elements on many lines, which have no effect on code. They were left untouched, because they were not errors.
-
-![trailing slash](link)
+- CSS Validator
 
 ![style.css]() passed with 7 warnings.
 
@@ -100,16 +100,29 @@ The validator showed Info for the trailing slash on void elements on many lines,
 
 I used [jshint](https://jshint.com/) to validate the Javascript code.
 
-![script.js]()
-![game.js]()
+The result had no errors but few warnings.
 
 ### Lighthouse
 
 I utilized Lighthouse, a feature within Chrome Developer Tools, to assess the website's performance, accessibility, adherence to best practices, and SEO.
 
-![Home page]()
+![home-desktop-lighthouse]()
 
-![Game page]()
+![home-mobile-lighthouse]()
+
+The Lighthouse results for both desktop and mobile of home page were deemed satisfactory.
+
+![Game-desktop-lighthouse]()
+![Game-mobile-lighthouse]()
+
+For the Game page, the img source (src) in the screenshot functionality remains empty initially, as the image is generated only after the user clicks the screenshot button. Consequently, in Lighthouse, the "Best Practices" category displayed a 95 percent score, primarily attributed to the "failed to load resource of screenshot" error.
+
+Additionally, the following issues have made negative impact on Performance on mobile screens:
+
+- Images are not loaded fast on small screens because of the heavy image quality.
+- The soil image being big, however, if size was reduced the quality of that image will decrease.
+- The celebration effect also affected the performance.
+  I attempted to fix them but eventually decided to leave these as they are, to ensure that the website features and images were of good quality.
 
 ## Bugs discovered
 
@@ -126,3 +139,5 @@ During development I noticed a few bugs that needed fixing.
 - Html validator showed warning: consider using the h1 elements as a top-level heading only. This was solved by changing the h1 element into h2 element.
 
 ### Unsolved bugs
+
+Mainly were the errors that were displayed on Lighthouse Performance for mobile. I made attempts to rectify these errors, but I couldn't discern a solution. I intend to delve deeper into the issue and explore potential solutions in the future.
