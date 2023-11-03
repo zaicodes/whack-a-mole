@@ -144,7 +144,7 @@ function PlayMusic() {
   }
 }
 
-// Buttons sound
+// Buttons click sound effect
 
 settingButton.forEach((button) => {
   button.addEventListener("click", function () {
@@ -157,7 +157,7 @@ function instructionList() {
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
 }
-// Close button
+// Close Instruction button
 function closeInstruction() {
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
@@ -396,13 +396,11 @@ document.addEventListener("DOMContentLoaded", function () {
     screenshotLayer.classList.remove("hidden");
   });
 });
-////////////////////////////////////////
+
 closingScreenshot.addEventListener("click", function () {
   screenshotLayer.classList.add("hidden");
   screenshotName.classList.remove("effect");
 });
-
-// Event Listeners for buttons
 
 // Difficulty Settings
 
@@ -433,7 +431,7 @@ hardButton.addEventListener("click", function () {
   allBtnSound.play();
 });
 
-// event listners
+// Event listeners for buttons
 musicButton.addEventListener("click", PlayMusic);
 reset.addEventListener("click", gameRefreshed);
 closeLeaderBoard.addEventListener("click", hideLeaderBoard);

@@ -17,9 +17,10 @@ function closeInstruction() {
 function closingEscape(e) {
   if (e.key === "Escape") {
     closeInstruction();
-    hideLeaderBoard();
   }
 }
+
+document.addEventListener("keydown", closingEscape);
 
 const close = document.querySelector(".close");
 close.addEventListener("click", closeInstruction);
