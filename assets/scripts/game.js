@@ -181,15 +181,6 @@ settingButton.forEach((button) => {
   });
 });
 
-// Event listeners for buttons
-musicButton.addEventListener("click", PlayMusic);
-reset.addEventListener("click", gameRefreshed);
-closeLeaderBoard.addEventListener("click", hideLeaderBoard);
-leaderBoardButton.addEventListener("click", ShowLeaderBoard);
-close.addEventListener("click", closeInstruction);
-instructionButtons.addEventListener("click", instructionList);
-document.addEventListener("keydown", closingEscape);
-
 // modal instructions //
 function instructionList() {
   modal.classList.remove("hidden");
@@ -439,6 +430,15 @@ closingScreenshot.addEventListener("click", function () {
   screenshotLayer.classList.add("hidden");
   screenshotName.classList.remove("effect");
 });
+
+// Event listeners for buttons
+musicButton.addEventListener("click", PlayMusic);
+reset.addEventListener("click", gameRefreshed);
+closeLeaderBoard.addEventListener("click", hideLeaderBoard);
+leaderBoardButton.addEventListener("click", ShowLeaderBoard);
+close.addEventListener("click", closeInstruction);
+instructionButtons.addEventListener("click", instructionList);
+document.addEventListener("keydown", closingEscape);
 
 // Downloading the screenshot
 
