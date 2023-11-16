@@ -43,6 +43,10 @@
     height: 80px;
   }
 
+  .modal h2 {
+    margin-top: 30px;
+  }
+
   .btn-pullup button {
     display: none;
   }
